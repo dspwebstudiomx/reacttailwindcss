@@ -13,7 +13,7 @@ const Clients = () => {
       (cliente) => {
         return (
           <a key={cliente.id} href={cliente.href} target="_blank" alt={cliente.alt}>
-            <img src={cliente.logo} alt={cliente.cliente} className=" w-36 sm:w-40 h-auto m-auto" />
+            <img src={cliente.logo} alt={cliente.cliente} className=" w-36 sm:w-40 h-auto m-auto" loading="lazy" />
           </a>
         )
       }
