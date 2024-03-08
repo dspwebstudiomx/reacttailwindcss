@@ -46,12 +46,12 @@ function Navbar() {
         </ul>
 
         {/* menu button */}
-        <div onClick={toggleNav} className='md:hidden z-10'>
+        <div onClick={toggleNav} className='md:hidden z-40'>
           <FaBars size={30} color="white" />
         </div>
 
         {/* menu mobile*/}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[98%]'}>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-900 opacity-[98%] z-30'}>
           <Link activeClass={Styles.active} to='hero' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Inicio</Link>
           <Link activeClass={Styles.active} to='about' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Sobre mi</Link>
           <Link activeClass={Styles.active} to='services' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Servicios</Link>
