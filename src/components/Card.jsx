@@ -5,11 +5,11 @@ const Card = ({ backgroundImage, cliente, alt, href }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
 
-      <article className='relative top-0 overflow-hidden sm:w-[300px] lg:px-5 z-0 h-[200px] rounded-lg border-2 border-slate-800 '>
+      <article className='card relative top-0 overflow-hidden sm:w-[300px] lg:px-5 z-0 h-[200px] rounded-lg border-2 border-slate-800 shadow-lg shadow-slate-600 transition-shadow'>
 
         {/* Background Image */}
         <img
-          className='absolute inset-0 h-full w-full object-cover object-center hover:scale-75'
+          className='absolute inset-0 h-full w-full object-cover object-center rounded-lg'
           src={backgroundImage}
           alt={alt}
           loading='lazy'
@@ -17,7 +17,7 @@ const Card = ({ backgroundImage, cliente, alt, href }) => {
         {/* Background Image */}
 
         {/* Overlay */}
-        <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-55'></div>
+        <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-75'></div>
         {/* Overlay */}
 
         {/* Content Container */}
