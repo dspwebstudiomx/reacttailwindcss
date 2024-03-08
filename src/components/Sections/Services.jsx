@@ -6,7 +6,7 @@ import TitleH2 from '../TitleH2'
 
 const Services = () => {
   return (
-    <Section id='services' className='bg-green-500'>
+    <Section id='services' className='bg-slate-300'>
       <Container>
         <TitleH2 title='Servicios' />
         {servicios.map((info) => {
