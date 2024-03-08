@@ -6,8 +6,8 @@ import Card from "../Card"
 
 const Portfolio = () => {
 
-  const containerClasses =
-    "sm:grid-cols-2 lg:gap-6 items-center place-items-stretch gap-12";
+  // const containerClasses =
+  //   "";
 
   const clientListCard =
     clientes.map(
@@ -26,7 +26,7 @@ const Portfolio = () => {
 
   return (
     <Section id="portfolio" className="bg-red-500">
-      <Container className={containerClasses}>
+      <Container className="grid lg:max-w-screen-lg sm:grid-cols-2  lg:grid-cols-3  items-center gap-10">
         {clientListCard}
       </Container>
     </Section>

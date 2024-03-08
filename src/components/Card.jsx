@@ -4,7 +4,7 @@ const Card = ({ backgroundImage, cliente, alt }) => {
 
   return (
 
-    <article className='relative top-0 overflow-hidden sm:w-[360px] lg:px-5 z-0 h-[220px] rounded-lg border-2 border-slate-800'>
+    <article className='relative top-0 overflow-hidden sm:w-[300px] lg:px-5 z-0 h-[200px] rounded-lg border-2 border-slate-800'>
 
       {/* Background Image */}
       <img
@@ -14,8 +14,10 @@ const Card = ({ backgroundImage, cliente, alt }) => {
       />
       {/* Background Image */}
 
+      <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-55'></div>
+
       {/* Content Container */}
-      <div id='card' className='absolute inset-0 z-0 md:w-[360px] md:h-[220px] bg-black opacity-65 flex justify-end items-end p-6'>
+      <div id='card' className='flex w-full h-full justify-end items-end pb-4 pr-4'>
         <h3 className='text-white uppercase z-10'>{cliente}</h3>
       </div>
       {/* Content Container */}
