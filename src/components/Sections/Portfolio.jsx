@@ -25,7 +25,7 @@ const Portfolio = () => {
     );
 
   return (
-    <Section id="portfolio" className="bg-slate-300">
+    <Section id="portfolio" className="bg-red-500">
       <Container className={containerClasses}>
         {clientListCard}
       </Container>
