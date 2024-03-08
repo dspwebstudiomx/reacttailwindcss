@@ -14,8 +14,12 @@ const Hero = () => {
       />
       {/* Background Image */}
 
+      {/* Overlay */}
+      <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-55'></div>
+      {/* Overlay */}
+
       {/* Content Container */}
-      <div id='hero' className='mx-auto lg:max-w-screen-lg flex flex-col md:items-start'>
+      <div id='hero' className='mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10'>
         <div className='mx-auto max-w-2xl lg:mx-0'>
           <h1 className='text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl line-height'>Diseño y Desarrollo Web</h1>
           <p className='mt-6 text-2xl leading-6 text-gray-300 line-height'>

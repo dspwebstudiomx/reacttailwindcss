@@ -14,7 +14,9 @@ const Card = ({ backgroundImage, cliente, alt }) => {
       />
       {/* Background Image */}
 
+      {/* Overlay */}
       <div className='absolute inset-0 z-0 w-full h-full bg-black opacity-55'></div>
+      {/* Overlay */}
 
       {/* Content Container */}
       <div id='card' className='flex w-full h-full justify-end items-end pb-4 pr-4'>
