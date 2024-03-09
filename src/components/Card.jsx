@@ -5,7 +5,7 @@ const Card = ({ backgroundImage, cliente, alt, href }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
 
-      <article className='card relative top-0 overflow-hidden sm:w-[300px] lg:px-5 z-0 h-[200px] rounded-lg border-2 border-slate-800 shadow-lg shadow-slate-600 transition-shadow'>
+      <article className='card relative top-0 overflow-hidden sm:w-[300px] lg:px-5 z-0 h-[200px] rounded-lg border-2 border-slate-800 shadow-lg shadow-slate-600 transition-shadow animate__animated animate__bounceIn duration-1000 animate__slower delay-1000 sm:mb-10'>
 
         {/* Background Image */}
         <img

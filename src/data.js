@@ -73,7 +73,7 @@ export const clientes = [
     id: 4,
     cliente: "Fabiola Beltrán",
     alt: "Fabiola Beltrán logo",
-    href: "https://fabiolabeltran.com",
+    href: "https://fabiolabeltran.dspwebstudio.com",
     logo: FabiolaBeltranLogo,
     backgroundImage: FabiolaBeltranBgImage,
   },
