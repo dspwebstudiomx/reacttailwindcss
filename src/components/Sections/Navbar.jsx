@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { FaBars, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import logo from '../../assets/Logos/dsp-white.png'
+import Spacing from './Spacing';
+import Line from './Line';
 
 function Navbar() {
 
@@ -52,13 +54,15 @@ function Navbar() {
         </div>
 
         {/* menu mobile*/}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-900 opacity-[98%] z-30'}>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-950 opacity-[98%] z-30'}>
           <Link activeClass={Styles.active} to='hero' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Inicio</Link>
           <Link activeClass={Styles.active} to='about' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Sobre mi</Link>
           <Link activeClass={Styles.active} to='services' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Servicios</Link>
           <Link activeClass={Styles.active} to='portfolio' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Portafolio</Link>
           <Link activeClass={Styles.active} to='contact' spy={true} smooth={true} offset={-96} duration={500} className={Styles.linkMobile} onClick={toggleNav}>Contacto</Link>
-          <ul className="social my-12 mx-auto flex gap-12">
+          <Line width='3/5' />
+          <Spacing distance='my-4' />
+          <ul className="social mt-4 mb-12 mx-auto flex gap-12">
             <li>
               <a href="https://www.facebook.com/dspwebstudio" target="_blank" rel="noopener noreferrer" className=' hover:text-blue-500'>
                 <FaFacebookF size={60} />
