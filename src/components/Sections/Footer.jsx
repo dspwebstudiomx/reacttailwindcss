@@ -2,11 +2,11 @@ import Logo from "../../assets/Logos/dsp-white.png"
 
 const Footer = () => {
   return (
-    <footer className="w-full text-slate-100 body-font">
+    <div className="w-full text-slate-100 body-font">
 
       {/*  Columns Container */}
       <section
-        className="container flex flex-col flex-wrap pt-10 lg:p-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-800">
+        className="flex flex-col flex-wrap pt-10 lg:p-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-800 w-full">
 
         {/* Logo & Slogan Section */}
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left lg:w-1/3">
@@ -86,7 +86,7 @@ const Footer = () => {
       </section>
       {/* Copyright Section */}
 
-    </footer>
+    </div>
   )
 }
 

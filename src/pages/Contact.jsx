@@ -1,13 +1,13 @@
-import ReturnButton from "../components/ReturnButton"
-import Navbar from "../components/Sections/Navbar"
+import PageTemplate from "../components/Templates/PageTemplate"
+
 
 
 const Contact = () => {
   return (
-    <>
-      <Navbar />
-      <ReturnButton />
-    </>
+    <PageTemplate>
+      <h1>Contacto</h1>
+
+    </PageTemplate>
   )
 }
 

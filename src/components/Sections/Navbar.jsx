@@ -29,21 +29,21 @@ function Navbar() {
   const toggleNav = () => setNav(!nav)
 
   return (
-    <nav className={Styles.header} >
+    <nav id='navbar' className={Styles.header} >
       <div className={Styles.container}>
 
         {/* logo */}
-        <HashLink to='/#hero' spy={true} scroll={element => scrollWithOffset(element, 80)} className='cursor-pointer'>
+        <HashLink to='/#hero' scroll={element => scrollWithOffset(element, 80)} className='cursor-pointer'>
           <img id='logo' src={logo} alt='logo' className='w-[120px]' />
         </HashLink>
 
         {/* menu */}
         <ul className='hidden md:flex cursor-pointer'>
-          <HashLink activeClass={Styles.active} to='/#hero' spy={true} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
-          <HashLink activeClass={Styles.active} to='/#about' spy={true} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
-          <HashLink activeClass={Styles.active} to='/#services' spy={true} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Servicios</HashLink>
-          <HashLink activeClass={Styles.active} to='/#portfolio' spy={true} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
-          <Link activeClass={Styles.active} to='contacto' spy={true} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Contacto</Link>
+          <HashLink to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
+          <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
+          <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Servicios</HashLink>
+          <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
+          <Link to='/contacto' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Contacto</Link>
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
             <li>
               <a href="https://www.facebook.com/dspwebstudio" target="_blank" className=' hover:text-blue-500'>
@@ -64,12 +64,12 @@ function Navbar() {
         </div>
 
         {/* menu mobile*/}
-        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-950 opacity-[98%] z-30'}>
-          <HashLink activeClass={Styles.active} to='/#hero' spy={true} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Inicio</HashLink>
-          <HashLink activeClass={Styles.active} to='/#about' spy={true} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 0)} onClick={toggleNav}>Sobre mi</HashLink>
-          <HashLink activeClass={Styles.active} to='/#services' spy={true} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav} >Servicios</HashLink>
-          <HashLink activeClass={Styles.active} to='/#portfolio' spy={true} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Portafolio</HashLink>
-          <Link activeClass={Styles.active} to='contacto' spy={true} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Contacto</Link>
+        <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-950 opacity-[99%] z-30'}>
+          <HashLink to='/#hero' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Inicio</HashLink>
+          <HashLink to='/#about' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 0)} onClick={toggleNav}>Sobre mi</HashLink>
+          <HashLink to='/#services' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav} >Servicios</HashLink>
+          <HashLink to='/#portfolio' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Portafolio</HashLink>
+          <Link to='contacto' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Contacto</Link>
           <Line width='3/5' />
           <Spacing distance='my-4' />
           <ul className="social mt-4 mb-12 mx-auto flex gap-12">
