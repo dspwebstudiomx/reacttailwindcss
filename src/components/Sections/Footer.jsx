@@ -1,12 +1,29 @@
 import Logo from "../../assets/Logos/dsp-white.png"
+import { HashLink } from "react-router-hash-link"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
+
+  const scrollWithOffset = (element, offset) => {
+    const elementPosition = element.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth"
+    });
+  }
+
+  const Styles = {
+    a: 'm-1 hover:text-blue-500',
+    active: 'text-blue-500'
+  }
+
   return (
     <div className="w-full text-slate-100 body-font">
 
       {/*  Columns Container */}
       <section
-        className="flex flex-col flex-wrap pt-10 lg:p-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-800 w-full">
+        className="flex flex-col flex-wrap p-4 md:p-10 lg:p-24 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-800 w-full">
 
         {/* Logo & Slogan Section */}
         <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left lg:w-1/3">
@@ -37,17 +54,13 @@ const Footer = () => {
         {/* Columns Section */}
         <div className="flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/3">
           <div className="w-1/2">
-            <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">About</h2>
-            <nav className="mb-10 list-none">
-              <li className="mt-3">
-                <a className=" cursor-pointer ">Company</a>
-              </li>
-              <li className="mt-3">
-                <a className=" cursor-pointer ">Careers</a>
-              </li>
-              <li className="mt-3">
-                <a className=" cursor-pointer ">Blog</a>
-              </li>
+            <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Seciones</h2>
+            <nav className="mb-10 list-none flex flex-col">
+              <HashLink to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
+              <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 0)}>Sobre mi</HashLink>
+              <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)} >Servicios</HashLink>
+              <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
+              <Link to='contacto' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Contacto</Link>
             </nav>
           </div>
           <div className="px-4 w-1/2">
