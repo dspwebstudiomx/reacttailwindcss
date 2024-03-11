@@ -1,4 +1,3 @@
-//? Logo
 import BecArquitectosLogo from "./assets/Logos/BecArquitectos.png";
 import SusimpaticaLogo from "./assets/Logos/Susimpatica.png";
 import RosaLavandaLogo from "./assets/Logos/RosaLavanda.png";
@@ -7,7 +6,6 @@ import EquityClaimsLuxLogo from "./assets/Logos/EquityClaimsLux.png";
 import EquityClaimsItaliaLogo from "./assets/Logos/EquityClaimsItalia.png";
 import PasionesdelAlmaLogo from "./assets/Logos/PasionesdelAlma.png";
 import SiaraEstudioLogo from "./assets/Logos/SiaraEstudio.png";
-//? Background
 import BecArquitectosBgImage from "./assets/Images/BecArquitectosSite.webp";
 import SusimpaticaBgImage from "./assets/Images/SusimpaticaSite.webp";
 import RosaLavandaBgImage from "./assets/Images/RosaLavandaSite.webp";

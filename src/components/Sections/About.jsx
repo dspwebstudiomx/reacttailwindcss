@@ -6,7 +6,7 @@ import lottieImageAbout from "../../assets/About.json"
 
 const About = () => {
   return (
-    <Section id="about" className="bg-slate-200 dark:bg-slate-800 dark:text-slate-100">
+    <Section id="about" className="bg-slate-200 dark:bg-slate-800 dark:text-slate-100 mt-[80px]">
       <Container>
         <TwoColumnSection>
           <div className="flex flex-col text-center sm:text-left">
