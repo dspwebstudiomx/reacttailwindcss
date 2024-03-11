@@ -57,10 +57,10 @@ const Footer = () => {
             <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Seciones</h2>
             <nav className="mb-10 list-none flex flex-col">
               <HashLink to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
-              <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 0)}>Sobre mi</HashLink>
+              <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
               <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)} >Servicios</HashLink>
               <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
-              <Link to='contacto' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Contacto</Link>
+              <Link to='/contacto' className={Styles.a}>Contacto</Link>
             </nav>
           </div>
           <div className="px-4 w-1/2">
