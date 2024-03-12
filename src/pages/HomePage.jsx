@@ -30,7 +30,6 @@ const HomePage = () => {
           </ButtonContainer>
         </div>
         {/* Content Container */}
-
       </Hero>
       <About />
       <Technologies />
