@@ -6,7 +6,7 @@ const Line = ({ width }) => {
   )
 }
 Line.propTypes = {
-  width: PropTypes.string.isRequired
+  width: PropTypes.number.isRequired
 }
 
 export default Line

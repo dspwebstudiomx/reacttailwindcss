@@ -1,4 +1,5 @@
 import './App.css';
+import '../node_modules/animate.css/animate.css';
 import 'animate.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";

@@ -11,7 +11,7 @@ const Services = () => {
         <TitleH2 title='Servicios' />
         {servicios.map((info) => {
           return (
-            <Container key={info.id} className='py-14'>
+            <Container key={info.id} className='py-14 flex-col'>
               <TwoColumnSection>
                 <h3 className='text-4xl font-semibold'><span className='text-blue-700 dark:text-blue-500 mr-3'>{info.id}.</span>{info.serviceName}</h3>
                 <p className='text-lg mx-11 mt-3 md:mt-0 text-balance'>{info.serviceDescription}</p>

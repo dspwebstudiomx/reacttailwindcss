@@ -1,8 +1,7 @@
-import Button from '../Button';
-import ButtonContainer from '../Templates/ButtonContainer'
-import HeroImage from '../../assets/Images/heroImage.webp'
 
-const Hero = () => {
+import PropTypes from 'prop-types'
+
+const Hero = ({ HeroImage, children }) => {
   return (
     <section id='hero' className='relative overflow-hidden sm:py-32 px-12 w-full lg:px-5 z-0 h-[75vh] flex items-center'>
 
@@ -19,25 +18,16 @@ const Hero = () => {
       {/* Overlay */}
 
       {/* Content Container */}
-      <div id='hero' className='mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10'>
-        <div className='mx-auto max-w-2xl lg:mx-0'>
-          <h1 className='text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl line-height'>Diseño y Desarrollo Web</h1>
-          <p className='mt-6 text-2xl leading-6 text-gray-300 line-height'>
-            Convierte tu visión en una realidad digital con nuestro servicio de diseño y desarrollo web profesional.
-          </p>
-        </div>
-        <ButtonContainer>
-          <Button
-            background={'bg-gradient-to-r from-cyan-500 to-blue-500'}
-            texto={'Sobre Mí'}
-            href={'about'}
-          />
-        </ButtonContainer>
-      </div>
+      {children}
       {/* Content Container */}
+
 
     </section >
   )
+}
+Hero.propTypes = {
+  HeroImage: PropTypes.string.isRequired,
+  children: PropTypes.element.isRequired,
 }
 
 export default Hero
