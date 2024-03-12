@@ -60,6 +60,7 @@ const Footer = () => {
               <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
               <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)} >Servicios</HashLink>
               <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
+              <Link to='/blog' className={Styles.a}>Blog</Link>
               <Link to='/contacto' className={Styles.a}>Contacto</Link>
             </nav>
           </div>

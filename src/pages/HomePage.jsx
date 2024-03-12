@@ -1,14 +1,15 @@
-import Hero from '../components/Sections/Hero';
-import About from '../components/Sections/About';
-import Services from '../components/Sections/Services';
-import Clients from '../components/Sections/Clients';
-import Portfolio from '../components/Sections/Portfolio';
-import PageTemplate from '../components/Templates/PageTemplate';
-import Technologies from '../components/Sections/Technologies';
+import Hero from '../components/Sections/Hero'
+import About from '../components/Sections/About'
+import Services from '../components/Sections/Services'
+import Clients from '../components/Sections/Clients'
+import Portfolio from '../components/Sections/Portfolio'
+import PageTemplate from '../components/Templates/PageTemplate'
+import Technologies from '../components/Sections/Technologies'
 import HeroImage from '../assets/Images/HeroImage.webp'
 import ButtonContainer from '../components/Templates/ButtonContainer'
 import Button from '../components/Button'
-import 'animate.css';
+import 'animate.css'
+
 const HomePage = () => {
   return (
     <PageTemplate>

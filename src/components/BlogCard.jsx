@@ -5,7 +5,7 @@ import 'animate.css';
 const BlogCard = ({ imageCard, TitleCard, TextCard, href }) => {
   return (
     <Link to={href}>
-      <div className="w-[260px] mx-auto border-1 border-gray-400 rounded-lg shadow-xl animate__animated animate__flipInY">
+      <div className="w-[240px] mx-auto border-1 border-gray-400 rounded-lg shadow-xl animate__animated animate__flipInY">
         <img src={imageCard} alt="image" className="rounded-t-lg" />
         <div className="px-6 py-8 bg-slate-200 flex flex-col gap-3 rounded-b-lg">
           <h3 className='text-xl text-pretty font-semibold'>{TitleCard}</h3>

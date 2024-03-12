@@ -6,7 +6,7 @@ import Container from "../Templates/Container";
 const Clients = () => {
 
   const containerClasses =
-    "grid-cols-2 sm:grid-cols-4 lg:gap-12 items-center gap-8";
+    "grid grid-cols-2 sm:grid-cols-4 lg:gap-12 items-center gap-8";
 
   const clientListDisplay =
     clientes.map(

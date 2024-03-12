@@ -43,6 +43,7 @@ function Navbar() {
           <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
           <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Servicios</HashLink>
           <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
+          <Link to='/blog' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Blog</Link>
           <Link to='/contacto' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Contacto</Link>
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
             <li>
@@ -69,6 +70,7 @@ function Navbar() {
           <HashLink to='/#about' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 0)} onClick={toggleNav}>Sobre mi</HashLink>
           <HashLink to='/#services' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav} >Servicios</HashLink>
           <HashLink to='/#portfolio' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Portafolio</HashLink>
+          <Link to='blog' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Blog</Link>
           <Link to='contacto' duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 80)} onClick={toggleNav}>Contacto</Link>
           <Line width='3/5' />
           <Spacing distance='my-4' />

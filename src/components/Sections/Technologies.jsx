@@ -8,7 +8,7 @@ import { SiAdobexd } from "react-icons/si";
 const Technologies = () => {
   return (
     <section className='bg-slate-400 py-12 px-16'>
-      <Container>
+      <Container className={'mt-0'}>
         <div className='flex gap-8 flex-wrap mx-auto px-8 justify-between'>
           <FaHtml5 color='#0F172A' size={48} />
           <FaCss3 color='#0F172A' size={48} />
