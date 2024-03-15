@@ -5,7 +5,6 @@ import Services from "../components/Sections/Services"
 import Clients from "../components/Sections/Clients"
 import Portfolio from "../components/Sections/Portfolio"
 import Technologies from "../components/Sections/Technologies"
-import HeroImage from "../assets/Images/HeroImage.webp"
 import ButtonContainer from "../components/Templates/ButtonContainer"
 import Contact from "../components/Sections/Contact"
 import Button from "../components/Button"
@@ -17,7 +16,7 @@ const HomePage = () => {
   return (
     <>
       <Navbar />
-      <Hero HeroImage={HeroImage}>
+      <Hero>
         <div id="hero" className="mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl line-height">Diseño y Desarrollo Web</h1>
