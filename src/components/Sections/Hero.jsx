@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types'
-import HeroImage from '../assets/Images/HeroImage.webp'
+import HeroImage from '../../assets/Images/HeroImage.webp'
 
 const Hero = ({ children }) => {
   return (
