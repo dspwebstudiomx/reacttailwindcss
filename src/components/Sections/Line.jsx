@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types"
 
 const Line = ({ width }) => {
   return (
@@ -6,7 +6,7 @@ const Line = ({ width }) => {
   )
 }
 Line.propTypes = {
-  width: PropTypes.number.isRequired
+  width: PropTypes.string.isRequired
 }
 
 export default Line

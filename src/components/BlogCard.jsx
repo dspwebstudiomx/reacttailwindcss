@@ -5,11 +5,11 @@ import 'animate.css';
 const BlogCard = ({ imageCard, TitleCard, TextCard, href }) => {
   return (
     <Link to={href}>
-      <div className="w-[240px] mx-auto border-1 border-gray-400 rounded-lg shadow-xl animate__animated animate__flipInY">
-        <img src={imageCard} alt="image" className="rounded-t-lg" />
-        <div className="px-6 py-8 bg-slate-200 flex flex-col gap-3 rounded-b-lg">
-          <h3 className='text-xl text-pretty font-semibold'>{TitleCard}</h3>
-          <p className='text-sm'>{TextCard}</p>
+      <div className="mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY">
+        <img src={imageCard} alt="image" className="rounded-t-md" />
+        <div className="px-6 py-4 bg-slate-200 flex flex-col gap-3 rounded-b-md">
+          <h3 className='text- tlgext-pretty font-semibold text-blue-800'>{TitleCard}</h3>
+          <p className='text-xs text-gray-800'>{TextCard}</p>
           <br />
         </div>
       </div>

@@ -54,7 +54,7 @@ const Footer = () => {
         {/* Columns Section */}
         <div className="flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/3">
           <div className="w-1/2">
-            <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Seciones</h2>
+            <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Secciones</h2>
             <nav className="mb-10 list-none flex flex-col">
               <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
               <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>

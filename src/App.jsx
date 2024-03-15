@@ -6,16 +6,19 @@ import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import ScrollToTop from './components/ScrolltoTop';
 
 export default function App() {
   return (
     < BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contacto" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ScrollToTop>
     </BrowserRouter>
   )
 }
