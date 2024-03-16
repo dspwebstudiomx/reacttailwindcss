@@ -27,7 +27,7 @@ const ContactForm = () => {
           <label htmlFor="" className="mb-2 text-lg">Mensaje</label>
           <textarea type="text" name="name" id="name" className="rounded-md text-slate-900 bg-slate-200 p-4 min-h-40 max-h-40 text-lg" />
         </div>
-        <input type="submit" className="mt-6 bg-gradient-to-r from-blue-500 to-blue-900  text-white rounded-md py-8 sm:py-4 px-6 text-2xl sm:text-lg hover:bg-slate-700" value={'Enviar'} />
+        <input type="submit" className="mt-6 bg-gradient-to-r from-blue-500 to-blue-900  text-white rounded-md p-6 text-2xl sm:text-xl hover:bg-slate-700 sm:w-[35%] w-[100%] mx-auto" value={'Enviar'} />
       </form>
 
     </article>
