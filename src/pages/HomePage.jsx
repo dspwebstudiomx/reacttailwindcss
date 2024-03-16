@@ -1,20 +1,23 @@
-import Navbar from "../components/Sections/Navbar"
-import Hero from "../components/Sections/Hero"
-import About from "../components/Sections/About"
-import Services from "../components/Sections/Services"
-import Clients from "../components/Sections/Clients"
-import Portfolio from "../components/Sections/Portfolio"
-import Technologies from "../components/Sections/Technologies"
-import ButtonContainer from "../components/Templates/ButtonContainer"
-import Contact from "../components/Sections/Contact"
-import Button from "../components/Button"
-import Footer from "../components/Sections/Footer"
-import ReturnButton from "../components/ReturnButton"
 import "animate.css"
+import { lazy, Suspense } from 'react';
+
+const Navbar = lazy(() => import('../components/Sections/Navbar'));
+const Hero = lazy(() => import('../components/Sections/Hero'));
+const About = lazy(() => import('../components/Sections/About'));
+const Services = lazy(() => import('../components/Sections/Services'));
+const Clients = lazy(() => import('../components/Sections/Clients'));
+const Portfolio = lazy(() => import('../components/Sections/Portfolio'));
+const Technologies = lazy(() => import('../components/Sections/Technologies'));
+const ButtonContainer = lazy(() => import('../components/Templates/ButtonContainer'));
+const Contact = lazy(() => import('../components/Sections/Contact'));
+const Button = lazy(() => import('../components/Button'));
+const Loading = lazy(() => import('../components/Loading.jsx'));
+const Footer = lazy(() => import('../components/Sections/Footer'));
+const ReturnButton = lazy(() => import('../components/ReturnButton'));
 
 const HomePage = () => {
   return (
-    <>
+    <Suspense fallback={<Loading />}>
       <Navbar />
       <Hero>
         <div id="hero" className="mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10">
@@ -42,7 +45,7 @@ const HomePage = () => {
       <Contact />
       <Footer />
       <ReturnButton />
-    </>
+    </Suspense >
   )
 }
 

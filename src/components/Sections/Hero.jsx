@@ -27,7 +27,6 @@ const Hero = ({ children }) => {
   )
 }
 Hero.propTypes = {
-  HeroImage: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired,
 }
 
