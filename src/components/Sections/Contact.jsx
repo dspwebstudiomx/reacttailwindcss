@@ -6,12 +6,14 @@ import TitleH2 from "../TitleH2"
 const Contact = () => {
   return (
     <Section id="contacto" className="bg-slate-300">
-      <Container className={'grid grid-cols-1 sm:grid-cols-2 gap-12'}>
-        <div id="contactDescription" className="flex flex-col items-start justify-center">
+      <Container className={'flex flex-wrap gap-10'}>
+        <div id="contactDescription" className="flex flex-col items-center sm:items-start justify-center sm:w-[36%] w-[100%]">
           <TitleH2 title="Contacto" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis excepturi optio maiores quis, voluptate dolorem illum veniam officiis iusto maxime. Tempore repellendus itaque earum quam est expedita maxime possimus.</p>
+          <hr className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[15%] skew-x-12 mb-12 mx-auto text-center sm:ml-0" />
+
+          <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis excepturi optio maiores quis, voluptate dolorem illum veniam officiis iusto maxime. Tempore repellendus itaque earum quam est expedita maxime possimus.</p>
         </div>
-        <div id="contactForm">
+        <div id="contactForm" className="sm:w-[60%] w-[100%]">
           <ContactForm />
         </div>
 

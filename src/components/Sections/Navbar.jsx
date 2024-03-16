@@ -9,8 +9,8 @@ function Navbar() {
 
 
   const Styles = {
-    header: "fixed top-0 h-[98px] flex items-center justify-between bg-slate-900 text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
-    a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500",
+    header: "fixed top-0 h-[98px] flex items-center justify-between bg-gradient-to-r from-slate-700 to-slate-950  text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
+    a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500 ",
     container: "flex  w-full h-auto items-center justify-between sm:px-10",
     linkMobile: "my-5 hover:border-b-4 hover:border-blue-500 active:text-blue-500 text-white text-3xl hover:pb-2",
     active: "text-blue-500"

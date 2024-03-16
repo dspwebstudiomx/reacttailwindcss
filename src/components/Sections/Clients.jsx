@@ -20,7 +20,7 @@ const Clients = () => {
     );
 
   return (
-    <Section id="clientes" className="bg-slate-600 w-full">
+    <Section id="clientes" className="bg-gradient-to-r from-slate-700 to-slate-900 w-full">
       <Container className={containerClasses}>
         {clientListDisplay}
       </Container>
