@@ -14,6 +14,7 @@ import EquityClaimsLuxBgImage from "./assets/Images/EquityClaimsLuxSite.webp";
 import EquityClaimsItaliaBgImage from "./assets/Images/EquityClaimsItaliaSite.webp";
 import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
 import SiaraEstudioBgImage from "./assets/Images/SiaraEventosSite.webp";
+import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.jpg";
 
 export const servicios = [
   {
@@ -106,5 +107,36 @@ export const clientes = [
     href: "https://siaraestudio.com",
     backgroundImage: SiaraEstudioBgImage,
     logo: SiaraEstudioLogo,
+  },
+];
+
+export const articulosBlog = [
+  {
+    id: 1,
+    titulo: "Mi nuevo Blog",
+    extracto:
+      "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad...",
+    imagen: Blog1Image,
+  },
+  {
+    id: 2,
+    titulo: "Mi nuevo Blog",
+    extracto:
+      "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad...",
+    imagen: Blog1Image,
+  },
+  {
+    id: 3,
+    titulo: "Mi nuevo Blog",
+    extracto:
+      "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad...",
+    imagen: Blog1Image,
+  },
+  {
+    id: 4,
+    titulo: "Mi nuevo Blog",
+    extracto:
+      "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad...",
+    imagen: Blog1Image,
   },
 ];
