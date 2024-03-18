@@ -85,7 +85,7 @@ const Footer = () => {
       {/*  Columns Container */}
 
       {/* Copyright Section */}
-      <section className="bg-slate-950 text-white">
+      <section className="text-whites bg-slate-950">
         <div className="container px-5 py-4 mx-auto">
           <p className="text-sm text-center">
             <span>

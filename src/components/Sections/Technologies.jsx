@@ -8,32 +8,32 @@ import Section from "../Templates/Section"
 
 const Technologies = () => {
   return (
-    <Section className="bg-slate-400" id="technologies">
+    <Section className="bg-slate-400 dark:bg-slate-900" id="technologies">
       <Container className={"mt-0"}>
-        <div className="flex gap-12 flex-wrap mx-auto justify-between">
+        <div className="flex gap-12 flex-wrap mx-auto justify-between text-white">
           <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
-            <FaHtml5 color="#0F172A" size={48} className="hover:scale-150" title="Html 5" />
+            <FaHtml5 size={48} className="hover:scale-150 dark:text-white text-slate-900" title="Html 5" />
           </a>
           <a href="https://developer.mozilla.org/es/docs/Learn/CSS" target="_blank" rel="noopener noreferrer">
-            <FaCss3 color="#0F172A" size={48} className="hover:scale-150" title="CSS 3" />
+            <FaCss3 size={48} className="hover:scale-150 dark:text-white text-slate-900" title="CSS 3" />
           </a>
           <a href="https://developer.mozilla.org/es/docs/Learn/JavaScript" target="_blank" rel="noopener noreferrer">
-            <IoLogoJavascript color="#0F172A" size={48} className="hover:scale-150" title="JavaScript" />
+            <IoLogoJavascript size={48} className="hover:scale-150 dark:text-white text-slate-900" title="JavaScript" />
           </a>
           <a href="https://react.dev/" target="_blank" rel="noopener noreferrer">
-            <FaReact color="#0F172A" size={48} className="hover:scale-150" title="React.js" />
+            <FaReact size={48} className="hover:scale-150 dark:text-white text-slate-900" title="React.js" />
           </a>
           <a href="https://wordpress.com/es/" target="_blank" rel="noopener noreferrer">
-            <FaWordpress color="#0F172A" size={48} className="hover:scale-150" title="WordPress" />
+            <FaWordpress size={48} className="hover:scale-150 dark:text-white text-slate-900" title="WordPress" />
           </a>
           <a href="https://elementor.com/" target="_blank" rel="noopener noreferrer">
-            <FaElementor color="#0F172A" size={48} className="hover:scale-150" title="Elementor Page Builder" />
+            <FaElementor size={48} className="hover:scale-150 dark:text-white text-slate-900" title="Elementor Page Builder" />
           </a>
           <a href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
-            <FaFigma color="#0F172A" size={48} className="hover:scale-150" title="Figma" />
+            <FaFigma size={48} className="hover:scale-150 dark:text-white text-slate-900" title="Figma" />
           </a>
           <a href="https://helpx.adobe.com/mx/xd/help/whats-new.html" target="_blank" rel="noopener noreferrer">
-            <SiAdobexd olor="#0F172A" size={48} className="hover:scale-150" title="Adobe XD" />
+            <SiAdobexd size={48} className="hover:scale-150 dark:text-white text-slate-900" title="Adobe XD" />
           </a>
         </div>
       </Container>
