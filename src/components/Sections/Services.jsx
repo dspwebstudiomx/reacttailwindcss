@@ -11,7 +11,7 @@ const Services = () => {
         <TitleH2 title='Servicios' />
         {servicios.map((info) => {
           return (
-            <Container key={info.id} className='flex-col'>
+            <Container key={info.id} className='flex-col mt-20'>
               <TwoColumnSection>
                 <h3 className='text-4xl font-semibold'><span className='text-blue-700 dark:text-blue-500 mr-3'>{info.id}.</span>{info.serviceName}</h3>
                 <p className='text-lg mx-11 mt-3 mb-16 md:mt-0 text-balance'>{info.serviceDescription}</p>

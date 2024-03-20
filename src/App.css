@@ -84,3 +84,7 @@ html {
   letter-spacing: 1px;
   font-size: 1.2em;
 }
+
+.navlink.active {
+  color: #1616cb;
+}

@@ -14,7 +14,8 @@ import EquityClaimsLuxBgImage from "./assets/Images/EquityClaimsLuxSite.webp";
 import EquityClaimsItaliaBgImage from "./assets/Images/EquityClaimsItaliaSite.webp";
 import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
 import SiaraEstudioBgImage from "./assets/Images/SiaraEventosSite.webp";
-import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.jpg";
+import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.webp";
+import Blog2Image from "../src/assets/Images/Blog/Articulos/blog2.webp";
 
 export const servicios = [
   {
@@ -120,10 +121,11 @@ export const articulosBlog = [
   },
   {
     id: 2,
-    titulo: "Mi nuevo Blog",
+    titulo:
+      "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
     extracto:
-      "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad...",
-    imagen: Blog1Image,
+      "El Diseño Web es una disciplina crucial en el desarrollo de sitios y aplicaciones digitales, ya que tiene el poder de transformar una simple interfaz en una experiencia cautivadora para los usuarios. ",
+    imagen: Blog2Image,
   },
   {
     id: 3,

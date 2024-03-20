@@ -3,7 +3,7 @@ import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
   return (
-    <PageTemplate TituloPrincipal="Contacto" background="bg-slate-300">
+    <PageTemplate TituloPrincipal="Contacto" background="bg-slate-300" id={'ContactoPagina'}>
       <ContactForm />
     </PageTemplate>
   )

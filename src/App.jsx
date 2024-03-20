@@ -7,8 +7,10 @@ import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import ScrollToTop from './components/ScrolltoTop';
+import Article from './pages/Article';
 
 export default function App() {
+
   return (
     < BrowserRouter>
       <ScrollToTop>
@@ -17,6 +19,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/blog/:id" element={<Article />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

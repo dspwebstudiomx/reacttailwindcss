@@ -7,13 +7,11 @@ import Spacing from "./Spacing";
 
 function Navbar() {
 
-
   const Styles = {
-    header: "fixed top-0 h-[98px] flex items-center justify-between bg-gradient-to-r from-slate-700 to-slate-950  text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
-    a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500 ",
+    header: "fixed top-0 h-[98px] flex items-center justify-between bg-slate-900  text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
+    a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500",
     container: "flex  w-full h-auto items-center justify-between sm:px-10",
-    linkMobile: "my-5 hover:border-b-4 hover:border-blue-500 active:text-blue-500 text-white text-3xl hover:pb-2",
-    active: "text-blue-500"
+    linkMobile: "my-5 hover:border-b-4 hover:border-blue-500 active:text-blue-500 text-white text-3xl hover:pb-2"
   }
 
   const [nav, setNav] = useState(false);
@@ -24,7 +22,7 @@ function Navbar() {
     window.scroll({
       top: elementPosition,
       left: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   }
 
@@ -33,18 +31,19 @@ function Navbar() {
       <div className={Styles.container}>
 
         {/* logo */}
-        <HashLink to="/" scroll={element => scrollWithOffset(element, 98)} className="cursor-pointer">
+        <HashLink to="/#inicio" className="cursor-pointer" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logo} alt="logo" className="w-[120px]" />
         </HashLink>
 
         {/* menu */}
         <ul className="hidden md:flex cursor-pointer">
-          <HashLink to="/" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
+
+          <HashLink to="/#inicio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
           <HashLink to="/#about" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Sobre mi</HashLink>
           <HashLink to="/#services" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Servicios</HashLink>
           <HashLink to="/#portfolio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Portafolio</HashLink>
           <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
-          <Link to="/contacto" duration={500} className={Styles.a} sc>Contacto</Link>
+          <Link to="/contacto" duration={500} className={Styles.a}>Contacto</Link>
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
             <li>
               <a href="https:/www.facebook.com/dspwebstudio" target="_blank" className=" hover:text-blue-500">
@@ -58,7 +57,6 @@ function Navbar() {
             </li>
           </ul>
         </ul>
-
         {/* menu button */}
         <div onClick={toggleNav} className="md:hidden z-40">
           <FaBars size={30} color="white" />
@@ -66,7 +64,7 @@ function Navbar() {
 
         {/* menu mobile*/}
         <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-950 opacity-[99%] z-30"}>
-          <HashLink to="/" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Inicio</HashLink>
+          <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Inicio</HashLink>
           <HashLink to="/#about" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Sobre mi</HashLink>
           <HashLink to="/#services" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} >Servicios</HashLink>
           <HashLink to="/#portfolio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Portafolio</HashLink>
@@ -84,7 +82,7 @@ function Navbar() {
                 <FaInstagram size={60} />
               </a>
             </li>
-          </ul><h1></h1>
+          </ul>
         </ul>
 
       </div>
