@@ -127,7 +127,7 @@ export const articulosBlog = [
     extracto:
       "¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad y la tecnología se entrelazan para dar vida a sitios web asombrosos y funcionales. Imagina poder plasmar tus ideas en diseños atractivos y amigables, capaces de cautivar a usuarios de todas partes del mundo. Aquí aprenderás a dar forma a tu imaginación y convertirla en realidad, mientras dominas herramientas como HTML, CSS, JavaScript y mucho más.",
     imagen: Blog1Image,
-    autor: "Juan Carlos",
+    autor: "dspwebstudio",
     fecha: "23/02/2024",
     categoria: "Desarrollo Web",
   },
@@ -138,7 +138,7 @@ export const articulosBlog = [
     extracto:
       "El Diseño Web es una disciplina crucial en el desarrollo de sitios y aplicaciones digitales, ya que tiene el poder de transformar una simple interfaz en una experiencia cautivadora para los usuarios. Tanto para principiantes como para profesionales, es crucial contar con un conjunto de herramientas que faciliten y optimicen el proceso de diseño. En esta guía, exploraremos algunas de las herramientas más imprescindibles en el arsenal de un Front End Developer, abarcando desde prototipado hasta diseño gráfico y gestión de recursos.",
     imagen: Blog2Image,
-    autor: "Carlos",
+    autor: "dspwebstudio",
     fecha: "12/03/2024",
     categoria: "Diseño Web",
   },
@@ -149,7 +149,7 @@ export const articulosBlog = [
     extracto:
       "El diseño web es una disciplina esencial en el desarrollo de sitios y aplicaciones web, que permite crear interfaces atractivas y funcionales para los usuarios...",
     imagen: Blog3Image,
-    autor: "Daniel",
+    autor: "dspwebstudio",
     fecha: "23/03/2024",
     categoria: "Diseño Web",
   },
