@@ -4,7 +4,7 @@ import HeroImage from '../../assets/Images/HeroImage.webp'
 
 const Hero = ({ children }) => {
   return (
-    <section id='inicio' className='relative overflow-hidden sm:py-32 px-12 w-full lg:px-5 z-0 h-[75vh] flex items-center mt-20'>
+    <section id='hero' className='relative overflow-hidden sm:py-32 px-12 w-full lg:px-5 z-0 h-[75vh] flex items-center'>
 
       {/* Background Image */}
       <img

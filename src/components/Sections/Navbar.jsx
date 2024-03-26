@@ -64,24 +64,16 @@ function Navbar() {
 
         {/* menu mobile*/}
         <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-blue-950 opacity-[99%] z-30"}>
-          <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Inicio</HashLink>
+          <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} id="inicio">Inicio</HashLink>
           <HashLink to="/#about" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Sobre mi</HashLink>
           <HashLink to="/#services" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} >Servicios</HashLink>
           <HashLink to="/#portfolio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Portafolio</HashLink>
           <Link to="/blog" duration={500} className={Styles.linkMobile} onClick={toggleNav}>Blog</Link>
           <Link to="/contacto" duration={500} className={Styles.linkMobile} onClick={toggleNav}>Contacto</Link>
           <Spacing distance="my-4" />
-          <ul className="social mt-4 mb-12 mx-auto flex gap-12">
-            <li>
-              <a href="https:/www.facebook.com/dspwebstudio" target="_blank" className=" hover:text-blue-500">
-                <FaFacebookF size={60} />
-              </a>
-            </li>
-            <li>
-              <a href="https:/www.instagram.com/dspwebstudio" target="_blank" className=" hover:text-blue-500">
-                <FaInstagram size={60} />
-              </a>
-            </li>
+          <ul id="social mt-4 mb-12 mx-auto flex gap-12">
+            <Link to={"https:/www.facebook.com/dspwebstudio"} target="_blank" rel="noreferrer"><FaFacebookF /></Link>
+            <Link to={"https:/www.instagram.com/dspwebstudio"} target="_blank" rel="noreferrer"><FaInstagram /></Link>
           </ul>
         </ul>
 

@@ -4,16 +4,18 @@ import Footer from "../Sections/Footer"
 import PropTypes from "prop-types"
 import Section from "./Section"
 import Container from "./Container"
+import ToScrollSection from "../ToScrollSection";
 
 
-const PageTemplate = ({ children, id, TituloPrincipal, background }) => {
+const PageTemplate = ({ children, TituloPrincipal, background }) => {
   return (
-    <>
+    <div id="scrollTop">
       <header>
         <Navbar />
       </header>
-      <main id="inicio">
-        <Section id={id} className={`mx-auto ${background}`}>
+      <ToScrollSection />
+      <main>
+        <Section className={`mx-auto ${background}`}>
           <Container>
             <h1 className="text-3xl mx-auto text-center mb-2">{TituloPrincipal}</h1>
             <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mb-20 mx-auto text-center' />
@@ -25,7 +27,7 @@ const PageTemplate = ({ children, id, TituloPrincipal, background }) => {
         <Footer />
       </footer>
       <ReturnButton />
-    </>
+    </div>
   )
 }
 

@@ -24,7 +24,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  min-height: 100vh;
   margin-top: 90px;
 }
 
@@ -40,44 +39,6 @@ html {
 .card:hover img {
   transform: scale(1.05);
   overflow: hidden;
-}
-
-.carousel-container {
-  position: relative;
-  width: 500px;
-  height: 300px;
-  overflow: hidden;
-}
-
-.carousel-slide {
-  position: absolute;
-  width: 500px;
-  height: 300px;
-  display: none;
-}
-
-.carousel-slide:first-child {
-  display: block;
-}
-
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.carousel-prev {
-  left: 0;
-}
-
-.carousel-next {
-  right: 0;
 }
 
 .navlink {

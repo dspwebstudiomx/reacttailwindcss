@@ -12,6 +12,9 @@ export default {
         50: "50%",
         10: "10%",
       },
+      aspect: {
+        1: "1/1",
+      },
     },
   },
   plugins: [],

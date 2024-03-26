@@ -1,7 +1,7 @@
 import Container from "../Templates/Container"
 import ContactForm from "../ContactForm"
-import Section from "../Templates/Section"
 import TitleH2 from "../TitleH2"
+import Section from "../Templates/Section"
 
 const Contact = () => {
   return (
@@ -13,10 +13,9 @@ const Contact = () => {
 
           <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt perspiciatis excepturi optio maiores quis, voluptate dolorem illum veniam officiis iusto maxime. Tempore repellendus itaque earum quam est expedita maxime possimus.</p>
         </div>
-        <div id="contactForm" className="sm:w-[60%] w-[100%]">
+        <div id="contactForm" className="sm:w-[59%] w-[100%]">
           <ContactForm />
         </div>
-
       </Container>
     </Section>
   )

@@ -13,14 +13,14 @@ const Clients = () => {
       (cliente) => {
         return (
           <a key={cliente.id} href={cliente.href} target="_blank" alt={cliente.alt}>
-            <img src={cliente.logo} alt={cliente.cliente} className=" w-32 h-auto m-auto animate_animated animate__swing" loading="lazy" />
+            <img src={cliente.logo} alt={cliente.cliente} className=" w-32 h-auto m-auto animate_animated animate__swing object-cover" loading="lazy" />
           </a>
         )
       }
     );
 
   return (
-    <Section id="clientes" className="bg-gradient-to-r from-slate-700 to-slate-900 w-full">
+    <Section id="clientes" className="bg-gradient-to-r from-slate-700 to-slate-900 w-full px-4">
       <Container className={containerClasses}>
         {clientListDisplay}
       </Container>

@@ -1,5 +1,4 @@
 import "animate.css"
-import { Fragment } from 'react';
 import Navbar from '../components/Sections/Navbar';
 import Hero from '../components/Sections/Hero';
 import About from '../components/Sections/About';
@@ -15,15 +14,15 @@ import ReturnButton from '../components/ReturnButton';
 
 const HomePage = () => {
   return (
-    <Fragment>
+    <div id="scrollTop">
       <header>
         <Navbar />
       </header>
       <main>
         <Hero>
           <div id="hero" className="mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl line-height">Diseño y Desarrollo Web</h1>
+            <div className="max-w-2xl lg:mx-0 mb-10 mx-5">
+              <h1 className="text-5xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl line-height mb-10">Diseño y Desarrollo Web</h1>
               <p className="mt-6 text-2xl leading-6 text-gray-300 line-height">
                 Convierte tu visión en una realidad digital con nuestro servicio de diseño y desarrollo web profesional.
               </p>
@@ -47,7 +46,7 @@ const HomePage = () => {
         <ReturnButton />
       </main>
       <Footer />
-    </Fragment>
+    </div>
   )
 }
 

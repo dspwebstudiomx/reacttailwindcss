@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const TwoColumnSection = ({ children }) => {
-  const containerClasses = `grid sm:grid-cols-2 gap-2 sm:gap-2 mx-auto`;
+  const containerClasses = `grid sm:grid-cols-2 gap-2 sm:gap-0 mx-auto`;
 
   return (
     <div className={containerClasses}>
