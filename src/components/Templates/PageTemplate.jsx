@@ -32,7 +32,6 @@ const PageTemplate = ({ children, TituloPrincipal, background }) => {
 }
 
 PageTemplate.propTypes = {
-  id: PropTypes.string,
   background: PropTypes.string,
   TituloPrincipal: PropTypes.string,
   children: PropTypes.node
