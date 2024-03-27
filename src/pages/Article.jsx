@@ -95,7 +95,7 @@ const Article = () => {
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
             <Spacing distance="mb-0" />
             <div className="flex gap-8 flex-col">
-              {articulosBlog.slice(-2).map(
+              {articulosBlog.map(
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
@@ -120,7 +120,7 @@ const Article = () => {
                     </Link>
                   )
                 }
-              ).reverse()}
+              ).slice(-2).reverse()}
             </div>
           </aside>
           {/* Contenedor Derecho */}
