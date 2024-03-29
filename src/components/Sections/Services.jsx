@@ -19,10 +19,10 @@ const Services = () => {
               <TwoColumnSection>
                 <div className='flex flex-col gap-6 justify-center'>
                   <h3 className='text-4xl font-semibold'><span className='text-blue-700 dark:text-blue-500 mr-3'>{info.id}.</span>{info.serviceName}</h3>
-                  <p className='text-lg mx-11 mt-3 mb-16 md:mt-0 text-balance'>{info.serviceDescription}</p>
+                  <p className='text-xl text-wrap '>{info.serviceDescription}</p>
                 </div>
                 <div id={`lottie-${info.serviceName}`}>
-                  <Lottie animationData={info.lottieImage} loop={true} className="w-[232px] md:w-[380px] my-9 sm:mr-0 mx-auto" />
+                  <Lottie animationData={info.lottieImage} loop={true} className="w-full md:w-[380px] my-9 sm:mr-0 mx-auto" />
                 </div>
               </TwoColumnSection>
             </Container>
