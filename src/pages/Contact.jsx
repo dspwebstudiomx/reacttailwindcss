@@ -12,7 +12,7 @@ const Contact = () => {
     <div className="" id="scrollTop">
       <Navbar />
       <ToScrollSection />
-      <Section className="mt-10 bg-slate-300">
+      <Section className="mt-10 bg-slate-300" id="contacto">
         <Container>
           <Contacto />
         </Container>

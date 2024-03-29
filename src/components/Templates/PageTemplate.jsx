@@ -7,7 +7,7 @@ import Container from "./Container"
 import ToScrollSection from "../ToScrollSection";
 
 
-const PageTemplate = ({ children, TituloPrincipal, background }) => {
+const PageTemplate = ({ id, children, TituloPrincipal, background }) => {
   return (
     <div id="scrollTop">
       <header>
@@ -15,7 +15,7 @@ const PageTemplate = ({ children, TituloPrincipal, background }) => {
       </header>
       <ToScrollSection />
       <main>
-        <Section className={`mx-auto ${background}`}>
+        <Section className={`mx-auto ${background}`} id={id}>
           <Container>
             <h1 className="text-3xl mx-auto text-center mb-2">{TituloPrincipal}</h1>
             <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mb-20 mx-auto text-center' />
@@ -32,6 +32,7 @@ const PageTemplate = ({ children, TituloPrincipal, background }) => {
 }
 
 PageTemplate.propTypes = {
+  id: PropTypes.string,
   background: PropTypes.string,
   TituloPrincipal: PropTypes.string,
   children: PropTypes.node

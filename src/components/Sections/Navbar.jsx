@@ -36,7 +36,7 @@ function Navbar() {
         </HashLink>
 
         {/* menu */}
-        <ul className="hidden md:flex cursor-pointer">
+        <ul className="hidden lg:flex cursor-pointer">
 
           <HashLink to="/#inicio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
           <HashLink to="/#about" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Sobre mi</HashLink>
@@ -58,7 +58,7 @@ function Navbar() {
           </ul>
         </ul>
         {/* menu button */}
-        <div onClick={toggleNav} className="md:hidden z-40">
+        <div onClick={toggleNav} className="lg:hidden z-40">
           <FaBars size={30} color="white" />
         </div>
 

@@ -120,7 +120,7 @@ const Article = () => {
                     </Link>
                   )
                 }
-              ).slice(-2).reverse()}
+              ).slice(-2).toReversed()}
             </div>
           </aside>
           {/* Contenedor Derecho */}
