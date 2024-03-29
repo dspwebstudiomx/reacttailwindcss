@@ -49,3 +49,7 @@ html {
 .navlink.active {
   color: #1616cb;
 }
+
+body.modal-active {
+  overflow-y: hidden;
+}
