@@ -1,5 +1,6 @@
 
 import PropTypes from 'prop-types'
+import HeroImage from '../../assets/Images/HeroImage.webp'
 import ButtonContainer from '../Templates/ButtonContainer'
 import Button from '../Button'
 
@@ -10,7 +11,7 @@ const Hero = () => {
       {/* Background Image */}
       <img
         className='absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-100'
-        src='../../assets/Images/HeroImage.webp'
+        src={HeroImage}
         alt='code symbol'
       />
       {/* Background Image */}
