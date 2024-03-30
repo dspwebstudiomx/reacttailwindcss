@@ -34,18 +34,10 @@ const Footer = () => {
           <p className="mt-2 text-lg">Generando oportunidades para tu negocio.</p>
           <div className="mt-4">
             <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-              <a className=" cursor-pointer hover:text-gray-700">
-
-              </a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700">
-
-              </a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700">
-
-              </a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700">
-
-              </a>
+              <a className=" cursor-pointer hover:text-gray-700" href="#"></a>
+              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
+              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
+              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
             </span>
           </div>
         </div>
@@ -68,13 +60,13 @@ const Footer = () => {
             <h2 className="mb-3 text-lg font-medium tracking-widest text-blue-500 uppercase title-font">Support</h2>
             <nav className="mb-10 list-none">
               <li className="mt-3">
-                <a className=" cursor-pointer ">Contact Support</a>
+                <a className="cursor-pointer" href="#">Contact Support</a>
               </li>
               <li className="mt-3">
-                <a className=" cursor-pointer ">Help Resources</a>
+                <a className=" cursor-pointer " href="#">Help Resources</a>
               </li>
               <li className="mt-3">
-                <a className=" cursor-pointer ">Release Updates</a>
+                <a className=" cursor-pointer " href="#">Release Updates</a>
               </li>
             </nav>
           </div>
