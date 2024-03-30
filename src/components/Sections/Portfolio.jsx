@@ -13,12 +13,11 @@ const Portfolio = () => {
           backgroundImage={cliente.backgroundImage}
           cliente={cliente.cliente}
           href={cliente.href} target="_blank" alt={cliente.alt}
-
         />
       )
     }
   );
-  const classes = "grid lg:max-w-screen-lg sm:grid-cols-2  lg:grid-cols-3  items-center gap-10 mx-6"
+  const classes = "grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 items-center gap-12 justify-center"
 
   return (
     <Section id="portfolio" className="bg-red-500">

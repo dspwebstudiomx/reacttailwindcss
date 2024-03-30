@@ -9,8 +9,8 @@ import Section from "../Templates/Section"
 const Technologies = () => {
   return (
     <Section className="bg-slate-400 dark:bg-slate-900" id="technologies">
-      <Container className={'px-8'}>
-        <div className="grid grid-cols-4 gap-6 justify-between items-center">
+      <Container className={''}>
+        <div className=" grid grid-cols-4 gap-12 md:grid-cols-8 ">
           <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
             <FaHtml5 size={48} className="hover:scale-150 dark:text-white text-slate-900" title="Html 5" />
           </a>
