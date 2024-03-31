@@ -105,7 +105,7 @@ export default function ContactForm() {
                 {touched.user_name && errors.user_name && <p className='mt-2 text-blue-400 text-xs'>* {errors.user_name}</p>}
               </div>
               <div className="shield flex flex-col sm:w-[45%] w-full">
-                <label className="mb-2">Apellido<span className='text-blue-400 ml-1'>*</span></label>
+                <label htmlFor='user_surname' className="mb-2">Apellido<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
                   id="user_surname"

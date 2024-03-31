@@ -5,7 +5,7 @@ import Section from "../Templates/Section"
 
 const Contact = () => {
   return (
-    <Section id="contacto" className="bg-slate-300 px-6">
+    <Section id="contactoSection" className="bg-slate-300 px-6">
       <Container className={'flex flex-wrap gap-20 md:gap-8'}>
         <div id="contactDescription" className="flex flex-col items-center sm:items-start justify-center md:w-[36%] w-[85%] mx-auto text-wrap">
           <TitleH2 title="Contacto" />

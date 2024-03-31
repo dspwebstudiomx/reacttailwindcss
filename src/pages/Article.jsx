@@ -24,11 +24,10 @@ const Article = () => {
   console.log(listadoInverso)
 
   const classes = {
-    section: "mt-10 min-h-screen",
-    container: "flex justify-between gap-2 lg:gap-12 flex-wrap py-20",
-    content: "sm:w-[58%] mb-20 flex-col w-full h-auto place-content-between bg-red-200",
-    contenedorIzquierdo: "sm:w-[58%] flex flex-col min-h-[100vh] w-full place-content-between",
-    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-8 rounded-lg border-2 border-blue-800"
+    section: "mt-0 min-h-screen p-6 xl:px-0 sm:px-12",
+    container: "flex justify-between gap-2 flex-wrap py-20",
+    contenedorIzquierdo: "sm:w-[53%] flex flex-col min-h-[100vh] w-full place-content-between",
+    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-8 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800"
   }
   return (
     <div id="scrollTop">
@@ -41,7 +40,7 @@ const Article = () => {
             {/* Contenido */}
             <div>
               <header>
-                <h1 className="text-4xl text-blue-900">{articuloContenido.titulo}</h1>
+                <h1 className="text-4xl text-blue-900 dark:text-slate-200">{articuloContenido.titulo}</h1>
                 {/* Datos del creador */}
                 <div className="mb-12 flex lg:items-center lg:justify-between my-4 flex-wrap leading-loose flex-col lg:flex-row">
                   <div className="flex items-center">
@@ -95,7 +94,7 @@ const Article = () => {
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
             <Spacing distance="mb-0" />
             <div className="flex gap-8 flex-col">
-              {articulosBlog.map(
+              {articulosBlog.slice(-2).reverse().map(
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
@@ -120,7 +119,7 @@ const Article = () => {
                     </Link>
                   )
                 }
-              ).slice(-2).toReversed()}
+              )}
             </div>
           </aside>
           {/* Contenedor Derecho */}

@@ -1,8 +1,8 @@
-
-import PropTypes from 'prop-types'
 import HeroImage from '../../assets/Images/HeroImage.webp'
 import ButtonContainer from '../Templates/ButtonContainer'
 import Button from '../Button'
+import { IoPersonOutline } from "react-icons/io5";
+
 
 const Hero = () => {
   return (
@@ -12,7 +12,7 @@ const Hero = () => {
       <img
         className='absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-100'
         src={HeroImage}
-        alt='code symbol'
+        alt='hero image'
       />
       {/* Background Image */}
 
@@ -30,19 +30,16 @@ const Hero = () => {
         </div>
         <ButtonContainer>
           <Button
+            icono={<IoPersonOutline size={21} />}
             texto={"Sobre Mí"}
             href={"about"}
+            type={"button"}
           />
         </ButtonContainer>
+        {/* Content Container */}
       </div>
-      {/* Content Container */}
-
-
     </section >
   )
-}
-Hero.propTypes = {
-  children: PropTypes.element.isRequired,
 }
 
 export default Hero

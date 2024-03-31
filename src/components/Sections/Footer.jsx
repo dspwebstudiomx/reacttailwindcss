@@ -48,26 +48,42 @@ const Footer = () => {
           <div className="w-1/2">
             <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Secciones</h2>
             <nav className="mb-10 list-none flex flex-col">
-              <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
-              <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
-              <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)} >Servicios</HashLink>
-              <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
-              <Link to='/blog' className={Styles.a}>Blog</Link>
-              <Link to='/contacto' className={Styles.a}>Contacto</Link>
+              <ul>
+                <li>
+                  <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Inicio</HashLink>
+                </li>
+                <li>
+                  <HashLink to='/#about' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Sobre mi</HashLink>
+                </li>
+                <li>
+                  <HashLink to='/#services' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)} >Servicios</HashLink>
+                </li>
+                <li>
+                  <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
+                </li>
+                <li>
+                  <Link to='/blog' className={Styles.a}>Blog</Link>
+                </li>
+                <li>
+                  <Link to='/contacto' className={Styles.a}>Contacto</Link>
+                </li>
+              </ul>
             </nav>
           </div>
           <div className="px-4 w-1/2">
             <h2 className="mb-3 text-lg font-medium tracking-widest text-blue-500 uppercase title-font">Support</h2>
             <nav className="mb-10 list-none">
-              <li className="mt-3">
-                <a className="cursor-pointer" href="#">Contact Support</a>
-              </li>
-              <li className="mt-3">
-                <a className=" cursor-pointer " href="#">Help Resources</a>
-              </li>
-              <li className="mt-3">
-                <a className=" cursor-pointer " href="#">Release Updates</a>
-              </li>
+              <ul>
+                <li className="mt-3">
+                  <a className="cursor-pointer" href="#" aria-label="Contact Support">Contact Support</a>
+                </li>
+                <li className="mt-3">
+                  <a className=" cursor-pointer " href="#" aria-label="Help Resources">Help Resources</a>
+                </li>
+                <li className="mt-3">
+                  <a className=" cursor-pointer " href="#" aria-label="Release Updates">Release Updates</a>
+                </li>
+              </ul>
             </nav>
           </div>
         </div>
@@ -75,7 +91,7 @@ const Footer = () => {
 
       </section>
       {/*  Columns Container */}
-
+      <hr className={`h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-full`} />
       {/* Copyright Section */}
       <section className="text-whites bg-slate-950">
         <div className="container px-5 py-4 mx-auto">
