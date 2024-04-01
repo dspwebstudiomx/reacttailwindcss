@@ -9,7 +9,7 @@ const Portfolio = () => {
     (cliente) => {
       return (
         <Card
-          key={cliente.id}
+          key={cliente.cliente}
           backgroundImage={cliente.backgroundImage}
           cliente={cliente.cliente}
           href={cliente.href} target="_blank" alt={cliente.alt}
@@ -17,10 +17,10 @@ const Portfolio = () => {
       )
     }
   );
-  const classes = "grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 items-center gap-12 justify-center"
+  const classes = "grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12 place-items-center"
 
   return (
-    <Section id="portfolio" className="bg-red-500">
+    <Section id="portfolio">
       <Container className={classes}>
         {clientListCard}
       </Container>

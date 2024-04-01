@@ -92,7 +92,7 @@ export default function ContactForm() {
         {({ errors, touched }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
             <div className="flex flex-wrap justify-between gap-3">
-              <div className="shield flex flex-col sm:w-[50%] w-full">
+              <div className="shield flex flex-col lg:w-[50%] w-full">
                 <label htmlFor='user_name' className="mb-2">Nombre<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   id="user_name"
@@ -104,7 +104,7 @@ export default function ContactForm() {
                 />
                 {touched.user_name && errors.user_name && <p className='mt-2 text-blue-400 text-xs'>* {errors.user_name}</p>}
               </div>
-              <div className="shield flex flex-col sm:w-[45%] w-full">
+              <div className="shield flex flex-col lg:w-[45%] w-full">
                 <label htmlFor='user_surname' className="mb-2">Apellido<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
@@ -118,7 +118,7 @@ export default function ContactForm() {
               </div>
             </div>
             <div className="flex flex-wrap justify-between gap-3">
-              <div className="shield flex flex-col sm:w-[50%] w-full">
+              <div className="shield flex flex-col lg:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
@@ -131,7 +131,7 @@ export default function ContactForm() {
                 {touched.user_email && errors.user_email && <p className='mt-2 text-blue-400 text-xs'>* {errors.user_email}</p>}
 
               </div>
-              <div className="shield flex flex-col sm:w-[45%] w-full">
+              <div className="shield flex flex-col lg:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"

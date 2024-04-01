@@ -20,11 +20,11 @@ const Blog = () => {
   }
   return (
     <PageTemplate id="blog" TituloPrincipal={'Mis Artículos'} background={'bg-slate-300'} >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-center align-middle md:px-20 ">
-        <ArticleCardGenerator articulos={articulos} />
-      </div>
-      <div className="flex flex-wrap gap-4 mt-20 items-center justify-center">
+      <div className='flex flex-col md:flex-row gap-4 items-center justify-center w-full h-auto mb-16'>
         <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
+      </div>
+      <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-8'>
+        <ArticleCardGenerator articulos={articulos} />
       </div>
     </PageTemplate>
   )

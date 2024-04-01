@@ -32,14 +32,6 @@ const Footer = () => {
               width={150} />
           </a>
           <p className="mt-2 text-lg">Generando oportunidades para tu negocio.</p>
-          <div className="mt-4">
-            <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start">
-              <a className=" cursor-pointer hover:text-gray-700" href="#"></a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
-              <a className="ml-3  cursor-pointer hover:text-gray-700" href="#"></a>
-            </span>
-          </div>
         </div>
         {/* Logo & Slogan Section */}
 

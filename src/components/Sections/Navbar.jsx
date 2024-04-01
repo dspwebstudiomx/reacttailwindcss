@@ -30,31 +30,39 @@ function Navbar() {
     <nav id="navbar" className={Styles.header} >
       <section className={Styles.container}>
 
-        {/* logo */}
+        {/* Logo */}
         <HashLink to="/#inicio" className="cursor-pointer" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logo} alt="logo" className="w-[120px]" />
         </HashLink>
+        {/* Logo */}
 
-        {/* menu */}
-        <ul className="hidden lg:flex cursor-pointer">
-          <li>
-            <HashLink to="/#inicio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
-          </li>
-          <li>
-            <HashLink to="/#about" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Sobre mi</HashLink>
-          </li>
-          <li>
-            <HashLink to="/#services" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Servicios</HashLink>
-          </li>
-          <li>
-            <HashLink to="/#portfolio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Portafolio</HashLink>
-          </li>
-          <li>
-            <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
-          </li>
-          <li>
-            <Link to="/contacto" duration={500} className={Styles.a}>Contacto</Link>
-          </li>
+
+        {/* Menu */}
+        <div className="hidden lg:flex">
+          {/* Links */}
+          <ul className="flex cursor-pointer">
+            <li>
+              <HashLink to="/#inicio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#about" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Sobre mi</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#services" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Servicios</HashLink>
+            </li>
+            <li>
+              <HashLink to="/#portfolio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Portafolio</HashLink>
+            </li>
+            <li>
+              <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
+            </li>
+            <li>
+              <Link to="/contacto" duration={500} className={Styles.a}>Contacto</Link>
+            </li>
+          </ul>
+          {/* Links */}
+
+          {/* Social */}
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
             <li>
               <a href="https:/www.facebook.com/dspwebstudio" target="_blank" className=" hover:text-blue-500" aria-label="facebook">
@@ -67,13 +75,17 @@ function Navbar() {
               </a>
             </li>
           </ul>
-        </ul>
-        {/* menu button */}
+          {/* Social */}
+        </div>
+        {/* Menu */}
+
+        {/* Menu button */}
         <div onClick={toggleNav} className="lg:hidden z-40">
           <FaBars size={30} color="white" />
         </div>
+        {/* Menu button */}
 
-        {/* menu mobile*/}
+        {/* Menu mobile*/}
         <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-10 gap-9"}>
           <ul className="flex flex-col gap-6">
             <li>
@@ -107,6 +119,7 @@ function Navbar() {
             </ul>
           </div>
         </div>
+        {/* Menu mobile*/}
 
       </section>
     </nav >

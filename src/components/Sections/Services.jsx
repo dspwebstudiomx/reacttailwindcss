@@ -1,7 +1,6 @@
 import { servicios } from '../../data'
 import Section from '../Templates/Section'
 import Container from '../Templates/Container'
-import TwoColumnSection from '../Templates/TwoColumnSection'
 import TitleH2 from '../TitleH2'
 import Lottie from 'lottie-react'
 
@@ -15,17 +14,17 @@ const Services = () => {
         <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[7%] skew-x-12 mb-20 mx-auto text-center mt-1' />
         {servicios.map((info) => {
           return (
-            <Container key={info.id} className='flex-col mt-20'>
-              <TwoColumnSection>
+            <article key={info.id} className='flex flex-col mt-2 gap-12'>
+              <div className='flex flex-col sm:flex-row'>
                 <div className='flex flex-col gap-6 justify-center'>
                   <h3 className='text-4xl font-semibold'><span className='text-blue-700 dark:text-blue-500 mr-3'>{info.id}.</span>{info.serviceName}</h3>
                   <p className='text-xl text-wrap '>{info.serviceDescription}</p>
                 </div>
-                <div id={`lottie-${info.serviceName}`}>
+                <div id={`lottie-${info.serviceName}`} className='xl:w-1/2'>
                   <Lottie animationData={info.lottieImage} loop={true} className="w-full md:w-[380px] my-9 sm:mr-0 mx-auto" />
                 </div>
-              </TwoColumnSection>
-            </Container>
+              </div>
+            </article>
 
           )
         }

@@ -16,23 +16,20 @@ const Article = () => {
 
   let { id } = useParams()
   let articuloContenido = articulosBlog.find(articulo => articulo.id == id)
-  console.log(articuloContenido)
 
   const linkAnterior = parseInt(id) - 1;
   const linkPosterior = parseInt(id) + 1;
-  const listadoInverso = articulosBlog.reverse();
-  console.log(listadoInverso)
 
   const classes = {
-    section: "mt-0 min-h-screen p-6 xl:px-0 sm:px-12",
+    section: "mt-0 min-h-screen xl:px-0 sm:px-12",
     container: "flex justify-between gap-2 flex-wrap py-20",
     contenedorIzquierdo: "sm:w-[53%] flex flex-col min-h-[100vh] w-full place-content-between",
-    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-8 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800"
+    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800"
   }
   return (
     <div id="scrollTop">
       <Navbar />
-      <Section className={classes.section}>
+      <Section className={classes.section} id="article">
         <Container className={classes.container} id={id}>
 
           {/*  Contenedor izquierdo */}

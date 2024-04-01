@@ -64,14 +64,6 @@ export const clientes = [
   },
   {
     id: 2,
-    cliente: "Susimpatica",
-    alt: "Susimpática logo",
-    href: "#",
-    logo: SusimpaticaLogo,
-    backgroundImage: SusimpaticaBgImage,
-  },
-  {
-    id: 3,
     cliente: "RosaLavanda",
     alt: "RosaLavanda logo",
     href: "https://rosalavanda.com.mx",
@@ -79,7 +71,7 @@ export const clientes = [
     backgroundImage: RosaLavandaBgImage,
   },
   {
-    id: 4,
+    id: 3,
     cliente: "Fabiola Beltrán",
     alt: "Fabiola Beltrán logo",
     href: "https://fabiolabeltran.dspwebstudio.com",
@@ -87,7 +79,7 @@ export const clientes = [
     backgroundImage: FabiolaBeltranBgImage,
   },
   {
-    id: 5,
+    id: 4,
     cliente: "Equity Claims Lux",
     alt: "Equity Claims Lux logo",
     href: "https://equityclaimslux.com",
@@ -95,7 +87,7 @@ export const clientes = [
     backgroundImage: EquityClaimsLuxBgImage,
   },
   {
-    id: 6,
+    id: 5,
     cliente: "Equity Claims Italia",
     alt: "Equity Claims Italia logo",
     href: "https://equityclaimsitalia.com",
@@ -103,20 +95,12 @@ export const clientes = [
     backgroundImage: EquityClaimsItaliaBgImage,
   },
   {
-    id: 7,
+    id: 6,
     cliente: "Mezcal Pasiones del Alma",
     alt: "Mezcal Pasiones del Alma logo",
     href: "https://mezcalpasiones.com",
     logo: PasionesdelAlmaLogo,
     backgroundImage: PasionesdelAlmaBgImage,
-  },
-  {
-    id: 8,
-    cliente: "Siara Estudio",
-    alt: "Siara Estudio logo",
-    href: "https://siaraestudio.com",
-    backgroundImage: SiaraEstudioBgImage,
-    logo: SiaraEstudioLogo,
   },
 ];
 

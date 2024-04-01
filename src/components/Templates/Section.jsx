@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Section = ({ id, children, className }) => {
   return (
-    <section id={id} className={`flex flex-col bg-slate-200 dark:bg-slate-950 dark:text-slate-50 py-20 sm:px-0 ${className} justify-center items-center`}>
+    <section id={id} className={`bg-slate-200 dark:bg-slate-950 dark:text-slate-50 ${className} md:p-12 p-8 py-12 mx-auto`}>
       {children}
     </section>
   )
@@ -10,7 +10,7 @@ const Section = ({ id, children, className }) => {
 
 Section.propTypes = {
   id: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   children: PropTypes.node.isRequired
 }
 
