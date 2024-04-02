@@ -1,19 +1,15 @@
 import BecArquitectosLogo from "./assets/Logos/BecArquitectos.png";
-import SusimpaticaLogo from "./assets/Logos/Susimpatica.png";
 import RosaLavandaLogo from "./assets/Logos/RosaLavanda.png";
 import FabiolaBeltranLogo from "./assets/Logos/FabiolaBeltranHS.png";
 import EquityClaimsLuxLogo from "./assets/Logos/EquityClaimsLux.png";
 import EquityClaimsItaliaLogo from "./assets/Logos/EquityClaimsItalia.png";
 import PasionesdelAlmaLogo from "./assets/Logos/PasionesdelAlma.png";
-import SiaraEstudioLogo from "./assets/Logos/SiaraEstudio.png";
 import BecArquitectosBgImage from "./assets/Images/BecArquitectosSite.webp";
-import SusimpaticaBgImage from "./assets/Images/SusimpaticaSite.webp";
 import RosaLavandaBgImage from "./assets/Images/RosaLavandaSite.webp";
 import FabiolaBeltranBgImage from "./assets/Images/FabiolaBeltranSite.webp";
 import EquityClaimsLuxBgImage from "./assets/Images/EquityClaimsLuxSite.webp";
 import EquityClaimsItaliaBgImage from "./assets/Images/EquityClaimsItaliaSite.webp";
 import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
-import SiaraEstudioBgImage from "./assets/Images/SiaraEventosSite.webp";
 import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.webp";
 import Blog2Image from "../src/assets/Images/Blog/Articulos/blog2.webp";
 import Blog3Image from "../src/assets/Images/Blog/Articulos/blog3.webp";
@@ -136,5 +132,15 @@ export const articulosBlog = [
     autor: "dspwebstudio",
     fecha: "23/03/2024",
     categoria: "Diseño Web",
+  },
+  {
+    id: "4",
+    titulo: "Test",
+    extracto:
+      "El diseño web es una disciplina esencial en el desarrollo de sitios y aplicaciones web, que permite crear interfaces atractivas y funcionales para los usuarios...",
+    imagen: Blog3Image,
+    autor: "dspwebstudio",
+    fecha: "23/03/2024",
+    categoria: "SEO",
   },
 ];

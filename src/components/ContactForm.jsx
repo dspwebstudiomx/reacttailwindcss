@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 import { FaRegEnvelope } from "react-icons/fa6"
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
-import Button from './Button';
 
 export default function ContactForm() {
 
@@ -85,8 +84,8 @@ export default function ContactForm() {
             return errors;
           }
         }
-        onSubmit={({ resetForm }) => {
-          resetForm()
+        onSubmit={() => {
+
         }}
       >
         {({ errors, touched }) => (
@@ -156,8 +155,8 @@ export default function ContactForm() {
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
 
             </div>
-            <button type='submit' className="bg-gradient-to-r from-blue-500 to-blue-900  text-white rounded-md p-6 text-xl hover:bg-slate-700 sm:w-[45%] w-[100%] mx-auto flex items-center justify-center" >
-              <FaRegEnvelope className="mr-2" />
+            <button type='submit' className="bg-gradient-to-r from-blue-500 to-blue-900  text-white rounded-md px-6 py-4 text-lg hover:bg-slate-700 sm:w-[45%] w-[100%] mx-auto flex items-center justify-center" >
+              <FaRegEnvelope className="mr-1" />
               Enviar mensaje
             </button>
             {showModal &&
@@ -165,11 +164,7 @@ export default function ContactForm() {
                 <div id='modal-overlay' className='fixed inset-0 z-0'></div>
                 <div id='modal-window' className='fixed w-[85%] sm:w-[50%] lg:w-[400px] h-auto bg-slate-100 rounded-xl text-slate-900 flex flex-col items-center justify-center z-3 p-12 py-16 lg:p-8 border-blue-500 border-4 shadow-2xl'>
                   <h1 className='text-center text-2xl sm:text-[16px] font-bold tracking-wider leading-snug'>Mensaje enviado satisfactoriamente</h1>
-                  <Button
-                    href='/'
-                    functionButton='{() => setShowModal(false)'
-                    texto='Cerrar'
-                  />
+                  <button onClick={() => setShowModal(!showModal)} className='rounded-lg text-white border-2  text-2xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] sm:w-[210px] h-[70px] mt-4'>Cerrar mensaje </button>
                 </div>
               </div>)
             }
