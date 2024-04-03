@@ -5,9 +5,10 @@ const ButtonArticleList = ({ categorias, filtrarCategoria }) => {
         key={categoria}
         type="button"
         onClick={() => filtrarCategoria(categoria)}
-        className="rounded-full text-white border-2  text-2xl sm:text-lg bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center w-[320px] sm:w-[180px] h-[40px]">
+        className="text-bold hover:text-blue-800"
+      >
         {categoria}
-      </button>
+      </button >
     ))
   )
 }

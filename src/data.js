@@ -13,10 +13,16 @@ import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
 import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.webp";
 import Blog2Image from "../src/assets/Images/Blog/Articulos/blog2.webp";
 import Blog3Image from "../src/assets/Images/Blog/Articulos/blog3.webp";
-import WebDevelopmentTutorial from "../src/assets/JSON/web-development-tutorial.json";
-import CodeDebugging from "../src/assets/JSON/code-debugging.json";
-import UsabilityTesting from "../src/assets/JSON/usability-testing.json";
-import MobileApplicationTesting from "../src/assets/JSON/mobile-application-testing.json";
+import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
+import CodeDebugging from "./assets/JSON/code-debugging.json";
+import UsabilityTesting from "./assets/JSON/usability-testing.json";
+import MobileApplicationTesting from "./assets/JSON/mobile-application-testing.json";
+import {
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa6";
 
 export const servicios = [
   {
@@ -109,7 +115,7 @@ export const articulosBlog = [
     imagen: Blog1Image,
     autor: "dspwebstudio",
     fecha: "23/02/2024",
-    categoria: "Desarrollo Web",
+    categoria: "Personal",
   },
   {
     id: "2",
@@ -142,5 +148,36 @@ export const articulosBlog = [
     autor: "dspwebstudio",
     fecha: "23/03/2024",
     categoria: "SEO",
+  },
+];
+
+export const socialLinks = [
+  {
+    id: 1,
+    social: "facebook",
+    href: "https://www.facebook.com/dspwebstudio",
+    icono: FaFacebookF,
+    texto: "dspwebstudio",
+  },
+  {
+    id: 2,
+    social: "instagram",
+    href: "https://www.instagram.com/dspwebstudio",
+    icono: FaInstagram,
+    texto: "dspwebstudio",
+  },
+  {
+    id: 3,
+    social: "email",
+    href: "mailto:contacto@dspwebstudio.com",
+    icono: FaEnvelope,
+    texto: "dspwebstudio",
+  },
+  {
+    id: 4,
+    social: "whatsapp",
+    href: "https://wa.me/+524439188025",
+    icono: FaWhatsapp,
+    texto: "dspwebstudio",
   },
 ];

@@ -14,7 +14,7 @@ const Footer = () => {
   }
 
   const Styles = {
-    a: 'my-4 sm:my-1 hover:text-blue-500 text-lg',
+    a: 'sm:my-1 hover:text-blue-500 text-lg',
     active: 'text-blue-500'
   }
 
@@ -37,7 +37,7 @@ const Footer = () => {
 
         {/* Columns Section */}
         <div className="flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/3">
-          <div className="w-1/2">
+          <div className="w-full">
             <h2 className="mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font">Secciones</h2>
             <nav className="mb-10 list-none flex flex-col">
               <ul>
@@ -62,7 +62,7 @@ const Footer = () => {
               </ul>
             </nav>
           </div>
-          <div className="px-4 w-1/2">
+          <div className="px-4 w-1/2 hidden">
             <h2 className="mb-3 text-lg font-medium tracking-widest text-blue-500 uppercase title-font">Support</h2>
             <nav className="mb-10 list-none">
               <ul>

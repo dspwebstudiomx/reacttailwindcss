@@ -11,6 +11,8 @@ import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
+import ButtonScroll from '../components/ButtonScroll'
+import ButtonContainer from "../components/Templates/ButtonContainer"
 
 const Article = () => {
 
@@ -41,15 +43,15 @@ const Article = () => {
                 {/* Datos del creador */}
                 <div className="mb-12 flex lg:items-center lg:justify-between my-4 flex-wrap leading-loose flex-col lg:flex-row">
                   <div className="flex items-center">
-                    <IoPersonCircleOutline size={24} color="#1D4ED8" /><span className="mx-1 font-medium">Autor:</span>{articuloContenido.autor}
+                    <IoPersonCircleOutline size={24} color="#1D4ED8" /><span className="mx-1 font-normal">Autor:</span>{articuloContenido.autor}
                   </div>
-                  <div className="mx-2 items-center hidden lg:block">|</div>
+                  <div className="mx-1 items-center hidden lg:block">|</div>
                   <div className="flex items-center">
-                    <FaRegBookmark size={18} color="#1D4ED8" /><span className="mx-1 font-medium">Categoría:</span>{articuloContenido.categoria}
+                    <FaRegBookmark size={18} color="#1D4ED8" /><span className="mx-1 font-normal">Categoría:</span>{articuloContenido.categoria}
                   </div>
-                  <div className="mx-2 items-center hidden lg:block">|</div>
+                  <div className="mx-1 items-center hidden lg:block">|</div>
                   <div className="flex items-center">
-                    <TbClockEdit size={22} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articuloContenido.fecha}
+                    <TbClockEdit size={22} color="#1D4ED8" /><span className="mx-1 font-normal">Fecha:</span>{articuloContenido.fecha}
                   </div>
                 </div>
                 {/* Datos del creador */}
@@ -62,30 +64,30 @@ const Article = () => {
               </header>
               <p>{articuloContenido.extracto}</p>
               {/* Botones de Navegación */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 my-6 gap-4 mt-20">
-                <Link to={`/blog/${linkAnterior}`} >
-                  <button className="text-slate-100 text-lg flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 px-3 py-6 rounded-lg hover:bg-blue-800 w-full">
-                    <FaArrowLeft className="mr-1" />Artículo Anterior
-                  </button>
-                </Link>
-                <Link to={`/blog/${linkPosterior}`} >
-                  <button className="text-slate-100 text-lg flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 px-3 py-6 rounded-lg hover:bg-blue-800 w-full">
-                    Siguiente Artículo<FaArrowRight className="ml-1" />
-                  </button>
-                </Link>
-                <Link to={"/blog"} >
-                  <button className="text-slate-100 text-lg flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-500 px-3 py-6 rounded-lg hover:bg-blue-800 w-full">
-                    <FaArrowRotateLeft className="mr-1" />Regresar al Blog
-                  </button>
-                </Link>
-              </div>
+              <ButtonContainer>
+                <ButtonScroll
+                  to={`/blog/${linkAnterior}`}
+                  name="Anterior"
+                  icono={<FaArrowLeft />}
+                />
+                <ButtonScroll
+                  to={`/blog/${linkPosterior}`}
+                  name="Siguiente"
+                  icono={<FaArrowRight />}
+                  reverse={'flex-row-reverse'}
+                  spanReverse={'ml-2 mr-0'}
+                />
+                <ButtonScroll
+                  to={`/blog`}
+                  name="Ver todos"
+                  icono={<FaArrowRotateLeft />}
+                />
+              </ButtonContainer>
               {/* Botones de Navegación */}
-
+              {/* Contenido */}
             </div>
-            {/* Contenido */}
+            {/*  Contenedor izquierdo */}
           </div>
-          {/*  Contenedor izquierdo */}
-
           {/* Contenedor Derecho */}
           <aside className={classes.contenedorDerecho} >
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
@@ -109,7 +111,7 @@ const Article = () => {
                           </div>
                         </div>
                         {/* Bubble */}
-                        <div id={`Bubble-${articulo.id}`} className="absolute -top-2 right-0 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500">{articulo.categoria}</div>
+                        <div id={`Bubble-${articulo.id}`} className="absolute -top-2 right-0 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
                         {/* Bubble */}
 
                       </article>

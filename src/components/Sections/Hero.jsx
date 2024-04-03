@@ -2,11 +2,13 @@ import HeroImage from '../../assets/Images/HeroImage.webp'
 import ButtonContainer from '../Templates/ButtonContainer'
 import { IoPersonOutline } from "react-icons/io5";
 import ButtonScroll from '../ButtonScroll';
+import { IoBookOutline } from "react-icons/io5";
+
 
 
 const Hero = () => {
   return (
-    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 h-auto flex items-center mt-20'>
+    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 h-auto flex items-center mt-20 h-[90vh] lg:min-h-[70vh] '>
 
       {/* Background Image */}
       <img
@@ -22,8 +24,8 @@ const Hero = () => {
 
       {/* Content Container */}
       <div id="heroContainer" className="mx-auto lg:max-w-screen-lg flex flex-col md:items-start z-10">
-        <div className="max-w-2xl lg:mx-0 mb-10 mx-5">
-          <h1 className="text-5xl font-bold text-white sm:text-4xl lg:text-5xl line-height mb-10">Diseño y Desarrollo Web</h1>
+        <div className="max-w-2xl lg:mx-0 mb-6 mx-5">
+          <h1 className="text-5xl font-bold text-white sm:text-4xl lg:text-5xl leading-snug mb-10">Diseño y Desarrollo Web</h1>
           <p className="mt-6 text-2xl leading-8 text-gray-300 line-height">
             Convierte tu visión en una realidad digital con nuestro servicio de diseño y desarrollo web profesional.
           </p>
@@ -32,7 +34,12 @@ const Hero = () => {
           <ButtonScroll
             icono={<IoPersonOutline size={21} />}
             name={"Sobre Mí"}
-            to={"about"}
+            to={"#about"}
+          />
+          <ButtonScroll
+            icono={<IoBookOutline size={21} />}
+            name={"Contacto"}
+            to={"#contact"}
           />
         </ButtonContainer>
         {/* Content Container */}

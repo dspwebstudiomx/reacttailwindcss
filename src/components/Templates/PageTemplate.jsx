@@ -18,7 +18,7 @@ const PageTemplate = ({ id, children, TituloPrincipal, background }) => {
         <Section className={`mx-auto ${background}`} id={id}>
           <Container>
             <h1 className="text-3xl mx-auto text-center mb-2">{TituloPrincipal}</h1>
-            <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mb-20 mx-auto text-center' />
+            <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mb-12 mx-auto text-center' />
             {children}
           </Container>
         </Section>

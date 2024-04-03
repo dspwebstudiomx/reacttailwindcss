@@ -2,6 +2,11 @@ import { useRef, useState } from 'react';
 import { FaRegEnvelope } from "react-icons/fa6"
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
+import Modal from './Modal';
+import Button from './Button';
+
+import { IoMdExit } from "react-icons/io";
+
 
 export default function ContactForm() {
 
@@ -90,23 +95,25 @@ export default function ContactForm() {
       >
         {({ errors, touched }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
+
+            {/* Fields */}
             <div className="flex flex-wrap justify-between gap-3">
-              <div className="shield flex flex-col lg:w-[50%] w-full">
+              <div className="flex flex-col lg:w-[50%] w-full">
                 <label htmlFor='user_name' className="mb-2">Nombre<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md text-slate-900 bg-slate-200 px-4 py-3 focus:border-2 border-blue-500"
+                  className="rounded-md text-slate-900 bg-slate-200 p-4 focus:border-2 border-blue-500"
                   type="text"
                   placeholder="John"
                   required
                 />
                 {touched.user_name && errors.user_name && <p className='mt-2 text-blue-400 text-xs'>* {errors.user_name}</p>}
               </div>
-              <div className="shield flex flex-col lg:w-[45%] w-full">
+              <div className="flex flex-col lg:w-[45%] w-full">
                 <label htmlFor='user_surname' className="mb-2">Apellido<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
+                  className="rounded-md text-slate-900 bg-slate-200 p-4"
                   id="user_surname"
                   name="user_surname"
                   placeholder="Doe"
@@ -117,10 +124,10 @@ export default function ContactForm() {
               </div>
             </div>
             <div className="flex flex-wrap justify-between gap-3">
-              <div className="shield flex flex-col lg:w-[50%] w-full">
+              <div className="flex flex-col lg:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
+                  className="rounded-md text-slate-900 bg-slate-200 p-4"
                   id="user_email"
                   name="user_email"
                   placeholder="johndoe@email.com"
@@ -130,10 +137,10 @@ export default function ContactForm() {
                 {touched.user_email && errors.user_email && <p className='mt-2 text-blue-400 text-xs'>* {errors.user_email}</p>}
 
               </div>
-              <div className="shield flex flex-col lg:w-[45%] w-full">
+              <div className="flex flex-col lg:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 px-4 py-3"
+                  className="rounded-md text-slate-900 bg-slate-200 p-4"
                   type="text"
                   name="user_phone"
                   id="user_phone"
@@ -143,34 +150,47 @@ export default function ContactForm() {
 
               </div>
             </div>
-            <div className="flex flex-col w-full mb-6">
+            <div className="flex flex-col w-full">
               <label htmlFor="message" className="mb-2">Mensaje<span className='text-blue-400 ml-1'>*</span></label>
               <textarea
                 type="text"
                 name="message"
                 id="message"
-                className="rounded-md text-slate-900 bg-slate-200 px-4 py-3 min-h-40 max-h-40"
+                className="rounded-md text-slate-900 bg-slate-200 p-4 h-40 max-h-40"
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
 
             </div>
-            <button type='submit' className="bg-gradient-to-r from-blue-500 to-blue-900  text-white rounded-md px-6 py-4 text-lg hover:bg-slate-700 sm:w-[45%] w-[100%] mx-auto flex items-center justify-center" >
-              <FaRegEnvelope className="mr-1" />
-              Enviar mensaje
-            </button>
+            {/* Fields */}
+
+            {/* Submit Button */}
+            <Button
+              texto={'Enviar mensaje'}
+              icono={<FaRegEnvelope />}
+              type={'submit'}
+            />
+            {/* Submit Button */}
+
+
+            {/* Modal */}
             {showModal &&
-              (<div id='modal' className='fixed inset-0 flex justify-center items-center z-0'>
-                <div id='modal-overlay' className='fixed inset-0 z-0'></div>
-                <div id='modal-window' className='fixed w-[85%] sm:w-[50%] lg:w-[400px] h-auto bg-slate-100 rounded-xl text-slate-900 flex flex-col items-center justify-center z-3 p-12 py-16 lg:p-8 border-blue-500 border-4 shadow-2xl'>
-                  <h1 className='text-center text-2xl sm:text-[16px] font-bold tracking-wider leading-snug'>Mensaje enviado satisfactoriamente</h1>
-                  <button onClick={() => setShowModal(!showModal)} className='rounded-lg text-white border-2  text-2xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] sm:w-[210px] h-[70px] mt-4'>Cerrar mensaje </button>
-                </div>
-              </div>)
+              <Modal>
+                <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
+                <Button
+                  texto='OK'
+                  icono={<IoMdExit />}
+                  onclick={() => setShowModal(false)}
+                  type={'button'}
+                />
+              </Modal>
             }
+            {/* Modal */}
+
           </Form>
-        )}
-      </Formik>
+        )
+        }
+      </Formik >
     </article >
   )
 }

@@ -25,6 +25,11 @@ function Navbar() {
       behavior: "smooth",
     });
   }
+  if (nav) {
+    document.body.classList.add('modal-active')
+  } else {
+    document.body.classList.remove('modal-active')
+  }
 
   return (
     <nav id="navbar" className={Styles.header} >
@@ -87,7 +92,7 @@ function Navbar() {
 
         {/* Menu mobile*/}
         <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-10 gap-9"}>
-          <ul className="flex flex-col gap-6">
+          <ul className="flex flex-col gap-12">
             <li>
               <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} id="inicio">Inicio</HashLink>
             </li>
