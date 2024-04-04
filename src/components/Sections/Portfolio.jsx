@@ -17,7 +17,7 @@ const Portfolio = () => {
       )
     }
   );
-  const classes = "grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12 place-items-center"
+  const classes = "grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-12 place-items-center mx-auto"
 
   return (
     <Section id="portfolio">

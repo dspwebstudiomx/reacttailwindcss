@@ -8,7 +8,7 @@ import { IoBookOutline } from "react-icons/io5";
 
 const Hero = () => {
   return (
-    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 h-[90vh] lg:min-h-[70vh] '>
+    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 h-auto lg:min-h-[70vh] '>
 
       {/* Background Image */}
       <img

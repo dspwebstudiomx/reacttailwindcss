@@ -37,7 +37,7 @@ export default function ContactForm() {
 
 
   return (
-    <article id="formulario" className="border-4  border-cyan-600 rounded-2xl px-8 py-10 pb-14 bg-slate-900  text-slate-100 ">
+    <article id="formulario" className="border-4  border-cyan-600 rounded-2xl px-8 py-10 pb-14 bg-slate-900  text-slate-100 w-full ">
       <Formik
         initialValues={{
           user_name: '',
@@ -95,6 +95,7 @@ export default function ContactForm() {
       >
         {({ errors, touched }) => (
           <Form ref={form} onSubmit={sendEmail} className="flex flex-col gap-8">
+            <h2 className="text-3xl mb-2 text-center lg:hidden">Formulario</h2>
 
             {/* Fields */}
             <div className="flex flex-wrap justify-between gap-3">
