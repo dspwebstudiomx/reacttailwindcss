@@ -19,11 +19,6 @@ const Article = () => {
   let articuloContenido = articulosBlog.find(articulo => articulo.id == id)
   let linkAnterior = parseInt(id) - 1
   let linkPosterior = parseInt(id) + 1
-  let articuloActualId = parseInt(id)
-
-  let prevButton = document.querySelector('#prevButton')
-
-  articuloActualId === 1 ? prevButton.classList.add("hidden") : prevButton.classList.remove('hidden')
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
