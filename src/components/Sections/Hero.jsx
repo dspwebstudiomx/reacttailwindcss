@@ -1,7 +1,7 @@
 import HeroImage from '../../assets/Images/HeroImage.webp'
 import ButtonContainer from '../Templates/ButtonContainer'
 import { IoPersonOutline } from "react-icons/io5";
-import ButtonScroll from '../ButtonScroll';
+import ButtonScroll from '../Atoms/Buttons/ButtonScroll';
 import { IoBookOutline } from "react-icons/io5";
 
 

@@ -1,9 +1,11 @@
+import { useRef } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import PropTypes from 'prop-types'
 
-const ButtonScroll = ({ name, icono, to, reverse, spanReverse }) => {
+const ButtonScroll = ({ id, name, icono, to, reverse, spanReverse, onclick }) => {
 
-  const classes = `rounded-lg text-white border-2  text-2xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] sm:w-[180px] h-[70px] ${reverse} mx-auto`
+  const buttonRef = useRef(null);
+  const classes = `rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[70px] ${reverse} mx-auto`
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
@@ -15,7 +17,7 @@ const ButtonScroll = ({ name, icono, to, reverse, spanReverse }) => {
   }
   return (
     <HashLink to={to} scroll={element => scrollWithOffset(element, 98)}>
-      <button type='button' className={classes}>
+      <button onClick={onclick} type='button' className={classes} ref={buttonRef} id={id}>
         <span className={`mr-2 ${spanReverse}`}>{icono}</span>
         {name}
       </button>
@@ -25,8 +27,11 @@ const ButtonScroll = ({ name, icono, to, reverse, spanReverse }) => {
 
 ButtonScroll.propTypes = {
   to: PropTypes.string,
+  id: PropTypes.string,
+  onclick: PropTypes.any,
+  className: PropTypes.string,
   icono: PropTypes.object,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   reverse: PropTypes.string,
   spanReverse: PropTypes.string
 };

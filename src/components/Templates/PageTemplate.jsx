@@ -1,10 +1,11 @@
-import ReturnButton from "../ReturnButton"
+import ReturnButton from "../Atoms/Buttons/ReturnButton"
 import Navbar from "../Sections/Navbar"
 import Footer from "../Sections/Footer"
 import PropTypes from "prop-types"
 import Section from "./Section"
 import Container from "./Container"
-import ToScrollSection from "../ToScrollSection";
+import ScrollToTop from "../Functions/ScrolltoTop"
+import ButtonScroll from "../Atoms/Buttons/ButtonScroll"
 
 
 const PageTemplate = ({ id, children, TituloPrincipal, background }) => {
@@ -13,7 +14,8 @@ const PageTemplate = ({ id, children, TituloPrincipal, background }) => {
       <header>
         <Navbar />
       </header>
-      <ToScrollSection />
+      <ScrollToTop />
+      <ButtonScroll />
       <main>
         <Section className={`mx-auto ${background}`} id={id}>
           <Container>

@@ -1,9 +1,9 @@
 import Container from "../Templates/Container"
+import Section from "../Templates/Section"
 import { FaHtml5, FaCss3, FaReact, FaWordpress, FaFigma } from "react-icons/fa6"
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaElementor } from "react-icons/fa";
 import { SiAdobexd } from "react-icons/si";
-import Section from "../Templates/Section"
 
 
 const Technologies = () => {

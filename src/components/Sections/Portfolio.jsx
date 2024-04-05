@@ -1,7 +1,7 @@
 import Section from "../Templates/Section";
 import { clientes } from "../../data";
 import Container from "../Templates/Container";
-import Card from "../Card"
+import Card from "../Molecules/Card"
 
 
 const Portfolio = () => {

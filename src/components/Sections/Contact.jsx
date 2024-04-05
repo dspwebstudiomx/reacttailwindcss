@@ -1,7 +1,7 @@
 import Container from "../Templates/Container"
-import ContactForm from "../ContactForm"
+import ContactForm from "../Molecules/ContactForm"
 import Section from "../Templates/Section"
-import SocialLinks from "../SocialLinks"
+import SocialLinks from "../Molecules/SocialLinks"
 
 const Contact = () => {
   return (
@@ -14,7 +14,7 @@ const Contact = () => {
             ¡Hagamos que suceda! ¿Listo para llevar tu visión al siguiente nivel? Estoy aquí para ayudarte.
             <strong>¡Contáctame y comencemos a crear algo increíble juntos!</strong>
           </p>
-          <div className="mt-20 mx-auto">
+          <div className="mt-20">
             <SocialLinks />
           </div>
         </div>

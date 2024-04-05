@@ -8,7 +8,7 @@ import Portfolio from '../components/Sections/Portfolio';
 import Technologies from '../components/Sections/Technologies';
 import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
-import ReturnButton from '../components/ReturnButton';
+import ReturnButton from '../components/Atoms/Buttons/ReturnButton';
 
 const HomePage = () => {
   return (

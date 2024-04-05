@@ -3,8 +3,7 @@ import { FaRegEnvelope } from "react-icons/fa6"
 import { Formik, Field, Form } from 'formik';
 import emailjs from '@emailjs/browser';
 import Modal from './Modal';
-import Button from './Button';
-
+import Button from '../Atoms/Buttons/Button';
 import { IoMdExit } from "react-icons/io";
 
 
@@ -179,7 +178,7 @@ export default function ContactForm() {
               <Modal>
                 <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
                 <Button
-                  texto='OK'
+                  texto='Cerrar'
                   icono={<IoMdExit />}
                   onclick={() => setShowModal(false)}
                   type={'button'}

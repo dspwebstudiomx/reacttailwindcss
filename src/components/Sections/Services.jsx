@@ -1,7 +1,7 @@
 import { servicios } from '../../data'
 import Section from '../Templates/Section'
 import Container from '../Templates/Container'
-import TitleH2 from '../TitleH2'
+import TitleH2 from '../Atoms/Headings/TitleH2'
 import Lottie from 'lottie-react'
 
 

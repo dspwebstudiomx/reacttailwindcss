@@ -1,26 +1,24 @@
-
+import { useParams, Link } from "react-router-dom"
 import Section from "../components/Templates/Section"
 import Container from "../components/Templates/Container"
 import Navbar from "../components/Sections/Navbar"
 import Footer from "../components/Sections/Footer"
-import { articulosBlog } from "../data"
 import Spacing from "../components/Sections/Spacing"
-import { useParams, Link } from "react-router-dom"
-import ReturnButton from "../components/ReturnButton"
+import ReturnButton from "../components/Atoms/Buttons/ReturnButton"
+import ButtonScroll from "../components/Atoms/Buttons/ButtonScroll"
+import ButtonContainer from "../components/Templates/ButtonContainer"
+import { articulosBlog } from "../data"
 import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
-import ButtonScroll from '../components/ButtonScroll'
-import ButtonContainer from "../components/Templates/ButtonContainer"
 
 const Article = () => {
 
   let { id } = useParams()
   let articuloContenido = articulosBlog.find(articulo => articulo.id == id)
-
-  const linkAnterior = parseInt(id) - 1;
-  const linkPosterior = parseInt(id) + 1;
+  let linkAnterior = parseInt(id) - 1
+  let linkPosterior = parseInt(id) + 1
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
@@ -69,19 +67,24 @@ const Article = () => {
                   to={`/blog/${linkAnterior}`}
                   name="Anterior"
                   icono={<FaArrowLeft />}
+                  id="prevButton"
                 />
+
                 <ButtonScroll
                   to={`/blog/${linkPosterior}`}
                   name="Siguiente"
                   icono={<FaArrowRight />}
-                  reverse={'flex-row-reverse'}
-                  spanReverse={'ml-2 mr-0'}
+                  reverse={"flex-row-reverse"}
+                  spanReverse={"ml-2 mr-0"}
+                  id="nextButton"
                 />
+
                 <ButtonScroll
                   to={`/blog`}
                   name="Ver todos"
                   icono={<FaArrowRotateLeft />}
                 />
+
               </ButtonContainer>
               {/* Botones de Navegación */}
               {/* Contenido */}
@@ -100,7 +103,7 @@ const Article = () => {
                       <article className="relate mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex w-[75vw] sm:flex-col sm:w-[100%]">
                         <img src={articulo.imagen} alt="image" className="rounded-t-md w-1/3 sm:w-full object-cover md:h-[150px] " />
                         <div className="px-6 py-10 bg-slate-200 flex flex-col gap-3 rounded-b-md w-2/3 sm:w-full min-h-[180px] justify-start overflow-hidden">
-                          <h3 className='text-md font-semibold text-blue-800 leading-tight'>{articulo.titulo}</h3>
+                          <h3 className="text-lg text-blue-800 leading-tight">{articulo.titulo}</h3>
                           <div className="mt-3 flex flex-col gap-2">
                             <div className="flex items-center text-xs">
                               <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}

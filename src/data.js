@@ -137,17 +137,7 @@ export const articulosBlog = [
     imagen: Blog3Image,
     autor: "dspwebstudio",
     fecha: "23/03/2024",
-    categoria: "Diseño Web",
-  },
-  {
-    id: "4",
-    titulo: "Test",
-    extracto:
-      "El diseño web es una disciplina esencial en el desarrollo de sitios y aplicaciones web, que permite crear interfaces atractivas y funcionales para los usuarios...",
-    imagen: Blog3Image,
-    autor: "dspwebstudio",
-    fecha: "23/03/2024",
-    categoria: "SEO",
+    categoria: "Herramientas",
   },
 ];
 
