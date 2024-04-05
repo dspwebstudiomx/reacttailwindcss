@@ -12,6 +12,7 @@ import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
+import { HashLink } from "react-router-hash-link"
 
 const Article = () => {
 
@@ -19,12 +20,23 @@ const Article = () => {
   let articuloContenido = articulosBlog.find(articulo => articulo.id == id)
   let linkAnterior = parseInt(id) - 1
   let linkPosterior = parseInt(id) + 1
+  let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
+  let primerContenido = articulosBlog[0].id
+
+  const scrollWithOffset = (element, offset) => {
+    const elementPosition = element.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
     container: "flex justify-between gap-2 flex-wrap py-20",
     contenedorIzquierdo: "sm:w-[53%] flex flex-col min-h-[100vh] w-full place-content-between",
-    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800"
+    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800 max-h-[1070px]"
   }
   return (
     <div id="scrollTop">
@@ -62,29 +74,25 @@ const Article = () => {
               </header>
               <p>{articuloContenido.extracto}</p>
               {/* Botones de Navegación */}
-              <ButtonContainer>
-                <ButtonScroll
-                  to={`/blog/${linkAnterior}`}
-                  name="Anterior"
-                  icono={<FaArrowLeft />}
-                  id="prevButton"
-                />
+              <ButtonContainer distancia="mt-12">
 
-                <ButtonScroll
-                  to={`/blog/${linkPosterior}`}
-                  name="Siguiente"
-                  icono={<FaArrowRight />}
-                  reverse={"flex-row-reverse"}
-                  spanReverse={"ml-2 mr-0"}
-                  id="nextButton"
-                />
-
+                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)}>
+                  <button type='button' className={articuloContenido.id === primerContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[70px] mx-auto'}>
+                    <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
+                    Anterior
+                  </button>
+                </HashLink >
+                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)}>
+                  <button type='button' className={articuloContenido.id === ultimoContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[70px] mx-auto flex-row-reverse'}>
+                    <span className={`ml-2`}><FaArrowRight /></span>
+                    Siguiente
+                  </button>
+                </HashLink >
                 <ButtonScroll
                   to={`/blog`}
                   name="Ver todos"
                   icono={<FaArrowRotateLeft />}
                 />
-
               </ButtonContainer>
               {/* Botones de Navegación */}
               {/* Contenido */}
