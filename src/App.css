@@ -49,3 +49,10 @@ html {
 body.modal-active {
   overflow-y: hidden;
 }
+
+.categories__container {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #e5e1e1, #bdcee1);
+  box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #CBD5E2;
+}

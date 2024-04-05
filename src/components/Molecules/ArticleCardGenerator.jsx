@@ -11,7 +11,7 @@ const articleCardGenerator = ({ articulos }) => {
             <article className="relate mx-auto border-1 border-gray-400 shadow-xl animate__animated animate__flipInY flex w-[75vw] sm:flex-col sm:w-[100%] rounded-xl">
               <img src={articulo.imagen} alt="image" className="w-1/3 sm:w-full object-cover md:h-[150px] rounded-tl-xl rounded-bl-xl sm:rounded-bl-none sm:rounded-tr-xl" />
               <div className="px-6 py-10 bg-slate-200 flex flex-col gap-3  w-2/3 sm:w-full min-h-[240px] justify-center overflow-hidden rounded-br-xl sm:rounded-bl-xl ">
-                <h2 className='text-xl md:text-[1.1em] font-normal  text-blue-800 leading-tight'>{articulo.titulo}</h2>
+                <h2 className='text-xl md:text-[1em] font-normal  text-blue-800 leading-tight'>{articulo.titulo}</h2>
                 <div className="mt-3 flex flex-col gap-2">
                   <div className="flex items-center text-base text-slate-800">
                     <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}

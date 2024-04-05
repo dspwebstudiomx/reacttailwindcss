@@ -4,7 +4,7 @@ import Footer from "../Sections/Footer"
 import PropTypes from "prop-types"
 import Section from "./Section"
 import Container from "./Container"
-import ScrollToTop from "../Functions/ScrolltoTop"
+import ScrollToTop from "../../Functions/ScrolltoTop"
 import ButtonScroll from "../Atoms/Buttons/ButtonScroll"
 
 

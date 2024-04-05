@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import ScrollToTop from './components/Functions/ScrolltoTop';
+import ScrollToTop from './Functions/ScrolltoTop';
 import Article from './pages/Article';
 
 export default function App() {
