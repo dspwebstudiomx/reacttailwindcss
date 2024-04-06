@@ -12,7 +12,7 @@ const Portfolio = () => {
           key={cliente.cliente}
           backgroundImage={cliente.backgroundImage}
           cliente={cliente.cliente}
-          href={cliente.href} target="_blank" alt={cliente.alt}
+          href={cliente.href} target="_blank" alt={cliente.altPortolio}
         />
       )
     }

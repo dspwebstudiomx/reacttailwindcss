@@ -59,10 +59,11 @@ export const clientes = [
   {
     id: 1,
     cliente: "Bec Arquitectos",
-    alt: "BEC Arquitectos",
+    alt: "BEC Arquitectos logo",
     href: "https://arqbec.com",
     logo: BecArquitectosLogo,
     backgroundImage: BecArquitectosBgImage,
+    altPortolio: "Imagen del sitio web - BEC Arquitectos",
   },
   {
     id: 2,
@@ -71,6 +72,7 @@ export const clientes = [
     href: "https://rosalavanda.com.mx",
     logo: RosaLavandaLogo,
     backgroundImage: RosaLavandaBgImage,
+    altPortolio: "Imagen del sitio web - Rosa Lavanda",
   },
   {
     id: 3,
@@ -79,6 +81,7 @@ export const clientes = [
     href: "https://fabiolabeltran.dspwebstudio.com",
     logo: FabiolaBeltranLogo,
     backgroundImage: FabiolaBeltranBgImage,
+    altPortolio: "Imagen del sitio web - Fabiola Beltrán",
   },
   {
     id: 4,
@@ -87,6 +90,7 @@ export const clientes = [
     href: "https://equityclaimslux.com",
     logo: EquityClaimsLuxLogo,
     backgroundImage: EquityClaimsLuxBgImage,
+    altPortolio: "Imagen del sitio web - Equity Claims Lux",
   },
   {
     id: 5,
@@ -95,6 +99,7 @@ export const clientes = [
     href: "https://equityclaimsitalia.com",
     logo: EquityClaimsItaliaLogo,
     backgroundImage: EquityClaimsItaliaBgImage,
+    altPortolio: "Imagen del sitio web - Equity Claims Italia",
   },
   {
     id: 6,
@@ -103,6 +108,7 @@ export const clientes = [
     href: "https://mezcalpasiones.com",
     logo: PasionesdelAlmaLogo,
     backgroundImage: PasionesdelAlmaBgImage,
+    altPortolio: "Imagen del sitio web - Mezcal Pasiones del Alma",
   },
 ];
 

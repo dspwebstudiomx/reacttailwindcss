@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../../assets/Logos/dsp-white.png"
 import Spacing from "./Spacing";
+import SocialLink from "../Atoms/Social/SocialLink";
 
 function Navbar() {
 
@@ -69,16 +70,18 @@ function Navbar() {
 
           {/* Social */}
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
-            <li>
-              <a href="https:/www.facebook.com/dspwebstudio" target="_blank" className=" hover:text-blue-500" aria-label="facebook">
-                <FaFacebookF size={32} />
-              </a>
-            </li>
-            <li>
-              <a href="https:/www.instagram.com/dspwebstudio" target="_blank" className=" hover:text-blue-500" aria-label="instagram">
-                <FaInstagram size={32} />
-              </a>
-            </li>
+            <SocialLink
+              href={'https://www.facebook.com/dspwebstudio'}
+              icono={<FaFacebookF size={32} className='text-white hover:text-blue-600 hover:scale-110' />}
+              ariaLabel={'Accede a mi  cuenta de Facebook'}
+              title={'Visita mi página en Facebook'}
+            />
+            <SocialLink
+              href={'https://www.instagram.com/dspwebstudio'}
+              icono={<FaInstagram size={32} className='text-white hover:text-blue-600 hover:scale-110' />}
+              ariaLabel={'Accede a mi  cuenta de Instagram'}
+              title="Visita mi perfil de Instagram"
+            />
           </ul>
           {/* Social */}
         </div>
@@ -91,12 +94,11 @@ function Navbar() {
         {/* Menu button */}
 
         {/* Menu mobile*/}
-        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-10 gap-9"}>
-          <ul className="flex flex-col gap-12">
+        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-10 gap-4"}>
+          <ul className="flex flex-col gap-8">
             <li>
               <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} id="inicio">Inicio</HashLink>
               <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
-
             </li>
             <li>
               <HashLink to="/#about" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Sobre mi</HashLink>
@@ -128,12 +130,18 @@ function Navbar() {
           </ul>
           <div id="mt-4 mb-12 flex w-[75vw] justify-center items-center">
             <ul className="flex gap-12">
-              <li>
-                <Link to={"https:/www.facebook.com/dspwebstudio"} target="_blank" rel="noreferrer" aria-label="Facebook"><FaFacebookF size={48} /></Link>
-              </li>
-              <li>
-                <Link to={"https:/www.instagram.com/dspwebstudio"} target="_blank" rel="noreferrer" aria-label="Instagram"><FaInstagram size={48} /></Link>
-              </li>
+              <SocialLink
+                href={'https://www.facebook.com/dspwebstudio'}
+                icono={<FaFacebookF size={42} className='text-white hover:text-blue-900 hover:scale-110' />}
+                ariaLabel={'Accede a mi  cuenta de Facebook'}
+                title={'Visita mi página en Facebook'}
+              />
+              <SocialLink
+                href={'https://www.instagram.com/dspwebstudio'}
+                icono={<FaInstagram size={42} className='text-white hover:text-blue-900 hover:scale-110' />}
+                ariaLabel={'Accede a mi  cuenta de Instagram'}
+                title="Visita mi perfil de Instagram"
+              />
             </ul>
           </div>
         </div>
