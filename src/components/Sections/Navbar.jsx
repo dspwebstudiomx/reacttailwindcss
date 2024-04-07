@@ -38,7 +38,7 @@ function Navbar() {
 
         {/* Logo */}
         <HashLink to="/#inicio" className="cursor-pointer" scroll={element => scrollWithOffset(element, 98)}>
-          <img id="logo" src={logo} alt="logo" className="w-[120px]" />
+          <img id="logo" src={logo} alt=" dspwebstudio logo" className="w-[120px]" />
         </HashLink>
         {/* Logo */}
 

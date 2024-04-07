@@ -26,11 +26,11 @@ const Footer = () => {
         className="flex flex-col flex-wrap p-4 md:p-10 lg:p-12 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-900  w-full justify-center">
 
         {/* Logo & Slogan Section */}
-        <div className="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left lg:w-1/3">
-          <a className="flex items-center justify-center font-medium text-blue-500 title-font md:justify-start">
-            <img src={Logo} alt="dspwebstudio logo"
-              width={150} />
-          </a>
+        <div className="flex-shrink-0 w-64 mx-auto md:mx-0 sm:text-left lg:w-1/3">
+
+          <HashLink to="/#inicio" className="cursor-pointer" scroll={element => scrollWithOffset(element, 98)}>
+            <img id="logo" src={Logo} alt="dspwebstudio logo" className="w-[150px] mx-auto" />
+          </HashLink>
           <p className="mt-2 text-lg">Generando oportunidades para tu negocio.</p>
         </div>
         {/* Logo & Slogan Section */}
