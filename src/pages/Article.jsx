@@ -77,13 +77,13 @@ const Article = () => {
               <ButtonContainer distancia="mt-12">
 
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)}>
-                  <button type='button' className={articuloContenido.id === primerContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[70px] mx-auto'}>
+                  <button type='button' className={articuloContenido.id === primerContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)}>
-                  <button type='button' className={articuloContenido.id === ultimoContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[70px] mx-auto flex-row-reverse'}>
+                  <button type='button' className={articuloContenido.id === ultimoContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto flex-row-reverse'}>
                     <span className={`ml-2`}><FaArrowRight /></span>
                     Siguiente
                   </button>
