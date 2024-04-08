@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
 const ButtonContainer = ({ children, distancia }) => {
-  const classes = `flex flex-col md:flex-row gap-4 mx-auto md:ml-0 ${distancia}`
   return (
-    <div className={classes}>
+    <div className={`flex flex-wrap gap-8 sm:gap-6 justify-center items-center ${distancia}`}>
       {children}
     </div>
   )

@@ -13,7 +13,7 @@ const Services = () => {
         <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[7%] skew-x-12 mb-20 mx-auto text-center mt-1' />
         {servicios.map((servicio) => {
           return (
-            <article key={servicio.id} className='flex flex-col mt-2 gap-32 w-full md:w-[80%] mx-auto place-items-center'>
+            <article key={servicio.id} id={servicio.idService} className='flex flex-col mt-2 gap-32 w-full md:w-[80%] mx-auto place-items-center'>
               <div className='flex flex-col sm:flex-row'>
                 <div className='flex flex-col gap-6 justify-center'>
                   <h3 className='text-3xl font-semibold'><span className='text-blue-700 dark:text-blue-500 mr-3 '>{servicio.id}.</span><span className='first-letter:text-blue-700'>{servicio.serviceName}</span></h3>

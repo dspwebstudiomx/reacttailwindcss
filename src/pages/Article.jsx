@@ -13,6 +13,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
+import { FaHome } from "react-icons/fa"
 
 const Article = () => {
 
@@ -34,9 +35,9 @@ const Article = () => {
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
-    container: "flex justify-between gap-2 flex-wrap py-20",
-    contenedorIzquierdo: "sm:w-[53%] flex flex-col min-h-[100vh] w-full place-content-between",
-    contenedorDerecho: "sm:w-[40%] lg:w-[320px] flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800 max-h-[1070px]"
+    container: "grid xl:grid-cols-2 justify-between gap-20 xl:gap-32 flex-wrap py-20",
+    contenedorIzquierdo: "flex flex-col min-h-[100vh] w-full place-content-between",
+    contenedorDerecho: "flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800 max-h-[1070px]"
   }
   return (
     <div id="scrollTop">
@@ -65,6 +66,7 @@ const Article = () => {
                   </div>
                 </div>
                 {/* Datos del creador */}
+
                 {/* Imagen del Artículo */}
                 <figure className="mb-12 text-sm">
                   <img src={articuloContenido.imagen} alt="imagen de blog" className="object-cover w-full h-[250px]" />
@@ -73,9 +75,9 @@ const Article = () => {
                 {/* Imagen del Artículo */}
               </header>
               <p>{articuloContenido.extracto}</p>
+
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-12">
-
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)}>
                   <button type='button' className={articuloContenido.id === primerContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
@@ -93,6 +95,12 @@ const Article = () => {
                   name="Ver todos"
                   icono={<FaArrowRotateLeft />}
                 />
+                <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
+                  <button type='button' className={'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
+                    <span className={`mr-2`}><FaHome /></span>
+                    Inicio
+                  </button>
+                </HashLink >
               </ButtonContainer>
               {/* Botones de Navegación */}
               {/* Contenido */}
@@ -103,7 +111,7 @@ const Article = () => {
           <aside className={classes.contenedorDerecho} >
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
             <Spacing distance="mb-0" />
-            <div className="flex gap-8 flex-col">
+            <div className="flex gap-12 xl:flex-col p-8">
               {articulosBlog.slice(-2).reverse().map(
                 (articulo) => {
                   return (

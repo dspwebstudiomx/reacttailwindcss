@@ -9,6 +9,7 @@ import Technologies from '../components/Sections/Technologies';
 import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
 import ReturnButton from '../components/Atoms/Buttons/ReturnButton';
+import Banner from '../components/Sections/Banner'
 
 const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ const HomePage = () => {
       </header>
       <main>
         <Hero />
+        <Banner />
         <About />
         <Technologies />
         <Services />

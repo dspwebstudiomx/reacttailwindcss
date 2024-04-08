@@ -27,6 +27,7 @@ import {
 export const servicios = [
   {
     id: 1,
+    idService: "webDesign",
     serviceName: "Diseño Web",
     serviceDescription:
       "Transformo tus ideas en una experiencia web impresionante. Diseño web a medida, moderno y funcional que cautivará a tus visitantes.",
@@ -34,6 +35,7 @@ export const servicios = [
   },
   {
     id: 2,
+    idService: "webDevelopment",
     serviceName: "Desarrollo Web",
     serviceDescription:
       "Convierto tu visión en un sitio web interactivo y potente. Desarrollo web personalizado, optimizado y adaptado a tus necesidades. Juntos, llevaremos tu presencia en línea al siguiente nivel.",
@@ -41,6 +43,7 @@ export const servicios = [
   },
   {
     id: 3,
+    idService: "optimization",
     serviceName: "Optimización",
     serviceDescription:
       "Mejore el rendimiento y la experiencia de usuario de tu sitio web con el servicio de Optimización Web. Implemento técnicas avanzadas para aumentar velocidad, usabilidad y conversiones, potenciando tu presencia en línea.",
@@ -48,6 +51,7 @@ export const servicios = [
   },
   {
     id: 4,
+    idService: "manteinance",
     serviceName: "Mantenimiento",
     serviceDescription:
       "Mantén tu sitio web actualizado, seguro y funcionando sin problemas. Mi servicio de mantenimiento web te brinda tranquilidad y tiempo para enfocarte en tu negocio principal. ¡Cuenta conmigo para cuidar de tu presencia en línea!",
