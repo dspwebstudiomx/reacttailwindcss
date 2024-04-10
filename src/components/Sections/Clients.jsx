@@ -7,22 +7,18 @@ const Clients = () => {
 
   const containerClasses =
     "grid grid-cols-2 sm:grid-cols-3 lg:gap-16 items-center justify-evenly gap-8";
-
-  const clientListDisplay =
-    clientes.map(
-      (cliente) => {
-        return (
-          <a key={cliente.id} href={cliente.href} target="_blank" alt={cliente.alt}>
-            <img src={cliente.logo} alt={cliente.cliente} className=" w-32 h-auto m-auto animate_animated animate__swing object-cover" loading="lazy" />
-          </a>
-        )
-      }
-    );
-
   return (
-    <Section id="clientes" className="bg-gradient-to-r from-slate-700 to-slate-900 w-full px-4">
+    <Section id="clients" className="bg-gradient-to-r from-slate-700 to-slate-900 w-full px-4">
       <Container className={containerClasses}>
-        {clientListDisplay}
+        {clientes.map(
+          cliente => {
+            return (
+              <a key={cliente.id} href={cliente.href} target="_blank" alt={cliente.alt}>
+                <img src={cliente.logo} alt={cliente.cliente} className=" w-32 h-auto m-auto animate_animated animate__swing object-cover" loading="lazy" />
+              </a>
+            )
+          }
+        )}
       </Container>
     </Section>
   )

@@ -5,7 +5,7 @@ const Card = ({ backgroundImage, cliente, alt, href }) => {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer">
 
-      <article id={`card-${cliente}`} className='card relative mx-auto overflow-hidden w-[300px] sm:w-[340px] lg:w-[360px] xl:w-[320px] z-0 h-[190px] lg:h-[240px] rounded-lg border-2 border-slate-800 shadow-lg shadow-slate-600 transition-shadow animate__animated animate__bounceIn duration-1000 animate__slower delay-1000'>
+      <article id={`card-${cliente}`} className='card relative mx-auto overflow-hidden w-[340px] alg:w-[360px] xl:w-[320px] z-0 h-[190px] lg:h-[240px] rounded-lg border-2 border-slate-800 shadow-lg shadow-slate-600 transition-shadow animate__animated animate__bounceIn duration-1000 animate__slower delay-1000'>
 
         {/* Background Image */}
         <img

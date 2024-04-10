@@ -10,6 +10,7 @@ import Contact from '../components/Sections/Contact';
 import Footer from '../components/Sections/Footer';
 import ReturnButton from '../components/Atoms/Buttons/ReturnButton';
 import Banner from '../components/Sections/Banner'
+import Testimonials from "../components/Sections/Testimonials";
 
 const HomePage = () => {
   return (
@@ -25,6 +26,7 @@ const HomePage = () => {
         <Services />
         <Clients />
         <Portfolio />
+        <Testimonials />
         <Contact />
         <ReturnButton />
       </main>

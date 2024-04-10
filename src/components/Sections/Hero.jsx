@@ -4,8 +4,6 @@ import { IoPersonOutline } from "react-icons/io5";
 import ButtonScroll from '../Atoms/Buttons/ButtonScroll';
 import { IoBookOutline } from "react-icons/io5";
 
-
-
 const Hero = () => {
   return (
     <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 min-h-fit lg:min-h-[70vh] xl:px-0'>

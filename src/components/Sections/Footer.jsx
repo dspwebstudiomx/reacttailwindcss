@@ -26,19 +26,19 @@ const Footer = () => {
         className='flex flex-wrap p-4 md:p-10 lg:p-12 xl:px-40 xl:py-20 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-900  w-full justify-center'>
 
         {/* Logo & Slogan Section */}
-        <div className='flex-shrink-0 w-full mx-auto md:mx-0 md:text-left text-center lg:w-1/4 mb-8'>
+        <div className='flex-shrink-0 w-full md:text-left text-center lg:w-1/4 mb-8'>
 
           <HashLink to='/#inicio' className='cursor-pointer' scroll={element => scrollWithOffset(element, 98)}>
-            <img id='logo' src={Logo} alt='dspwebstudio logo' className='w-[150px] mx-auto md:ml-auto' />
+            <img id='logo' src={Logo} alt='dspwebstudio logo' className='w-[150px] mx-auto lg:m-0' />
           </HashLink>
-          <p className='mt-2 text-lg'>Generando oportunidades para tu negocio.</p>
+          <p className='mt-2 text-lg text-center lg:text-left'>Generando oportunidades para tu negocio.</p>
         </div>
         {/* Logo & Slogan Section */}
 
         {/* Columns Sections */}
 
         {/* Sections */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Secciones</h2>
             <nav className='mb-10 list-none flex flex-col'>
@@ -55,9 +55,9 @@ const Footer = () => {
                 <li>
                   <HashLink to='/#portfolio' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>Portafolio</HashLink>
                 </li>
-                <li>
+                {/* <li>
                   <Link to='/blog' className={Styles.a}>Blog</Link>
-                </li>
+                </li> */}
                 <li>
                   <Link to='/contacto' className={Styles.a}>Contacto</Link>
                 </li>
@@ -84,7 +84,7 @@ const Footer = () => {
         {/* Sections */}
 
         {/* Services */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
             <nav className='mb-10 list-none flex flex-col'>
@@ -108,13 +108,13 @@ const Footer = () => {
         {/* Services */}
 
         {/* Policy */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-full'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-full  md:w-1/3'>
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
             <nav className='mb-10 list-none flex flex-col'>
               <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base'>
                 <li>
-                  <Link to={'/policy'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
+                  <Link to={'/politica-privacidad'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
                     Política de privacidad
                   </Link>
                 </li>

@@ -9,7 +9,7 @@ const Section = ({ id, children, className }) => {
 }
 
 Section.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.node.isRequired
 }

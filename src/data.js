@@ -1,12 +1,10 @@
 import BecArquitectosLogo from "./assets/Logos/BecArquitectos.png";
 import RosaLavandaLogo from "./assets/Logos/RosaLavanda.png";
-import FabiolaBeltranLogo from "./assets/Logos/FabiolaBeltranHS.png";
 import EquityClaimsLuxLogo from "./assets/Logos/EquityClaimsLux.png";
 import EquityClaimsItaliaLogo from "./assets/Logos/EquityClaimsItalia.png";
 import PasionesdelAlmaLogo from "./assets/Logos/PasionesdelAlma.png";
 import BecArquitectosBgImage from "./assets/Images/BecArquitectosSite.webp";
 import RosaLavandaBgImage from "./assets/Images/RosaLavandaSite.webp";
-import FabiolaBeltranBgImage from "./assets/Images/FabiolaBeltranSite.webp";
 import EquityClaimsLuxBgImage from "./assets/Images/EquityClaimsLuxSite.webp";
 import EquityClaimsItaliaBgImage from "./assets/Images/EquityClaimsItaliaSite.webp";
 import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
@@ -17,6 +15,10 @@ import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json"
 import CodeDebugging from "./assets/JSON/code-debugging.json";
 import UsabilityTesting from "./assets/JSON/usability-testing.json";
 import MobileApplicationTesting from "./assets/JSON/mobile-application-testing.json";
+import rosalavandaTestimonialLogo from "./assets/Logos/TestimonialLogo/rosalavanda.png";
+import becTestimonialLogo from "./assets/Logos/TestimonialLogo/bec.jpg";
+import equityclaimsluxTestimonialLogo from "./assets/Logos/TestimonialLogo/equityclaimslux.jpg";
+import mezcalpasionesTestimonialLogo from "./assets/Logos/TestimonialLogo/mezcalpasiones.png";
 import {
   FaEnvelope,
   FaFacebookF,
@@ -80,15 +82,6 @@ export const clientes = [
   },
   {
     id: 3,
-    cliente: "Fabiola Beltrán",
-    alt: "Fabiola Beltrán logo",
-    href: "https://fabiolabeltran.dspwebstudio.com",
-    logo: FabiolaBeltranLogo,
-    backgroundImage: FabiolaBeltranBgImage,
-    altPortolio: "Imagen del sitio web - Fabiola Beltrán",
-  },
-  {
-    id: 4,
     cliente: "Equity Claims Lux",
     alt: "Equity Claims Lux logo",
     href: "https://equityclaimslux.com",
@@ -97,7 +90,7 @@ export const clientes = [
     altPortolio: "Imagen del sitio web - Equity Claims Lux",
   },
   {
-    id: 5,
+    id: 4,
     cliente: "Equity Claims Italia",
     alt: "Equity Claims Italia logo",
     href: "https://equityclaimsitalia.com",
@@ -106,7 +99,7 @@ export const clientes = [
     altPortolio: "Imagen del sitio web - Equity Claims Italia",
   },
   {
-    id: 6,
+    id: 5,
     cliente: "Mezcal Pasiones del Alma",
     alt: "Mezcal Pasiones del Alma logo",
     href: "https://mezcalpasiones.com",
@@ -179,5 +172,44 @@ export const socialLinks = [
     href: "https://wa.me/+524439188025",
     icono: FaWhatsapp,
     texto: "dspwebstudio",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    nombre: "Aldo",
+    empresa: "BEC Arquitectos",
+    testimonio:
+      "Daniel escuchó nuestras ideas y supo exactamente cómo consolidarlas en la propuesta para nuestro sitio web. Trabajar con él fue sencillo, rápido y eficiente.",
+    hyperlink: "https://arqbec.com",
+    imagen: becTestimonialLogo,
+  },
+  {
+    id: 2,
+    nombre: "Hilse",
+    empresa: "Rosa Lavanda",
+    testimonio:
+      "Nuestra experiencia con Daniel ha sido muy buena, muy paciente, el trabajo en tiempo y forma, súper dedicado y siempre al pendiente de todas nuestras necesidades. Amamos cómo quedó nuestro e-commerce, ¡Muchas gracias Dani!",
+    hyperlink: "https://rosalavanda.com.mx",
+    imagen: rosalavandaTestimonialLogo,
+  },
+  {
+    id: 3,
+    nombre: "Thierry",
+    empresa: "Equity Claims Lux",
+    testimonio:
+      "Daniel has perfectly captured the concept of our financial firm and translated  accurately into a very effective and attractive website. His responsive and wise contributions, pleased all our partners worldwide. Daniel is a professional very appreciated for his technical knowledge and his well grounded advice.",
+    hyperlink: "https://equityclaimslux.com",
+    imagen: equityclaimsluxTestimonialLogo,
+  },
+  {
+    id: 4,
+    nombre: "Abigail",
+    empresa: "Mezcal Pasiones del Alma",
+    testimonio:
+      "Desde un inicio nos convenció su profesionalismo y disposición para escuchar nuestras ideas, inquietudes y dudas. Siempre fue proactivo y eso ayudó mucho para que realizáramos un trabajo en conjunto de una manera fácil y grata en tiempo y forma.",
+    hyperlink: "https://mezcalpasiones.com",
+    imagen: mezcalpasionesTestimonialLogo,
   },
 ];
