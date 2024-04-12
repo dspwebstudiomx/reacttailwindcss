@@ -4,11 +4,11 @@ import 'animate.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
-// import Blog from "./pages/Blog";
+import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import ScrollToTop from './Functions/ScrolltoTop';
 import Policy from './pages/Policy';
-// import Article from './pages/Article';
+import Article from './pages/Article';
 
 export default function App() {
 
@@ -17,11 +17,11 @@ export default function App() {
       <ScrollToTop>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* <Route path="/blog" element={<Blog />} /> */}
+          <Route path="/blog" element={<Blog />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/politica-privacidad" element={<Policy />} />
           <Route path="*" element={<NotFound />} />
-          {/* <Route path="/blog/:id" element={<Article />} /> */}
+          <Route path="/blog/:id" element={<Article />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
