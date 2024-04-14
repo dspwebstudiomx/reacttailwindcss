@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Testimonial = ({ id, nombre, empresa, imagen, testimonio, hyperlink }) => {
   return (
-    <article key={id} className='border-blue-900 border-2 rounded-xl p-6 flex flex-col gap-5 bg-slate-100 justify-center shadow-2xl animate_animated animate__bounceIn'>
+    <article key={id} className='border-blue-900 border-2 rounded-xl p-6 flex flex-col gap-5 bg-slate-200 justify-center shadow-2xl animate_animated animate__bounceIn'>
       <p className='leading-5 flex'>
         <span>
           <FaQuoteLeft size={16} className='text-blue-800 mr-2' />
