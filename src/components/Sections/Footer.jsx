@@ -61,21 +61,10 @@ const Footer = () => {
                 <li>
                   <Link to='/contacto' className={Styles.a}>Contacto</Link>
                 </li>
-              </ul>
-            </nav>
-          </div>
-          <div className='px-4 w-1/2 hidden'>
-            <h2 className='mb-3 text-lg font-medium tracking-widest text-blue-500 uppercase title-font'>Support</h2>
-            <nav className='mb-10 list-none'>
-              <ul>
-                <li className='mt-3'>
-                  <a className='cursor-pointer' href='#' aria-label='Contact Support'>Contact Support</a>
-                </li>
-                <li className='mt-3'>
-                  <a className=' cursor-pointer ' href='#' aria-label='Help Resources'>Help Resources</a>
-                </li>
-                <li className='mt-3'>
-                  <a className=' cursor-pointer ' href='#' aria-label='Release Updates'>Release Updates</a>
+                <li>
+                  <Link to={'/proceso-trabajo'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
+                    Proceso de Trabajo
+                  </Link>
                 </li>
               </ul>
             </nav>

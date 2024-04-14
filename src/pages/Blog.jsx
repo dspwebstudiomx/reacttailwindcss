@@ -19,9 +19,13 @@ const Blog = () => {
     setArticulos(filterDataCategory)
   }
   return (
-    <PageTemplate id="blog" TituloPrincipal={'Articulos'} background={'bg-slate-300'} >
-      <div className='categories__container mb-16 mx-auto xl:mr-auto flex items-center bg-slate-200 justify-evenly px-5 w-[80%] xl:w-[70%] rounded-xl py-3  flex-col md:flex-row'>
-        <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
+    <PageTemplate id="blog" TituloPrincipal={'Articulos'} background={'bg-slate-400'} >
+      <div className='categories__container mb-16 mx-auto xl:mr-auto flex items-center bg-slate-400 justify-evenly px-5 w-[80%] xl:w-[70%] rounded-xl py-3  flex-col md:flex-row'>
+        <label htmlFor="filtrarCategorias">Seleccionar categoría:</label>
+        <select name="filtrarCategorias" id="filtrarCategorias">
+          <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
+
+        </select>
       </div>
       <div className='grid sm:grid-cols-3 xl:grid-cols-4 gap-8'>
         <ArticleCardGenerator articulos={articulos} />

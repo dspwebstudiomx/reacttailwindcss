@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
+import WorkProcess from './pages/WorkProcess';
 import Contact from "./pages/Contact";
 import ScrollToTop from './Functions/ScrolltoTop';
 import Policy from './pages/Policy';
@@ -17,6 +18,7 @@ export default function App() {
       <ScrollToTop>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/proceso-trabajo" element={<WorkProcess />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/politica-privacidad" element={<Policy />} />

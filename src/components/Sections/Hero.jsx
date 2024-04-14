@@ -22,7 +22,7 @@ const Hero = () => {
 
       {/* Content Container */}
       <div id="heroContainer" className="mx-auto flex flex-col md:items-start z-10">
-        <div className="max-w-screen-md lg:mx-0 mb-6 mx-5">
+        <div className="max-w-screen-lg lg:mx-0 mb-6 mx-5">
           <h1 className="text-5xl font-bold text-white sm:text-4xl lg:text-5xl leading-snug mb-10">Diseño y Desarrollo Web</h1>
           <p className="my-6 text-2xl leading-8 text-gray-300 line-height">
             Convierte tu visión en una realidad digital con nuestro servicio de diseño y desarrollo web profesional.
