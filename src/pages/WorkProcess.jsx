@@ -22,7 +22,7 @@ const WorkProcess = () => {
 
           <Spacing distance='mb-12' />
 
-          <div className='bg-slate-200 px-6 pb-4 tracking-tight mx-auto rounded-xl text-balance'>
+          <div className='px-6 pb-4 tracking-tight mx-auto rounded-xl text-balance'>
 
             {/* 1. Consulta inicial */}
             <article id='ConsultaInicial' className='flex flex-col sm:flex-row gap-12 sm:gap-0'>

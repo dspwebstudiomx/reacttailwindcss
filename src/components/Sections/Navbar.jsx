@@ -59,9 +59,9 @@ function Navbar() {
             <li>
               <HashLink to="/#portfolio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Portafolio</HashLink>
             </li>
-            {/* <li>
+            <li>
               <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
-            </li> */}
+            </li>
             <li>
               <Link to="/contacto" duration={500} className={Styles.a}>Contacto</Link>
             </li>
@@ -116,11 +116,10 @@ function Navbar() {
               <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
 
             </li>
-            {/* <li>
+            <li>
               <Link to="/blog" duration={500} className={Styles.linkMobile} onClick={toggleNav}>Blog</Link>
               <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-3' />
-
-            </li> */}
+            </li>
             <li>
               <Link to="/contacto" duration={500} className={Styles.linkMobile} onClick={toggleNav}>Contacto</Link>
               <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />

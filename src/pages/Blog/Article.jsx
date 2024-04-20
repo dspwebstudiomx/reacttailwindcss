@@ -1,13 +1,14 @@
-import { useParams, Link } from "react-router-dom"
-import Section from "../components/Templates/Section"
-import Container from "../components/Templates/Container"
-import Navbar from "../components/Sections/Navbar"
-import Footer from "../components/Sections/Footer"
-import Spacing from "../components/Sections/Spacing"
-import ReturnButton from "../components/Atoms/Buttons/ReturnButton"
-import ButtonScroll from "../components/Atoms/Buttons/ButtonScroll"
-import ButtonContainer from "../components/Templates/ButtonContainer"
-import { articulosBlog } from "../data"
+import { Link } from "react-router-dom"
+import PropTypes from "prop-types"
+import Section from "../../components/Templates/Section"
+import Container from "../../components/Templates/Container"
+import Navbar from "../../components/Sections/Navbar"
+import Footer from "../../components/Sections/Footer"
+// import Spacing from "../../components/Sections/Spacing"
+import ReturnButton from "../../components/Atoms/Buttons/ReturnButton"
+import ButtonScroll from "../../components/Atoms/Buttons/ButtonScroll"
+import ButtonContainer from "../../components/Templates/ButtonContainer"
+import { articulosBlog } from "../../data"
 import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
@@ -15,14 +16,7 @@ import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
 import { FaHome } from "react-icons/fa"
 
-const Article = () => {
-
-  let { id } = useParams()
-  let articuloContenido = articulosBlog.find(articulo => articulo.id == id)
-  let linkAnterior = parseInt(id) - 1
-  let linkPosterior = parseInt(id) + 1
-  let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
-  let primerContenido = articulosBlog[0].id
+const Article = ({ id, title, author, category, date, image, children, source }) => {
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
@@ -32,60 +26,58 @@ const Article = () => {
       behavior: "smooth",
     });
   }
+  // let articuloAuthor = articulosBlog.find(articulo => articulo.autor === autor)
+  let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
+  const linkAnterior = parseInt(id) - 1
+  const linkPosterior = parseInt(id) + 1
+  console.log("El último artículo es:", ultimoContenido)
+  console.log("El id mostrado es:", id)
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
-    container: "grid xl:grid-cols-2 justify-between gap-20 xl:gap-32 flex-wrap py-20",
-    contenedorIzquierdo: "flex flex-col min-h-[100vh] w-full place-content-between",
-    contenedorDerecho: "flex flex-col gap-6 bg-slate-300 p-6 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 text-slate-800 max-h-[1070px]"
+    container: "flex flex-0 justify-between gap-20 xl:gap-32 py-20 flex-col sm:flex-row text-xl",
+    contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
+    contenedorDerecho: "flex flex-col gap-6 bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 max-h-[1360px] sm:w-1/3"
   }
+
   return (
     <div id="scrollTop">
       <Navbar />
       <Section className={classes.section} id="article">
-        <Container className={classes.container} id={id}>
+        <Container className={classes.container}>
 
           {/*  Contenedor izquierdo */}
           <div className={classes.contenedorIzquierdo}>
             {/* Contenido */}
-            <div>
-              <header>
-                <h1 className="text-4xl text-blue-900 dark:text-slate-200">{articuloContenido.titulo}</h1>
-                {/* Datos del creador */}
-                <div className="mb-12 flex lg:items-center lg:justify-between my-4 flex-wrap leading-loose flex-col lg:flex-row">
-                  <div className="flex items-center">
-                    <IoPersonCircleOutline size={24} color="#1D4ED8" /><span className="mx-1 font-normal">Autor:</span>{articuloContenido.autor}
-                  </div>
-                  <div className="mx-1 items-center hidden lg:block">|</div>
-                  <div className="flex items-center">
-                    <FaRegBookmark size={18} color="#1D4ED8" /><span className="mx-1 font-normal">Categoría:</span>{articuloContenido.categoria}
-                  </div>
-                  <div className="mx-1 items-center hidden lg:block">|</div>
-                  <div className="flex items-center">
-                    <TbClockEdit size={22} color="#1D4ED8" /><span className="mx-1 font-normal">Fecha:</span>{articuloContenido.fecha}
-                  </div>
-                </div>
-                {/* Datos del creador */}
+            <header>
+              <h1 className='text-3xl text-blue-800 font-normal'>{title}</h1 >
+              <br />
+              <div id="dataCreation" className="flex flex-wrap sm:flex-row gap-2 sm:gap-4">
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<TbClockEdit />}</span>Fecha: {date}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<FaRegBookmark />}</span>Categoria: {category}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
+              </div>
+              <br />
+              <figure>
+                <img src={image} alt="image blog" className="h-[220px] w-full overflow-hidden object-cover" />
+                <figcaption className="text-sm font-semibold mt-1"><span className="mr-1">Fuente:</span>{source}</figcaption>
+              </figure>
+            </header>
 
-                {/* Imagen del Artículo */}
-                <figure className="mb-12 text-sm">
-                  <img src={articuloContenido.imagen} alt="imagen de blog" className="object-cover w-full h-[250px]" />
-                  <figcaption>Fuente: Pexels.com</figcaption>
-                </figure>
-                {/* Imagen del Artículo */}
-              </header>
-              <p>{articuloContenido.extracto}</p>
-
+            <main className="py-16">
+              {children}
+            </main>
+            <footer>
               {/* Botones de Navegación */}
-              <ButtonContainer distancia="mt-12">
-                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)}>
-                  <button type='button' className={articuloContenido.id === primerContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
+              <ButtonContainer distancia="mt-4">
+                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
-                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)}>
-                  <button type='button' className={articuloContenido.id === ultimoContenido ? "hidden" : 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto flex-row-reverse'}>
+                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
+                  <button type='button' className="rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto flex-row-reverse">
                     <span className={`ml-2`}><FaArrowRight /></span>
                     Siguiente
                   </button>
@@ -103,16 +95,19 @@ const Article = () => {
                 </HashLink >
               </ButtonContainer>
               {/* Botones de Navegación */}
-              {/* Contenido */}
-            </div>
+            </footer>
+
+
+            {/* Contenido */}
+
             {/*  Contenedor izquierdo */}
           </div>
+
           {/* Contenedor Derecho */}
           <aside className={classes.contenedorDerecho} >
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
-            <Spacing distance="mb-0" />
-            <div className="flex gap-12 xl:flex-col p-8">
-              {articulosBlog.slice(-2).reverse().map(
+            <div className="flex gap-12 flex-col p-6">
+              {articulosBlog.slice(-3).reverse().map(
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
@@ -148,6 +143,16 @@ const Article = () => {
       <Footer />
     </div >
   )
+}
+Article.propTypes = {
+  children: PropTypes.node,
+  id: PropTypes.number,
+  source: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  date: PropTypes.string,
+  category: PropTypes.string,
+  image: PropTypes.any,
 }
 
 export default Article

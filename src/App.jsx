@@ -2,14 +2,17 @@ import './App.css';
 import '../node_modules/animate.css/animate.css';
 import 'animate.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import NotFound from "./pages/NotFound";
 import Blog from "./pages/Blog";
 import WorkProcess from './pages/WorkProcess';
 import Contact from "./pages/Contact";
 import ScrollToTop from './Functions/ScrolltoTop';
 import Policy from './pages/Policy';
-import Article from './pages/Article';
+import HolaMundo from './pages/Blog/Articles/HolaMundo';
+import NuevoBlog from './pages/Blog/Articles/NuevoBlog';
+import FundamentosDiseñoWeb from './pages/Blog/Articles/FundamentosDisenoWeb';
+import HerramientasDiseñoWeb from './pages/Blog/Articles/HerramientasDiseñoWeb';
 
 export default function App() {
 
@@ -23,7 +26,10 @@ export default function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/politica-privacidad" element={<Policy />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/blog/:id" element={<Article />} />
+          <Route path="/blog/0" element={<HolaMundo />} />
+          <Route path="/blog/1" element={<NuevoBlog />} />
+          <Route path="/blog/2" element={<FundamentosDiseñoWeb />} />
+          <Route path="/blog/3" element={<HerramientasDiseñoWeb />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
