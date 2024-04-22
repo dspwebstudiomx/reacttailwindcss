@@ -69,13 +69,13 @@ const Article = ({ id, title, author, category, date, image, children, source })
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto'>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
-                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto'>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
@@ -111,9 +111,9 @@ const Article = ({ id, title, author, category, date, image, children, source })
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
                       <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
-                        <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover md:h-[100px] " />
+                        <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
                         <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
-                          <h3 className="text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
+                          <h3 className="text-base sm:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
                           <div className="mt-3 flex flex-col gap-2">
                             <div className="flex items-center text-xs">
                               <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
