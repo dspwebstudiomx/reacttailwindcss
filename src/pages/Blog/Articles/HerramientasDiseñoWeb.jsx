@@ -7,7 +7,7 @@ import Spacing from '../../../components/Sections/Spacing'
 
 const HerramientasDiseñoWeb = () => {
   return (
-    <Article title='Herramientas del Diseño Web imprescindibles para principiantes y procesionales' id={3} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} date='agosto 21, 2023' source={'pexels.com'}>
+    <Article title='Herramientas del Diseño Web imprescindibles para principiantes y procesionales' id={3} category='Herramientas' author='Daniel S.' image={Image || Placeholder} date='agosto 21, 2023' source={'pexels.com'}>
       <p>El diseño web es una disciplina esencial en el desarrollo de sitios y aplicaciones web, que permite crear interfaces atractivas y funcionales para los usuarios. Tanto para principiantes como para profesionales, es crucial contar con un conjunto de herramientas que faciliten y optimicen el proceso de diseño. En esta guía, exploraremos algunas de las herramientas más imprescindibles en el arsenal de un Front End Developer, abarcando desde prototipado hasta diseño gráfico y gestión de recursos.</p>
       <ArticleSubtitle subtitle='Herramientas de Prototipado' />
       <p>Antes de sumergirse en el desarrollo, es esencial crear prototipos que permitan visualizar la interfaz y la experiencia del usuario. Para principiantes, plataformas en línea como Figma o Adobe XD ofrecen una interfaz intuitiva para diseñar wireframes y mockups sin la necesidad de habilidades de codificación. Los profesionales también pueden utilizar herramientas más robustas como Sketch o InVision, que brindan una mayor capacidad de interacción y colaboración con el equipo.</p><br />

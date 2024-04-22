@@ -13,6 +13,10 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
+import { useEffect, useState } from "react"
+import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
+import Spacing from "../../components/Sections/Spacing"
+import PageSubtitle from "../../components/Molecules/PageSubtitle"
 // import { FaHome } from "react-icons/fa"
 
 const Article = ({ id, title, author, category, date, image, children, source }) => {
@@ -34,11 +38,27 @@ const Article = ({ id, title, author, category, date, image, children, source })
   console.log("El id de la data es:", articulosBlog.id)
 
   const classes = {
-    section: "mt-0 min-h-screen xl:px-0 sm:px-12",
+    section: "mt-0 min-h-screen xl:px-0 sm:px-12 bg-slate-200",
     container: "flex flex-0 justify-between gap-20 xl:gap-32 py-20 flex-col sm:flex-row text-xl",
     contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
     contenedorDerecho: "flex flex-col gap-6 bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 h-auto sm:w-1/3"
   }
+  const [articulos, setArticulos] = useState(articulosBlog)
+
+  const filtrarCategoria = (categoria) => {
+    if (categoria === "Todas") {
+      setArticulos(articulosBlog);
+      return;
+    }
+    const filterDataCategory = articulosBlog.filter(articulo => articulo.categoria === categoria);
+    setArticulos(filterDataCategory);
+  }
+
+  // Call the filtrarCategoria function with the "Diseño Web" category
+  useEffect(() => {
+    filtrarCategoria(category);
+  });
+
   return (
     <div id="scrollTop">
       <Navbar />
@@ -97,6 +117,13 @@ const Article = ({ id, title, author, category, date, image, children, source })
                 <h2 className="text-2xl text-center">Articulos más recientes</h2>
 
               </div> */}
+              <Spacing distance="mb-20" />
+              <section>
+                <PageSubtitle subtitle="Artículos Relacionados" />
+                <div className="grid sm:grid-cols-3 justify-start mt-12">
+                  <ArticleCardGenerator articulos={articulos} />
+                </div>
+              </section>
             </footer>
             {/* Contenido */}
           </div>

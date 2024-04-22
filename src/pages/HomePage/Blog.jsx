@@ -11,7 +11,7 @@ const Blog = () => {
         <p className='text-2xl'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
       </div>
       <Spacing distance='mb-20' />
-      <div className='grid sm:grid-cols-4 gap-8'>
+      <div className='grid grid-cols-4 gap-8'>
         <ArticleCardGenerator />
       </div>
     </BackgroundSection>
