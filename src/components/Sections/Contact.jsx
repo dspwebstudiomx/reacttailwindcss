@@ -5,8 +5,8 @@ import SocialLinks from "../Molecules/SocialLinks"
 
 const Contact = () => {
   return (
-    <Section id="contact" className="bg-slate-300">
-      <Container className="grid md:grid-cols-2 gap-20 md:gap-8">
+    <Section id="contact" className="bg-slate-300 dark:bg-dark-800">
+      <Container className="grid xl:grid-cols-2 gap-20 md:gap-8">
         <div id="contactDescription" className="ml-auto">
           <h2 className="text-4xl text-center lg:text-left mb-2">Contáctame</h2>
           <hr className="h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[15%] skew-x-12 mb-12 mx-auto lg:mx-0" />

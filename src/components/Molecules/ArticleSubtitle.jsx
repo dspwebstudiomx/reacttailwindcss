@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const ArticleSubtitle = ({ subtitle }) => {
   return (
     <>
-      <Spacing distance={'mb-12'} />
+      <Spacing distance={'mb-16'} />
       <h2 className='text-2xl font-bold flex'>
         <MdOutlineKeyboardDoubleArrowRight className='text-blue-500 mt-[5px] sm:mt-[6px]' />
         <span className='animate__animated animate__fadeIn animate__slow'>{subtitle}</span>

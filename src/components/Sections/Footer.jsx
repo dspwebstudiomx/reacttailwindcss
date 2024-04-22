@@ -16,7 +16,7 @@ const Footer = () => {
   }
 
   const Styles = {
-    a: 'sm:my-1 hover:text-blue-500 flex  items-center justify-left',
+    a: 'sm:my-1 hover:text-blue-500 flex items-center sm:justify-left',
     active: 'text-blue-500'
   }
 
@@ -43,7 +43,7 @@ const Footer = () => {
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Secciones</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left ml-12 sm:ml-0'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left ml-0'>
                 <li>
                   <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
@@ -95,7 +95,7 @@ const Footer = () => {
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left ml-12 sm:ml-0'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left'>
                 <li>
                   <HashLink active='Styles.active' to='/#webDesign' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 120)}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
@@ -130,7 +130,7 @@ const Footer = () => {
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base mx-auto'>
                 <li>
                   <Link to={'/politica-privacidad'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>

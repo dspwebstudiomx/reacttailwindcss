@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Container = ({ children, className }) => {
 
-  const containerClasses = `${className}  xl:max-w-[1024px] lg:max-w-[768px] mx-auto`
+  const containerClasses = `${className} w-[80vw] xl:max-w-[1024px] lg:max-w-[768px] mx-auto`
 
   return (
     <div className={containerClasses}>

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 const ButtonScroll = ({ id, name, icono, to, reverse, spanReverse, onclick }) => {
 
   const buttonRef = useRef(null);
-  const classes = `rounded-lg text-white border-2  text-lg sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[240px] md:w-[182px] lg:w-[190px] h-[70px] md:h-[60px] ${reverse} mx-auto`
+  const classes = `rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[180px] md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] ${reverse} mx-auto`
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;

@@ -12,7 +12,7 @@ import { FiPhone } from 'react-icons/fi';
 
 const SocialLinks = () => {
   return (
-    <div className='flex gap-8 place-items-center justify-center md:justify-start'>
+    <div className='flex gap-4 items-center justify-center xl:justify-start'>
       <SocialLink
         href={'https://www.facebook.com/dspwebstudio'}
         icono={<FiFacebook size={44} className='text-blue-900 hover:text-blue-500 hover:scale-110 dark:text-blue-500' />}

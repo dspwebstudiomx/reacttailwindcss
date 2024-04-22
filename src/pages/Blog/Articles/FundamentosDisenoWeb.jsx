@@ -6,7 +6,7 @@ import Spacing from '../../../components/Sections/Spacing'
 
 const FundamentosDiseñoWeb = () => {
   return (
-    <Article title='Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales' id={2} category='Diseño Web' author='Daniel S' image={Image || Placeholder} date='julio 24, 2023' source='pexels.com'>
+    <Article title='Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales' id={2} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} date='julio 24, 2023' source='pexels.com'>
       <p>El Diseño Web es una disciplina crucial en el desarrollo de sitios y aplicaciones digitales, ya que tiene el poder de transformar una simple interfaz en una experiencia cautivadora para los usuarios. Para lograrlo, es fundamental comprender los principios básicos y conceptos esenciales del Diseño Web. En este artículo, exploraremos los fundamentos que todo Diseñador UX/UI debe dominar para crear experiencias en línea impactantes y efectivas.</p>
       <ArticleSubtitle subtitle='Usabilidad: La piedra angular del diseño' />
       <p>La usabilidad es el cimiento del Diseño Web efectivo. Se trata de garantizar que un sitio web sea intuitivo y fácil de usar, permitiendo a los usuarios alcanzar sus objetivos de manera sencilla y sin frustraciones. Para lograrlo, se deben tener en cuenta factores como la navegación clara, la jerarquía visual, los llamados a la acción destacados y la adaptabilidad a diferentes dispositivos.</p>

@@ -4,7 +4,6 @@ import Section from "../../components/Templates/Section"
 import Container from "../../components/Templates/Container"
 import Navbar from "../../components/Sections/Navbar"
 import Footer from "../../components/Sections/Footer"
-// import Spacing from "../../components/Sections/Spacing"
 import ReturnButton from "../../components/Atoms/Buttons/ReturnButton"
 import ButtonScroll from "../../components/Atoms/Buttons/ButtonScroll"
 import ButtonContainer from "../../components/Templates/ButtonContainer"
@@ -14,7 +13,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
-import { FaHome } from "react-icons/fa"
+// import { FaHome } from "react-icons/fa"
 
 const Article = ({ id, title, author, category, date, image, children, source }) => {
 
@@ -26,12 +25,13 @@ const Article = ({ id, title, author, category, date, image, children, source })
       behavior: "smooth",
     });
   }
-  // let articuloAuthor = articulosBlog.find(articulo => articulo.autor === autor)
+  // let articuloAuthor = articulosBlog.find(articulo => articulo.autor === author)
   let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
   const linkAnterior = parseInt(id) - 1
   const linkPosterior = parseInt(id) + 1
   console.log("El último artículo es:", ultimoContenido)
   console.log("El id mostrado es:", id)
+  console.log("El id de la data es:", articulosBlog.id)
 
   const classes = {
     section: "mt-0 min-h-screen xl:px-0 sm:px-12",
@@ -39,7 +39,6 @@ const Article = ({ id, title, author, category, date, image, children, source })
     contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
     contenedorDerecho: "flex flex-col gap-6 bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 max-h-[1360px] sm:w-1/3"
   }
-
   return (
     <div id="scrollTop">
       <Navbar />
@@ -52,7 +51,7 @@ const Article = ({ id, title, author, category, date, image, children, source })
             <header>
               <h1 className='text-3xl text-blue-800 font-normal'>{title}</h1 >
               <br />
-              <div id="dataCreation" className="flex flex-wrap sm:flex-row gap-2 sm:gap-4">
+              <div id="dataCreation" className="flex flex-wrap sm:flex-row gap-2 sm:gap-4 text-lg sm:text-base">
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<TbClockEdit />}</span>Fecha: {date}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<FaRegBookmark />}</span>Categoria: {category}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
@@ -63,23 +62,22 @@ const Article = ({ id, title, author, category, date, image, children, source })
                 <figcaption className="text-sm font-semibold mt-1"><span className="mr-1">Fuente:</span>{source}</figcaption>
               </figure>
             </header>
-
-            <main className="py-16">
+            <main className="py-16 text-xl sm:text-base">
               {children}
             </main>
             <footer>
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[180px] md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px]'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
-                  <button type='button' className="rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto flex-row-reverse">
-                    <span className={`ml-2`}><FaArrowRight /></span>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[180px] md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px]'>
                     Siguiente
+                    <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
                 </HashLink >
                 <ButtonScroll
@@ -87,21 +85,22 @@ const Article = ({ id, title, author, category, date, image, children, source })
                   name="Ver todos"
                   icono={<FaArrowRotateLeft />}
                 />
-                <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
+                {/* <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
                   <button type='button' className={'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
                     <span className={`mr-2`}><FaHome /></span>
                     Inicio
                   </button>
-                </HashLink >
+                </HashLink > */}
               </ButtonContainer>
               {/* Botones de Navegación */}
+              {/* <div>
+                <h2 className="text-2xl text-center">Articulos más recientes</h2>
+
+              </div> */}
             </footer>
-
-
             {/* Contenido */}
-
-            {/*  Contenedor izquierdo */}
           </div>
+          {/*  Contenedor izquierdo */}
 
           {/* Contenedor Derecho */}
           <aside className={classes.contenedorDerecho} >
@@ -111,9 +110,9 @@ const Article = ({ id, title, author, category, date, image, children, source })
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
-                      <article className="relate mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex w-[75vw] sm:flex-col sm:w-[100%]">
-                        <img src={articulo.imagen} alt="image" className="rounded-t-md w-1/3 sm:w-full object-cover md:h-[150px] " />
-                        <div className="px-6 py-10 bg-slate-200 flex flex-col gap-3 rounded-b-md w-2/3 sm:w-full min-h-[180px] justify-start overflow-hidden">
+                      <article className="relative mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
+                        <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover md:h-[150px] " />
+                        <div className="px-6 py-10 bg-slate-200 flex flex-col gap-3 rounded-b-md w-full min-h-[180px] justify-start overflow-hidden">
                           <h3 className="text-lg text-blue-800 leading-tight">{articulo.titulo}</h3>
                           <div className="mt-3 flex flex-col gap-2">
                             <div className="flex items-center text-xs">
