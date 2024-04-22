@@ -11,7 +11,7 @@ const Testimonials = () => {
         {testimonials.map(testimonial => {
           return (
             <Testimonial
-              key={testimonial.name}
+              key={testimonial.id}
               id={testimonial.id}
               hyperlink={testimonial.hyperlink}
               nombre={testimonial.nombre}

@@ -106,7 +106,7 @@ const Article = ({ id, title, author, category, date, image, children, source })
           <aside className={classes.contenedorDerecho} >
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
             <div className="flex gap-12 flex-col p-6">
-              {articulosBlog.slice(-4).map(
+              {articulosBlog.slice(-4).reverse().map(
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>

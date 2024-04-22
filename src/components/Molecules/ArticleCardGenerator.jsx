@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom"
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { TbClockEdit } from "react-icons/tb";
+import { articulosBlog } from "../../data";
 
-const articleCardGenerator = ({ articulos }) => {
+const articleCardGenerator = () => {
   return (
-    articulos.map(
+    articulosBlog.reverse().map(
       (articulo) => {
         return (
           <Link to={`/blog/${articulo.id}`} key={articulo.id}>

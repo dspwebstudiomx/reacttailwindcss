@@ -6,7 +6,7 @@ const BackgroundSection = ({ background, opacity, children }) => {
 
       {/* Background Image */}
       <img
-        className='absolute inset-0 -z-10 h-full w-full object-cover object-center opacity-100'
+        className='inset-0 -z-10 h-full w-full object-cover object-center opacity-100 absolute top:0'
         src={background}
         alt='hero image'
       />

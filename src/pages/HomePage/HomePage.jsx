@@ -7,6 +7,7 @@ import Process from '../../components/Sections/Process';
 import Clients from '../../components/Sections/Clients';
 import Portfolio from '../../components/Sections/Portfolio';
 import Technologies from '../../components/Sections/Technologies';
+import Blog from '../HomePage/Blog'
 import Contact from '../../components/Sections/Contact';
 import Footer from '../../components/Sections/Footer';
 import ReturnButton from '../../components/Atoms/Buttons/ReturnButton';
@@ -29,6 +30,7 @@ const HomePage = () => {
         <Clients />
         <Portfolio />
         <Testimonials />
+        <Blog />
         <Contact />
         <ReturnButton />
       </main>
