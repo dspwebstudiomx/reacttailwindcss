@@ -3,7 +3,7 @@ import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog1.webp'
 const NuevoBlog = () => {
   return (
-    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} date='22 junio, 2023'>
+    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} date='junio 22, 2023' source={'pexels.com'} time='1 min.'>
       <p><strong>¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! </strong>En este fascinante universo digital, te embarcarás en un emocionante viaje donde la creatividad y la tecnología se entrelazan para dar vida a sitios web asombrosos y funcionales.</p>
       <br />
       <p>Imagina poder plasmar tus ideas en diseños atractivos y amigables, capaces de cautivar a usuarios de todas partes del mundo. Aquí aprenderás a dar forma a tu imaginación y convertirla en realidad, mientras dominas herramientas como <strong>HTML, CSS, JavaScript </strong> y mucho más.</p>

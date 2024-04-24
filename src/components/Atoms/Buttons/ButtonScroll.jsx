@@ -1,11 +1,9 @@
-import { useRef } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import PropTypes from 'prop-types'
 
-const ButtonScroll = ({ id, name, icono, to, reverse, spanReverse, onclick }) => {
+const ButtonScroll = ({ name, icono, to, reverse, spanReverse, onclick }) => {
 
-  const buttonRef = useRef(null);
-  const classes = `rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] ${reverse} mx-auto border-blue-900 text-center`
+  const classes = `rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] ${reverse} mx-auto border-blue-900 text-center hover:bg-blue-800`
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
@@ -18,8 +16,8 @@ const ButtonScroll = ({ id, name, icono, to, reverse, spanReverse, onclick }) =>
 
   return (
     <HashLink to={to} scroll={element => scrollWithOffset(element, 98)}>
-      <button onClick={onclick} type='button' className={classes} ref={buttonRef} id={id}>
-        <span className={`mx-2 ${spanReverse}`}>{icono}</span>
+      <button onClick={onclick} type='button' className={classes} id={`Button_${to}`}>
+        <span className={`m-2 ${spanReverse}`}>{icono}</span>
         {name}
       </button>
     </HashLink>
@@ -28,7 +26,6 @@ const ButtonScroll = ({ id, name, icono, to, reverse, spanReverse, onclick }) =>
 
 ButtonScroll.propTypes = {
   to: PropTypes.string,
-  id: PropTypes.string,
   onclick: PropTypes.any,
   className: PropTypes.string,
   icono: PropTypes.object,

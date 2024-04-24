@@ -13,6 +13,7 @@ import HolaMundo from './pages/Blog/Articles/HolaMundo';
 import NuevoBlog from './pages/Blog/Articles/NuevoBlog';
 import FundamentosDiseñoWeb from './pages/Blog/Articles/FundamentosDisenoWeb';
 import HerramientasDiseñoWeb from './pages/Blog/Articles/HerramientasDiseñoWeb';
+import ColoresDiseno from './pages/Blog/Articles/ColoresDiseno';
 
 export default function App() {
 
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/blog/1" element={<NuevoBlog />} />
           <Route path="/blog/2" element={<FundamentosDiseñoWeb />} />
           <Route path="/blog/3" element={<HerramientasDiseñoWeb />} />
+          <Route path="/blog/4" element={<ColoresDiseno />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const BackgroundSection = ({ background, opacity, children }) => {
+const BackgroundSection = ({ id, background, opacity, children }) => {
   return (
-    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center min-h-fit  xl:px-0'>
+    <section id={id} className='relative overflow-hidden py-20 px-8 sm:px-32 w-full z-0 flex items-center min-h-fit  xl:px-0'>
 
       {/* Background Image */}
       <img
@@ -27,6 +27,7 @@ const BackgroundSection = ({ background, opacity, children }) => {
   )
 }
 BackgroundSection.propTypes = {
+  id: PropTypes.string,
   background: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   opacity: PropTypes.string.isRequired

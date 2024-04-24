@@ -12,7 +12,7 @@ const Process = () => {
           <h2 className='text-3xl font-semibold tracking-wide'>¿Estás listo para descubrir cómo puedo llevar tu presencia en línea al siguiente nivel?</h2>
           <br />
           <p className='text-xl'>Visita mi proceso de trabajo en diseño y desarrollo web, únete al emocionante viaje hacia el éxito digital.</p>
-          <div id="botonEnlace" className='grid place-content-center sm:place-content-start mt-10'>
+          <div id="botonEnlace" className='mt-10'>
             <ButtonScroll
               icono={<FaArrowRight size={21} />}
               name={"Visitar"}

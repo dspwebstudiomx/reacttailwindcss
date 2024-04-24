@@ -9,17 +9,17 @@ import ButtonScroll from "../../components/Atoms/Buttons/ButtonScroll"
 import ButtonContainer from "../../components/Templates/ButtonContainer"
 import { articulosBlog } from "../../data"
 import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
-import { IoPersonCircleOutline } from "react-icons/io5";
+import { IoCalendarOutline, IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
-import { useEffect, useState } from "react"
-import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
-import Spacing from "../../components/Sections/Spacing"
-import PageSubtitle from "../../components/Molecules/PageSubtitle"
+
+// import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
+// import Spacing from "../../components/Sections/Spacing"
+// import PageSubtitle from "../../components/Molecules/PageSubtitle"
 // import { FaHome } from "react-icons/fa"
 
-const Article = ({ id, title, author, category, date, image, children, source }) => {
+const Article = ({ id, title, author, category, date, image, children, source, time }) => {
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
@@ -29,35 +29,17 @@ const Article = ({ id, title, author, category, date, image, children, source })
       behavior: "smooth",
     });
   }
-  // let articuloAuthor = articulosBlog.find(articulo => articulo.autor === author)
+
   let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
   const linkAnterior = parseInt(id) - 1
   const linkPosterior = parseInt(id) + 1
-  console.log("El último artículo es:", ultimoContenido)
-  console.log("El id mostrado es:", id)
-  console.log("El id de la data es:", articulosBlog.id)
 
   const classes = {
-    section: "mt-0 min-h-screen xl:px-0 sm:px-12 bg-slate-200",
-    container: "flex flex-0 justify-between gap-20 xl:gap-32 py-20 flex-col sm:flex-row text-xl",
-    contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
-    contenedorDerecho: "flex flex-col gap-6 bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 h-auto sm:w-1/3"
+    section: "mt-0 min-xl-screen xl:px-0 sm:px-12 bg-slate-200",
+    container: "flex justify-between gap-12 xl:gap-12 py-32 flex-col xl:flex-row text-xl",
+    contenedorIzquierdo: "flex flex-col w-full",
+    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 h-auto xl:w-1/3 md:max-h-[1480px]"
   }
-  const [articulos, setArticulos] = useState(articulosBlog)
-
-  const filtrarCategoria = (categoria) => {
-    if (categoria === "Todas") {
-      setArticulos(articulosBlog);
-      return;
-    }
-    const filterDataCategory = articulosBlog.filter(articulo => articulo.categoria === categoria);
-    setArticulos(filterDataCategory);
-  }
-
-  // Call the filtrarCategoria function with the "Diseño Web" category
-  useEffect(() => {
-    filtrarCategoria(category);
-  });
 
   return (
     <div id="scrollTop">
@@ -69,17 +51,20 @@ const Article = ({ id, title, author, category, date, image, children, source })
           <div className={classes.contenedorIzquierdo}>
             {/* Contenido */}
             <header>
-              <h1 className='text-3xl text-blue-800 font-normal'>{title}</h1 >
+              <h1 className='text-3xl text-blue-800 font-semibold'>{title}</h1 >
               <br />
-              <div id="dataCreation" className="flex flex-wrap sm:flex-row gap-2 sm:gap-4 text-lg sm:text-base">
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<TbClockEdit />}</span>Fecha: {date}</h4>
+              <div id="dataCreation" className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-lg sm:text-base">
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoCalendarOutline />}</span>Fecha: {date}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<FaRegBookmark />}</span>Categoria: {category}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<TbClockEdit />}</span>Tiempo: {time}</h4>
               </div>
               <br />
               <figure>
                 <img src={image} alt="image blog" className="h-[220px] w-full overflow-hidden object-cover" />
-                <figcaption className="text-sm font-semibold mt-1"><span className="mr-1">Fuente:</span>{source}</figcaption>
+                <a href={`https://${source}`} target="_blank">
+                  <figcaption className="text-sm font-semibold mt-1"><span className="mr-1">Fuente:</span>{source}</figcaption>
+                </a>
               </figure>
             </header>
             <main className="py-16 text-xl sm:text-base">
@@ -113,17 +98,14 @@ const Article = ({ id, title, author, category, date, image, children, source })
                 </HashLink > */}
               </ButtonContainer>
               {/* Botones de Navegación */}
-              {/* <div>
-                <h2 className="text-2xl text-center">Articulos más recientes</h2>
 
-              </div> */}
-              <Spacing distance="mb-20" />
+              {/* <Spacing distance="mb-20" />
               <section>
                 <PageSubtitle subtitle="Artículos Relacionados" />
                 <div className="grid sm:grid-cols-3 justify-start mt-12">
-                  <ArticleCardGenerator articulos={articulos} />
+
                 </div>
-              </section>
+              </section> */}
             </footer>
             {/* Contenido */}
           </div>
@@ -132,15 +114,15 @@ const Article = ({ id, title, author, category, date, image, children, source })
           {/* Contenedor Derecho */}
           <aside className={classes.contenedorDerecho} >
             <h2 className="text-2xl text-center">Articulos más recientes</h2>
-            <div className="flex gap-12 flex-col p-6">
-              {articulosBlog.slice(-4).reverse().map(
+            <div className="grid gap-12 p-6 py-12">
+              {articulosBlog.map(
                 (articulo) => {
                   return (
                     <Link to={`/blog/${articulo.id}`} key={articulo.id}>
                       <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
                         <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
                         <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
-                          <h3 className="text-base sm:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
+                          <h3 className="text-base font-semibold sm:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
                           <div className="mt-3 flex flex-col gap-2">
                             <div className="flex items-center text-xs">
                               <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
@@ -151,14 +133,14 @@ const Article = ({ id, title, author, category, date, image, children, source })
                           </div>
                         </div>
                         {/* Bubble */}
-                        <div id={`Bubble-${articulo.id}`} className="absolute -top-2 right-0 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
+                        <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
                         {/* Bubble */}
 
                       </article>
                     </Link>
                   )
                 }
-              )}
+              ).slice(-4).reverse()}
             </div>
           </aside>
           {/* Contenedor Derecho */}
@@ -173,8 +155,11 @@ const Article = ({ id, title, author, category, date, image, children, source })
 Article.propTypes = {
   children: PropTypes.node,
   id: PropTypes.number,
+  time: PropTypes.string,
+  idTitle: PropTypes.string,
   source: PropTypes.string,
   title: PropTypes.string,
+  imageLink: PropTypes.string,
   author: PropTypes.string,
   date: PropTypes.string,
   category: PropTypes.string,

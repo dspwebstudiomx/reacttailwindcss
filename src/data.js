@@ -10,6 +10,7 @@ import EquityClaimsItaliaBgImage from "./assets/Images/EquityClaimsItaliaSite.we
 import PasionesdelAlmaBgImage from "./assets/Images/MezcalPasionesSite.webp";
 import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.webp";
 import Blog2Image from "../src/assets/Images/Blog/Articulos/blog2.webp";
+import Blog4Image from "../src/assets/Images/Blog/Articulos/blog4.webp";
 import Blog3Image from "../src/assets/Images/Blog/Articulos/blog3.webp";
 import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
 import CodeDebugging from "./assets/JSON/code-debugging.json";
@@ -111,30 +112,44 @@ export const clientes = [
 
 export const articulosBlog = [
   {
-    id: "1",
+    id: 1,
     titulo: "Mi nuevo Blog",
     imagen: Blog1Image,
     autor: "Daniel S.",
-    fecha: "junio 22, 2023",
+    fecha: "06/22/2023",
+    tiempo: "1 min.",
     categoria: "Personal",
   },
   {
-    id: "2",
+    id: 2,
     titulo:
       "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
     imagen: Blog2Image,
     autor: "Daniel S.",
-    fecha: "julio 24, 2023",
+    fecha: "07/24/2023",
     categoria: "Diseño Web",
+    tiempo: "3 min.",
   },
   {
-    id: "3",
+    id: 3,
+    idTitle: "herramientas-diseño-web",
     titulo:
       "Herramientas de Diseño Web imprescindibles para principiantes y profesionales",
     imagen: Blog3Image,
     autor: "Daniel S.",
-    fecha: "agosto 21, 2023",
+    fecha: "08/21/2023",
+    tiempo: "2 min.",
     categoria: "Herramientas",
+  },
+  {
+    id: 4,
+    idTitle: "paleta-colores",
+    titulo: "¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?",
+    imagen: Blog4Image,
+    autor: "Daniel S.",
+    fecha: "09/12/2023",
+    tiempo: "2 min.",
+    categoria: "Diseño Web",
   },
 ];
 
