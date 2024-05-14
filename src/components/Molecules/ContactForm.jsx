@@ -103,7 +103,7 @@ export default function ContactForm() {
                 <Field
                   id="user_name"
                   name="user_name"
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 focus:border-2 border-blue-500 xl:p-2"
+                  className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-blue-500 xl:p-2 outline-none"
                   type="text"
                   placeholder="John"
                   required
@@ -113,7 +113,7 @@ export default function ContactForm() {
               <div className="flex flex-col lg:w-[45%] w-full">
                 <label htmlFor='user_surname' className="mb-2">Apellido<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 xl:p-2"
+                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-blue-500 p-4 xl:p-2 outline-none"
                   id="user_surname"
                   name="user_surname"
                   placeholder="Doe"
@@ -127,7 +127,7 @@ export default function ContactForm() {
               <div className="flex flex-col lg:w-[50%] w-full">
                 <label htmlFor="user_email" className="mb-2">Correo Electrónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 xl:p-2"
+                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-blue-500 p-4 xl:p-2 outline-none"
                   id="user_email"
                   name="user_email"
                   placeholder="johndoe@email.com"
@@ -140,7 +140,7 @@ export default function ContactForm() {
               <div className="flex flex-col lg:w-[45%] w-full">
                 <label htmlFor="user_phone" className="mb-2">Número Telefónico<span className='text-blue-400 ml-1'>*</span></label>
                 <Field
-                  className="rounded-md text-slate-900 bg-slate-200 p-4 xl:p-2"
+                  className="rounded-md text-slate-900 bg-slate-200 border-2 border-blue-500 p-4 xl:p-2 outline-none"
                   type="text"
                   name="user_phone"
                   id="user_phone"
@@ -156,7 +156,7 @@ export default function ContactForm() {
                 type="text"
                 name="message"
                 id="message"
-                className="rounded-md text-slate-900 bg-slate-200 p-4 h-40 max-h-32 min-h-32"
+                className="rounded-md text-slate-900 bg-slate-200 p-4 border-2 border-blue-500 h-40 max-h-32 min-h-32 outline-none"
                 required
               />
               {touched.message && errors.message && <p className='mt-2 text-blue-400 text-xs'>* {errors.message}</p>}
