@@ -1,12 +1,8 @@
-import HeroImage from '../../assets/Images/HeroImage.webp'
-import ButtonContainer from '../Templates/ButtonContainer'
-import { IoPersonOutline } from "react-icons/io5";
-import ButtonScroll from '../Atoms/Buttons/ButtonScroll';
-import { IoBookOutline } from "react-icons/io5";
+import PropTypes from 'prop-types'
 
-const Hero = () => {
+const Hero = ({ children, HeroImage }) => {
   return (
-    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 min-h-fit lg:min-h-[70vh] xl:px-0'>
+    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 min-h-fit xl:px-0 text-white'>
 
       {/* Background Image */}
       <img
@@ -21,29 +17,14 @@ const Hero = () => {
       {/* Overlay */}
 
       {/* Content Container */}
-      <div id="heroContainer" className="mx-auto flex flex-col md:items-start z-10 sm:px-16">
-        <div className="max-w-screen-lg lg:mx-0 mb-6 mx-5">
-          <h1 className="text-5xl font-bold text-white sm:text-4xl lg:text-5xl leading-snug mb-10">Diseño y Desarrollo Web</h1>
-          <p className="my-6 text-2xl leading-8 text-gray-300 line-height">
-            Convierte tu visión en una realidad digital con mi servicio de diseño y desarrollo web profesional.
-          </p>
-        </div>
-        <ButtonContainer>
-          <ButtonScroll
-            iconLeft={<IoPersonOutline size={21} />}
-            name={"Sobre Mí"}
-            to={"#about"}
-          />
-          <ButtonScroll
-            iconLeft={<IoBookOutline size={21} />}
-            name={"Contacto"}
-            to={"#contact"}
-          />
-        </ButtonContainer>
-        {/* Content Container */}
+      <div id='heroContainer' className='mx-auto flex flex-col md:items-start z-10 sm:px-16'>
+        {children}
       </div>
     </section >
   )
 }
-
+Hero.propTypes = {
+  children: PropTypes.node,
+  HeroImage: PropTypes.string
+}
 export default Hero

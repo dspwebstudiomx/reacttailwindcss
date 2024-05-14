@@ -1,13 +1,18 @@
 import Container from '../Templates/Container'
+import PropTypes from 'prop-types'
 
-const Banner = () => {
+const Banner = ({ children, className }) => {
   return (
-    <section className='bg-gradient-to-r from-blue-500 to-blue-900'>
-      <Container className={'py-12'}>
-        <p className='text-xl text-white text-center'>Transforma Tu Visión en Realidad Digital con Nuestros Servicios de Diseño y Desarrollo Web</p>
+    <section className='bg-gradient-to-r from-blue-500 to-blue-900 py-12'>
+      <Container className={className}>
+        <div className='text-xl text-white text-center'>{children}</div>
       </Container>
     </section>
   )
+}
+Banner.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
 }
 
 export default Banner
