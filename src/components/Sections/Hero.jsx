@@ -30,12 +30,12 @@ const Hero = () => {
         </div>
         <ButtonContainer>
           <ButtonScroll
-            icono={<IoPersonOutline size={21} />}
+            iconLeft={<IoPersonOutline size={21} />}
             name={"Sobre Mí"}
             to={"#about"}
           />
           <ButtonScroll
-            icono={<IoBookOutline size={21} />}
+            iconLeft={<IoBookOutline size={21} />}
             name={"Contacto"}
             to={"#contact"}
           />

@@ -167,7 +167,7 @@ export default function ContactForm() {
             {/* Submit Button */}
             <Button
               texto={'Enviar mensaje'}
-              icono={<FaRegEnvelope />}
+              iconLeft={<FaRegEnvelope />}
               type={'submit'}
             />
             {/* Submit Button */}
@@ -179,7 +179,7 @@ export default function ContactForm() {
                 <h1 className='text-center sm:text-[16px] font-semibold leading-snug text-xl mb-6'>Mensaje enviado<br></br>satisfactoriamente</h1>
                 <Button
                   texto='Cerrar'
-                  icono={<IoMdExit />}
+                  iconRight={<IoMdExit />}
                   onclick={() => setShowModal(false)}
                   type={'button'}
                 />
