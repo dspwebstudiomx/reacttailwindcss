@@ -18,7 +18,7 @@ const BackgroundSection = ({ id, background, opacity, children }) => {
 
       {/* Content Container */}
       <div id="heroContainer" className="mx-auto flex flex-col md:items-start z-10">
-        <div className="max-w-screen-lg lg:mx-0 mb-6 mx-5">
+        <div className="max-w-screen-lg lg:mx-0 mb-6 mx-5 text-white flex flex-col gap-4">
           {children}
         </div>
         {/* Content Container */}

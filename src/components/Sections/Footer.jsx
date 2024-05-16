@@ -91,7 +91,7 @@ const Footer = () => {
         {/* Sections */}
 
         {/* Services */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-12 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
             <nav className='mb-10 list-none flex flex-col'>
@@ -126,11 +126,11 @@ const Footer = () => {
         {/* Services */}
 
         {/* Policy */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-full  md:w-1/3'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:mt-0 md:text-left lg:w-1/4 w-full  md:w-1/3'>
           <div className='w-full'>
             <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base mx-auto'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base mx-auto sm:ml-0'>
                 <li>
                   <Link to={'/politica-privacidad'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>

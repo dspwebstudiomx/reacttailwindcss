@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
-const Hero = ({ children, HeroImage }) => {
+const Hero = ({ children, HeroImage, height }) => {
   return (
-    <section id='hero' className='relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 min-h-fit xl:px-0 text-white'>
+    <section id='hero' className={`${height} relative overflow-hidden py-20 px-8 w-full z-0 flex items-center mt-20 xl:px-0 text-white`}>
 
       {/* Background Image */}
       <img
@@ -25,6 +25,7 @@ const Hero = ({ children, HeroImage }) => {
 }
 Hero.propTypes = {
   children: PropTypes.node,
-  HeroImage: PropTypes.string
+  HeroImage: PropTypes.string,
+  height: PropTypes.string
 }
 export default Hero

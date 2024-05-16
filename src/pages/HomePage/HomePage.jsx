@@ -22,8 +22,8 @@ const HomePage = () => {
       </header>
       <main className='mt-12'>
         <HeroHomePage />
-        <Banner>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum ab hic, molestiae sit non doloremque voluptas natus? Repellat, molestiae ullam!</p>
+        <Banner className={'py-10 text-xl'}>
+          <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
         </Banner>
         <About />
         <Technologies />

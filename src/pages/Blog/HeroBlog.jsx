@@ -3,8 +3,8 @@ import HeroImage from '../../assets/Images/blog.webp'
 
 const HeroBlog = () => {
   return (
-    <Hero HeroImage={HeroImage}>
-      <h1 className='text-4xl'>Blog</h1>
+    <Hero HeroImage={HeroImage} height={'min-h-[30vh]'}>
+      <h1 className='text-5xl font-semibold'>Blog</h1>
     </Hero>
   )
 }

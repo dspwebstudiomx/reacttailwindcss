@@ -88,7 +88,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 <ButtonScroll
                   to={`/blog`}
                   name="Ver todos"
-                  icono={<FaArrowRotateLeft />}
+                  iconLeftB={<FaArrowRotateLeft />}
                 />
                 {/* <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
                   <button type='button' className={'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>

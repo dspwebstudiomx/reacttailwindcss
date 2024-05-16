@@ -11,7 +11,7 @@ function Navbar() {
   const Styles = {
     header: "fixed top-0 h-[98px] flex items-center justify-between bg-slate-900  text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
     a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500 pb-3",
-    container: "flex w-full h-auto items-center justify-between sm:px-10",
+    container: "flex w-full xl:max-screen-w-[50vw] h-auto items-center justify-between sm:px-10",
     linkMobile: "my-5 hover:text-blue-600 active:text-blue-500 text-white text-3xl hover:pb-2"
   }
 
@@ -37,7 +37,7 @@ function Navbar() {
       <section className={Styles.container}>
 
         {/* Logo */}
-        <HashLink to="/#inicio" className="cursor-pointer" scroll={element => scrollWithOffset(element, 98)}>
+        <HashLink to="/#inicio" className="cursor-pointer max-" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logo} alt=" dspwebstudio logo" className="w-[120px]" />
         </HashLink>
         {/* Logo */}
