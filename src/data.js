@@ -12,6 +12,9 @@ import Blog1Image from "../src/assets/Images/Blog/Articulos/blog1.webp";
 import Blog2Image from "../src/assets/Images/Blog/Articulos/blog2.webp";
 import Blog4Image from "../src/assets/Images/Blog/Articulos/blog4.webp";
 import Blog3Image from "../src/assets/Images/Blog/Articulos/blog3.webp";
+import Blog5Image from "../src/assets/Images/Blog/Articulos/blog5.webp";
+import Blog6Image from "../src/assets/Images/Placeholder.webp";
+import Blog7Image from "../src/assets/Images/Blog/Articulos/blog7.webp";
 import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
 import CodeDebugging from "./assets/JSON/code-debugging.json";
 import UsabilityTesting from "./assets/JSON/usability-testing.json";
@@ -110,49 +113,6 @@ export const clientes = [
   },
 ];
 
-export const articulosBlog = [
-  {
-    id: 1,
-    titulo: "Mi nuevo Blog",
-    imagen: Blog1Image,
-    autor: "Daniel S.",
-    fecha: "06/22/2023",
-    tiempo: "1 min.",
-    categoria: "Personal",
-  },
-  {
-    id: 2,
-    titulo:
-      "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
-    imagen: Blog2Image,
-    autor: "Daniel S.",
-    fecha: "07/24/2023",
-    categoria: "Diseño Web",
-    tiempo: "3 min.",
-  },
-  {
-    id: 3,
-    idTitle: "herramientas-diseño-web",
-    titulo:
-      "Herramientas de Diseño Web imprescindibles para principiantes y profesionales",
-    imagen: Blog3Image,
-    autor: "Daniel S.",
-    fecha: "08/21/2023",
-    tiempo: "2 min.",
-    categoria: "Herramientas",
-  },
-  {
-    id: 4,
-    idTitle: "paleta-colores",
-    titulo: "¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?",
-    imagen: Blog4Image,
-    autor: "Daniel S.",
-    fecha: "09/12/2023",
-    tiempo: "2 min.",
-    categoria: "Diseño Web",
-  },
-];
-
 export const socialLinks = [
   {
     id: 1,
@@ -220,5 +180,78 @@ export const testimonials = [
       "Desde un inicio nos convenció su profesionalismo y disposición para escuchar nuestras ideas, inquietudes y dudas. Siempre fue proactivo y eso ayudó mucho para que realizáramos un trabajo en conjunto de una manera fácil y grata en tiempo y forma.",
     hyperlink: "https://mezcalpasiones.com",
     imagen: mezcalpasionesTestimonialLogo,
+  },
+];
+
+export const articulosBlog = [
+  {
+    id: 1,
+    titulo: "Mi nuevo Blog",
+    imagen: Blog1Image,
+    autor: "Daniel S.",
+    fecha: "junio 22,2023",
+    tiempo: "1 min.",
+    categoria: "Personal",
+  },
+  {
+    id: 2,
+    titulo:
+      "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
+    imagen: Blog2Image,
+    autor: "Daniel S.",
+    fecha: "julio 24,2023",
+    categoria: "Diseño Web",
+    tiempo: "3 min.",
+  },
+  {
+    id: 3,
+    idTitle: "herramientas-diseño-web",
+    titulo:
+      "Herramientas de Diseño Web imprescindibles para principiantes y profesionales",
+    imagen: Blog3Image,
+    autor: "Daniel S.",
+    fecha: "agosto 21,2023",
+    tiempo: "2 min.",
+    categoria: "Herramientas",
+  },
+  {
+    id: 4,
+    idTitle: "paleta-colores",
+    titulo: "¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?",
+    imagen: Blog4Image,
+    autor: "Daniel S.",
+    fecha: "septiembre 12,2023",
+    tiempo: "2 min.",
+    categoria: "Diseño Web",
+  },
+  {
+    id: 5,
+    idTitle: "importancia-diseño-responsivo",
+    titulo: "La Importancia del Diseño Responsivo en la Web Moderna",
+    imagen: Blog5Image,
+    autor: "Daniel S.",
+    fecha: "octubre 17,2023",
+    tiempo: "2 min.",
+    categoria: "Diseño Web",
+  },
+  {
+    id: 6,
+    idTitle: "errores-comunes-diseño-web",
+    titulo: "Los Errores Más Comunes en el Diseño Web y Cómo Evitarlos",
+    imagen: Blog6Image,
+    autor: "Daniel S.",
+    fecha: "noviembre 21,2023",
+    tiempo: "2 min.",
+    categoria: "Diseño Web",
+  },
+  {
+    id: 7,
+    idTitle: "errores-comunes-diseño-web",
+    titulo: "Principales Frameworks de Desarrollo Frontend: Comparación y Uso",
+    imagen: Blog7Image,
+    autor: "Daniel S.",
+    fecha: "diciembre 18,2023",
+    tiempo: "2 min.",
+    categoria: "Desarrollo Web",
   },
 ];

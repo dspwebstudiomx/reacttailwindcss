@@ -8,6 +8,8 @@ import { TbClockEdit } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import ButtonScroll from '../../components/Atoms/Buttons/ButtonScroll'
 import ButtonContainer from '../../components/Templates/ButtonContainer'
+import { IoEyeOutline } from 'react-icons/io5'
+
 const Blog = () => {
   const [articulos, setArticulos] = useState(articulosBlog)
 
@@ -28,7 +30,7 @@ const Blog = () => {
           <Spacing distance='mb-8' />
           <p className='text-2xl'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
           <ButtonContainer distancia={'mt-12'}>
-            <ButtonScroll name={'Ver mas artículos'} to={'/blog'} />
+            <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
           </ButtonContainer>
         </div>
         <div className='grid sm:grid-cols-2 gap-12'>

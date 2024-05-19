@@ -38,17 +38,17 @@ const Blog = () => {
       <ScrollToTop />
       <main id='blog' className='mt-20'>
         <HeroBlog />
-        <Banner className={'py-8 flex gap-8 justify-center text-lg'} >
+        <Banner className={'py-8 flex gap-8 justify-center text-lg cursor-pointer'} >
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
         </Banner>
         <Section>
-          <Container className={'grid sm:grid-cols-3 xl:grid-cols-4 justify-between gap-8 py-16'}>
+          <Container className={'grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-between gap-8 py-16'}>
             <ArticleCardGenerator articulos={articulos} />
           </Container>
         </Section>
         <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} >
-          <h2 className='text-3xl'>¿Gustas que toque algún tema en especial?</h2>
-          <p className='text-lg'>No dudes en contactarme para poder así generar el artículo de interés.</p>
+          <h2 className='text-3xl'>¿Gustas que toque algún tema de tu interés?</h2>
+          <p className='text-lg'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
           <Spacing distance='mb-3' />
           <ButtonScroll name={'Contáctame'} to={'/contacto'} />
         </BackgroundSection>

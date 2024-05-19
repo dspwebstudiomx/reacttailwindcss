@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const ButtonScroll = ({ name, iconLeft, iconRight, to, onclick }) => {
 
-  const classes = 'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 text-center hover:bg-blue-800'
+  const classes = 'rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 text-center hover:bg-blue-800'
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;

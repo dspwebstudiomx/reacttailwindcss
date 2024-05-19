@@ -13,6 +13,9 @@ import { IoCalendarOutline, IoPersonCircleOutline } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
+import BackgroundSection from "../../components/Molecules/BackgroundSection"
+import Spacing from "../../components/Sections/Spacing"
+import backgrooundSectionImage from '../../assets/Images/blogContacto.webp'
 
 // import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
 // import Spacing from "../../components/Sections/Spacing"
@@ -35,10 +38,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const linkPosterior = parseInt(id) + 1
 
   const classes = {
-    section: "mt-0 min-xl-screen xl:px-0 sm:px-12 bg-slate-200",
-    container: "flex justify-between gap-12 xl:gap-12 py-32 flex-col xl:flex-row text-xl",
-    contenedorIzquierdo: "flex flex-col w-full",
-    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-10 text-slate-800 h-auto xl:w-1/3 md:max-h-[1480px]"
+    section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200",
+    container: "flex justify-between gap-12 xl:gap-20 py-32 flex-col sm:flex-row text-xl justify-between",
+    contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
+    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 xl:w-[280px] bg-slate-300"
   }
 
   return (
@@ -53,7 +56,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             <header>
               <h1 className='text-3xl text-blue-800 font-semibold'>{title}</h1 >
               <br />
-              <div id="dataCreation" className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-lg sm:text-base">
+              <div id="dataCreation" className="grid grid-cols-2 lg:grid-cols-4 text-sm gap-2 justify-between">
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoCalendarOutline />}</span>Fecha: {date}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<FaRegBookmark />}</span>Categoria: {category}</h4>
                 <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
@@ -74,13 +77,13 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
+                  <button type='button' className='rounded-lg text-white border-2  text-xl text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
-                  <button type='button' className='rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
@@ -112,36 +115,51 @@ const Article = ({ id, title, author, category, date, image, children, source, t
           {/*  Contenedor izquierdo */}
 
           {/* Contenedor Derecho */}
-          <aside className={classes.contenedorDerecho} >
-            <h2 className="text-2xl text-center">Articulos más recientes</h2>
-            <div className="grid gap-12 p-6 py-12">
-              {articulosBlog.map(
-                (articulo) => {
-                  return (
-                    <Link to={`/blog/${articulo.id}`} key={articulo.id}>
-                      <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
-                        <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
-                        <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
-                          <h3 className="text-base font-semibold sm:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
-                          <div className="mt-3 flex flex-col gap-2">
-                            <div className="flex items-center text-xs">
-                              <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
-                            </div>
-                            <div className="flex items-center text-xs">
-                              <IoPersonCircleOutline size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Autor:</span>{articulo.autor}
+          <aside className="max-w-[320px]">
+            <section className={classes.contenedorDerecho} id="articulos-anteriores">
+              <h2 className="text-xl text-center px-5">Articulos más recientes</h2>
+              <div className="grid gap-12 p-6 py-12">
+                {articulosBlog.map(
+                  (articulo) => {
+                    return (
+                      <Link to={`/blog/${articulo.id}`} key={articulo.id}>
+                        <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
+                          <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
+                          <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
+                            <h3 className="text-base font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
+                            <div className="mt-3 flex flex-col gap-2">
+                              <div className="flex items-center text-xs">
+                                <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
+                              </div>
+                              <div className="flex items-center text-xs">
+                                <IoPersonCircleOutline size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Autor:</span>{articulo.autor}
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        {/* Bubble */}
-                        <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
-                        {/* Bubble */}
+                          {/* Bubble */}
+                          <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
+                          {/* Bubble */}
 
-                      </article>
-                    </Link>
-                  )
-                }
-              ).slice(-4).reverse()}
-            </div>
+                        </article>
+                      </Link>
+                    )
+                  }
+                ).slice(-4).reverse()}
+              </div>
+            </section>
+            <Spacing distance="mb-12" />
+            <section id="preguntar-tema-interes" className="xl:w-[87%]">
+              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl'} >
+                <div className="sm:px-6">
+                  <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
+                  <br />
+                  <p className='text-xl sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
+                  <Spacing distance='mb-3' />
+                  <br />
+                  <ButtonScroll name={'Contáctame'} to={'/contacto'} />
+                </div>
+              </BackgroundSection>
+            </section>
           </aside>
           {/* Contenedor Derecho */}
 
