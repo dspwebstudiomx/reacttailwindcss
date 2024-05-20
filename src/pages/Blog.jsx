@@ -38,7 +38,7 @@ const Blog = () => {
       <ScrollToTop />
       <main id='blog' className='mt-20'>
         <HeroBlog />
-        <Banner className={'py-8 flex gap-8 justify-center text-lg cursor-pointer'} >
+        <Banner className={'p-6 sm:py-6 sm:px-12 gap-4 text-lg sm:text-base cursor-pointer grid grid-cols-2 md:grid-cols-5 sm:place-items-center sm:mr-3'} >
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
         </Banner>
         <Section>

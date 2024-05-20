@@ -77,7 +77,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-xl text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
@@ -91,7 +91,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 <ButtonScroll
                   to={`/blog`}
                   name="Ver todos"
-                  iconLeftB={<FaArrowRotateLeft />}
+                  iconLeft={<FaArrowRotateLeft />}
                 />
                 {/* <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
                   <button type='button' className={'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
@@ -115,7 +115,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
           {/*  Contenedor izquierdo */}
 
           {/* Contenedor Derecho */}
-          <aside className="max-w-[320px]">
+          <aside className="w-full sm:max-w-[320px]">
             <section className={classes.contenedorDerecho} id="articulos-anteriores">
               <h2 className="text-xl text-center px-5">Articulos más recientes</h2>
               <div className="grid gap-12 p-6 py-12">
@@ -137,7 +137,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                             </div>
                           </div>
                           {/* Bubble */}
-                          <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
+                          <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
                           {/* Bubble */}
 
                         </article>
@@ -148,9 +148,9 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               </div>
             </section>
             <Spacing distance="mb-12" />
-            <section id="preguntar-tema-interes" className="xl:w-[87%]">
-              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl'} >
-                <div className="sm:px-6">
+            <section id="preguntar-tema-interes">
+              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl xl:w-[87%]'} >
+                <div className=" px-0 sm:px-6">
                   <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
                   <br />
                   <p className='text-xl sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>

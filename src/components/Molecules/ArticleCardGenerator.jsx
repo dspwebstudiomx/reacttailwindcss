@@ -26,7 +26,7 @@ const articleCardGenerator = ({ articulos }) => {
                 </div>
               </div>
               {/* Bubble */}
-              <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-sm shadow-lg rounded-bl-lg rounded-tr-xl border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
+              <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-xl border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
               {/* Bubble */}
 
             </article>

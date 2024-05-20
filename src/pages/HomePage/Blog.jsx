@@ -33,7 +33,7 @@ const Blog = () => {
             <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
           </ButtonContainer>
         </div>
-        <div className='grid sm:grid-cols-2 gap-12'>
+        <div className='grid sm:grid-cols-2 gap-12 mt-12 sm:mt-0'>
           {articulos.map(
             (articulo) => {
               return (

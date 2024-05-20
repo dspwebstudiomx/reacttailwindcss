@@ -26,13 +26,13 @@ const HomePage = () => {
           <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
         </Banner>
         <About />
-        <Technologies />
         <Services />
         <Process />
         <Clients />
         <Portfolio />
         <Testimonials />
         <Blog />
+        <Technologies />
         <Contact />
         <ReturnButton />
       </main>
