@@ -41,7 +41,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
     section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200",
     container: "flex justify-between gap-12 xl:gap-20 py-32 flex-col sm:flex-row text-xl justify-between",
     contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
-    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 xl:w-[280px] bg-slate-300"
+    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300"
   }
 
   return (
@@ -77,13 +77,13 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
-                  <button type='button' className='rounded-lg text-white border-2  text-lg sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[182px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[150px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
@@ -149,11 +149,11 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             </section>
             <Spacing distance="mb-12" />
             <section id="preguntar-tema-interes">
-              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl xl:w-[87%]'} >
-                <div className=" px-0 sm:px-6">
-                  <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
+              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl md:w-full w-[210px] py-6'} >
+                <div className=" px-0">
+                  <h2 className='md:text-xl'>¿Gustas que toque algún tema de tu interés?</h2>
                   <br />
-                  <p className='text-xl sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
+                  <p className='text-lg sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
                   <Spacing distance='mb-3' />
                   <br />
                   <ButtonScroll name={'Contáctame'} to={'/contacto'} />

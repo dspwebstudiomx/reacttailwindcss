@@ -25,25 +25,25 @@ const Footer = () => {
 
       {/*  Columns Container */}
       <section
-        className='flex flex-wrap p-4 md:p-10 lg:p-12 xl:px-40 xl:py-20 px-12 md:items-center lg:items-start md:flex-row md:flex-no-wrap bg-slate-800  w-full justify-center'>
+        className='flex flex-wrap p-4 md:p-10 lg:p-12 xl:px-40 xl:py-20 px-12 md:items-start md:flex-row bg-slate-800  w-full '>
         {/* Logo & Slogan Section */}
-        <div className='flex-shrink-0 w-full md:text-left text-center lg:w-1/4 mb-8'>
+        <div className='flex-shrink-0 w-full text-left md:w-1/4 mb-8'>
 
           <HashLink to='/#inicio' className='cursor-pointer' scroll={element => scrollWithOffset(element, 98)}>
-            <img id='logo' src={Logo} alt='dspwebstudio logo' className='w-[150px] mx-auto lg:m-0' />
+            <img id='logo' src={Logo} alt='dspwebstudio logo' className='w-[150px] lg:m-0 mx-auto' />
           </HashLink>
-          <p className='mt-2 text-lg text-center lg:text-left'>Generando oportunidades para tu negocio.</p>
+          <p className='mt-2 text-lg'>Generando oportunidades para tu negocio.</p>
         </div>
         {/* Logo & Slogan Section */}
 
         {/* Columns Sections */}
 
         {/* Sections */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left md:w-1/4 w-1/2'>
           <div className='w-full'>
-            <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Secciones</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Secciones</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left ml-0'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-base text-balance xl:text-base text-left ml-0'>
                 <li>
                   <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
@@ -91,11 +91,11 @@ const Footer = () => {
         {/* Sections */}
 
         {/* Services */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-12 md:mt-0 md:text-left lg:w-1/4 w-1/2 md:w-1/3'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-12 md:mt-0 md:text-left md:w-1/4 w-1/2'>
           <div className='w-full'>
-            <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
             <nav className='mb-10 list-none flex flex-col'>
-              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-xl text-balance xl:text-base text-left'>
+              <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-base text-balance xl:text-base text-left'>
                 <li>
                   <HashLink active='Styles.active' to='/#webDesign' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 120)}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
@@ -126,9 +126,9 @@ const Footer = () => {
         {/* Services */}
 
         {/* Policy */}
-        <div className='flex flex-wrap flex-grow mt-10 text-center md:mt-0 md:text-left lg:w-1/4 w-full  md:w-1/3'>
+        <div className='flex flex-wrap flex-grow mt-10 text-center md:mt-0 md:text-left md:w-1/4 w-full'>
           <div className='w-full'>
-            <h2 className='mb-3 text-xl font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
             <nav className='mb-10 list-none flex flex-col'>
               <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base mx-auto sm:ml-0'>
                 <li>

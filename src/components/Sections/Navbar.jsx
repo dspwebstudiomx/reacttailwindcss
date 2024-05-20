@@ -44,7 +44,7 @@ function Navbar() {
 
 
         {/* Menu */}
-        <div className="hidden lg:flex">
+        <div className="hidden md:flex">
           {/* Links */}
           <ul className="flex cursor-pointer">
             <li>
@@ -88,7 +88,7 @@ function Navbar() {
         {/* Menu */}
 
         {/* Menu button */}
-        <div onClick={toggleNav} className="lg:hidden z-40">
+        <div onClick={toggleNav} className="md:hidden z-40">
           <FaBars size={30} color="white" />
         </div>
         {/* Menu button */}

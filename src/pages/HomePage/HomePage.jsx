@@ -22,7 +22,7 @@ const HomePage = () => {
       </header>
       <main className='mt-12'>
         <HeroHomePage />
-        <Banner className={'py-10 text-xl'}>
+        <Banner className={'py-10 sm:text-lg xl:text-xl'}>
           <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
         </Banner>
         <About />
