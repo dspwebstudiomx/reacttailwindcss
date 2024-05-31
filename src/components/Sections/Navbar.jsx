@@ -2,16 +2,20 @@ import { useState } from "react";
 import { FaBars, FaFacebookF, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo from "../../assets/Logos/dsp-white.png"
+import logoWhite from "../../assets/Logos/dsp-white.png"
+import logoDark from "../../assets/Logos/dsp-color.webp"
 import Spacing from "./Spacing";
 import SocialLink from "../Atoms/Social/SocialLink";
+import ThemeToggle from "../../Functions/ThemeToggle";
+import { FaXmark } from "react-icons/fa6";
+import { navlinks } from "../../data";
 
 function Navbar() {
 
   const Styles = {
-    header: "fixed top-0 h-[98px] flex items-center justify-between bg-slate-900  text-white px-8 fixed w-full z-10 py-12 shadow-2xl",
+    header: "fixed top-0 h-[98px] flex items-center justify-between dark:bg-slate-900 bg-white text-slate-800  dark:text-slate-100 px-8 fixed w-full z-10 py-12 shadow-2xl",
     a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500 pb-3",
-    container: "flex w-full xl:max-screen-w-[50vw] h-auto items-center justify-between sm:px-10",
+    container: "flex w-full xl:max-w-screen-xl h-auto items-center justify-between sm:px-10 mx-auto",
     linkMobile: "my-5 hover:text-blue-600 active:text-blue-500 text-white text-3xl hover:pb-2"
   }
 
@@ -37,28 +41,32 @@ function Navbar() {
       <section className={Styles.container}>
 
         {/* Logo */}
-        <HashLink to="/#inicio" className="cursor-pointer max-" scroll={element => scrollWithOffset(element, 98)}>
-          <img id="logo" src={logo} alt=" dspwebstudio logo" className="w-[120px]" />
+        <HashLink to="/#inicio" className="dark:block hidden  cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+          <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="w-[130px] -ml-4" />
+        </HashLink>
+        {/* Logo */}
+        {/* Logo */}
+        <HashLink to="/#inicio" className="dark:hidden block cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+          <img id="logo" src={logoDark} alt=" dspwebstudio logo" className="w-[90px]" />
         </HashLink>
         {/* Logo */}
 
 
+        <div className="lg:hidden z-40 w-[5%]">
+          <ThemeToggle />
+        </div>
+
         {/* Menu */}
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex items-center font-semibold">
           {/* Links */}
           <ul className="flex cursor-pointer">
-            <li>
-              <HashLink to="/#inicio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Inicio</HashLink>
-            </li>
-            <li>
-              <HashLink to="/#about" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Sobre mi</HashLink>
-            </li>
-            <li>
-              <HashLink to="/#services" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Servicios</HashLink>
-            </li>
-            <li>
-              <HashLink to="/#portfolio" duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>Portafolio</HashLink>
-            </li>
+            {navlinks.map((navlink) => {
+              return (
+                <li key={navlink.id}>
+                  <HashLink to={navlink.href} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</HashLink>
+                </li>
+              )
+            })}
             <li>
               <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
             </li>
@@ -72,50 +80,39 @@ function Navbar() {
           <ul className="social my-auto mr-6 ml-12 flex gap-4">
             <SocialLink
               href={'https://www.facebook.com/dspwebstudio'}
-              icono={<FaFacebookF size={32} className='text-white hover:text-blue-600 hover:scale-110' />}
+              icono={<FaFacebookF size={32} className='text-slate-800 dark:text-white hover:text-blue-600 hover:scale-110' />}
               ariaLabel={'Accede a mi  cuenta de Facebook'}
               title={'Visita mi página en Facebook'}
             />
             <SocialLink
               href={'https://www.instagram.com/dspwebstudio'}
-              icono={<FaInstagram size={32} className='text-white hover:text-blue-600 hover:scale-110' />}
+              icono={<FaInstagram size={32} className='text-slate-800 dark:text-white hover:text-blue-600 hover:scale-110' />}
               ariaLabel={'Accede a mi  cuenta de Instagram'}
               title="Visita mi perfil de Instagram"
             />
+            <ThemeToggle />
           </ul>
           {/* Social */}
         </div>
         {/* Menu */}
 
         {/* Menu button */}
-        <div onClick={toggleNav} className="md:hidden z-40">
-          <FaBars size={30} color="white" />
+        <div onClick={toggleNav} className="lg:hidden z-40 flex gap-8 items-center w-[7%]">
+          {!nav ? <FaBars size={30} className="text-blue-900 dark:text-slate-100 z-40" /> : <FaXmark size={32} className="text-slate-100 dark:text-slate-100 z-40" />}
         </div>
         {/* Menu button */}
 
         {/* Menu mobile*/}
-        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-10 gap-4"}>
+        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-30 gap-4"}>
           <ul className="flex flex-col gap-8">
-            <li>
-              <HashLink to="/#inicio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} id="inicio">Inicio</HashLink>
-              <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
-            </li>
-            <li>
-              <HashLink to="/#about" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Sobre mi</HashLink>
-              <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
-
-
-            </li>
-            <li>
-              <HashLink to="/#services" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav} >Servicios</HashLink>
-              <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
-
-            </li>
-            <li>
-              <HashLink to="/#portfolio" duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)} onClick={toggleNav}>Portafolio</HashLink>
-              <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
-
-            </li>
+            {navlinks.map((navlink) => {
+              return (
+                <li key={navlink.id}>
+                  <HashLink onClick={toggleNav} to={navlink.href} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</HashLink>
+                  <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
+                </li>
+              )
+            })}
             <li>
               <Link to="/blog" duration={500} className={Styles.linkMobile} onClick={toggleNav}>Blog</Link>
               <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-3' />

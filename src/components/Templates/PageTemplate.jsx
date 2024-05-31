@@ -15,7 +15,7 @@ const PageTemplate = ({ background, id, children, TituloPrincipal }) => {
       </header>
       <ScrollToTop />
       <main>
-        <Section className={`mx-auto ${background} py-32 mt-12`} id={id}>
+        <Section className={`mx-auto ${background} py-32 mt-12 dark:bg-slate-800 dark:text-slate-100 text-lg`} id={id}>
           <Container>
             <h1 className="text-3xl mx-auto text-center mb-2">{TituloPrincipal}</h1>
             <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mb-12 mx-auto mt-1' />

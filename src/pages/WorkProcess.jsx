@@ -11,7 +11,7 @@ const WorkProcess = () => {
   return (
     <>
       <PageTemplate TituloPrincipal={"Proceso de Trabajo"}>
-        <div id='descripcionProceso' className='text-lg text-pretty'>
+        <div id='descripcionProceso' className='text-pretty'>
           <p>
             En <strong>dspwebstudio</strong>, me comprometo a brindarte una experiencia de diseño y desarrollo web sin problemas. Mi proceso de trabajo ha sido refinado a lo largo de años de experiencia para garantizar resultados excepcionales y la máxima satisfacción del cliente.
           </p>

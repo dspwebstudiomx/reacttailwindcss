@@ -2,8 +2,10 @@ import Contacto from "../components/Sections/Contact";
 import Navbar from "../components/Sections/Navbar";
 import Footer from "../components/Sections/Footer";
 import ReturnButton from "../components/Atoms/Buttons/ReturnButton";
+import useTitle from "../Functions/Hooks/useTitle";
 
 const Contact = () => {
+  useTitle({ title: 'Contacto' })
   return (
     <div className="" id="scrollTop">
       <Navbar />

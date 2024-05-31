@@ -15,8 +15,7 @@ import { TbClockEdit } from "react-icons/tb";
 import { HashLink } from "react-router-hash-link"
 import BackgroundSection from "../../components/Molecules/BackgroundSection"
 import Spacing from "../../components/Sections/Spacing"
-import backgrooundSectionImage from '../../assets/Images/blogContacto.webp'
-
+import backgroundSectionImage from '../../assets/Images/blogContacto.webp'
 // import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
 // import Spacing from "../../components/Sections/Spacing"
 // import PageSubtitle from "../../components/Molecules/PageSubtitle"
@@ -38,10 +37,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const linkPosterior = parseInt(id) + 1
 
   const classes = {
-    section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200",
+    section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200 dark:bg-slate-800 dark:text-slate-100",
     container: "flex justify-between gap-12 xl:gap-20 py-32 flex-col sm:flex-row text-xl justify-between",
     contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
-    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300"
+    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300 dark:bg-slate-900"
   }
 
   return (
@@ -54,13 +53,13 @@ const Article = ({ id, title, author, category, date, image, children, source, t
           <div className={classes.contenedorIzquierdo}>
             {/* Contenido */}
             <header>
-              <h1 className='text-3xl text-blue-800 font-semibold'>{title}</h1 >
+              <h1 className='text-3xl text-blue-800 dark:text-blue-500 font-semibold'>{title}</h1 >
               <br />
-              <div id="dataCreation" className="grid grid-cols-2 lg:grid-cols-4 text-sm gap-2 justify-between">
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoCalendarOutline />}</span>Fecha: {date}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<FaRegBookmark />}</span>Categoria: {category}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800">{<TbClockEdit />}</span>Tiempo: {time}</h4>
+              <div id="dataCreation" className="grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-xs w-full sm:w-1/2">
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<IoCalendarOutline />}</span>Fecha: {date}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<FaRegBookmark />}</span>Categoria: {category}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
+                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<TbClockEdit />}</span>Tiempo: {time}</h4>
               </div>
               <br />
               <figure>
@@ -77,13 +76,13 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               {/* Botones de Navegación */}
               <ButtonContainer distancia="mt-4">
                 <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
-                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-blue-900 shadow-2xl'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
                 <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
-                  <button type='button' className='rounded-lg text-white border-2  text-lg sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-2/3 md:w-[150px] lg:w-[170px] h-[70px] sm:h-[60px] mx-auto border-blue-900'>
+                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
@@ -116,8 +115,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
 
           {/* Contenedor Derecho */}
           <aside className="w-full sm:max-w-[320px]">
+
+            {/* Artículos Recientes */}
             <section className={classes.contenedorDerecho} id="articulos-anteriores">
-              <h2 className="text-xl text-center px-5">Articulos más recientes</h2>
+              <h2 className="text-3xl text-center px-5 dark:text-slate-100 my-4">Articulos más recientes</h2>
               <div className="grid gap-12 p-6 py-12">
                 {articulosBlog.map(
                   (articulo) => {
@@ -126,7 +127,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                         <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
                           <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
                           <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
-                            <h3 className="text-base font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
+                            <h3 className="text-xl font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
                             <div className="mt-3 flex flex-col gap-2">
                               <div className="flex items-center text-xs">
                                 <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
@@ -147,11 +148,15 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 ).slice(-4).reverse()}
               </div>
             </section>
+            {/* Artículos Recientes */}
+
             <Spacing distance="mb-12" />
-            <section id="preguntar-tema-interes">
-              <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} className={'max-h-[420px] rounded-lg border-2 border-black shadow-2xl md:w-full w-[210px] py-6'} >
-                <div className=" px-0">
-                  <h2 className='md:text-xl'>¿Gustas que toque algún tema de tu interés?</h2>
+
+            {/* Recomendar tema */}
+            <section id="recomendar-tema-interes">
+              <BackgroundSection opacity={'opacity-65'} background={backgroundSectionImage} className={'h-aut0 rounded-lg shadow-2xl md:w-full w-[210px]'} >
+                <div className="py-12 px-6">
+                  <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
                   <br />
                   <p className='text-lg sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
                   <Spacing distance='mb-3' />
@@ -160,6 +165,8 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 </div>
               </BackgroundSection>
             </section>
+            {/* Recomendar tema */}
+
           </aside>
           {/* Contenedor Derecho */}
 

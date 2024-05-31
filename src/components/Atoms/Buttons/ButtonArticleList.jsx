@@ -1,6 +1,6 @@
 const ButtonArticleList = ({ categorias, filtrarCategoria }) => {
   return (
-    categorias.map(categoria => (
+    categorias.sort().map(categoria => (
       <a
         key={categoria}
         value={categoria}

@@ -16,6 +16,8 @@ import Blog5Image from "../src/assets/Images/Blog/Articulos/blog5.webp";
 import Blog6Image from "../src/assets/Images/Placeholder.webp";
 import Blog7Image from "../src/assets/Images/Blog/Articulos/blog7.webp";
 import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
+import WebDesigner from "../src/assets/JSON/web-designer.json";
+import VideoDesign from "../src/assets/JSON/video-design.json";
 import CodeDebugging from "./assets/JSON/code-debugging.json";
 import UsabilityTesting from "./assets/JSON/usability-testing.json";
 import MobileApplicationTesting from "./assets/JSON/mobile-application-testing.json";
@@ -33,35 +35,48 @@ import {
 export const servicios = [
   {
     id: 1,
-    idService: "webDesign",
+    idService: "diseño-web",
     serviceName: "Diseño Web",
     serviceDescription:
       "Transformo tus ideas en una experiencia web impresionante. Diseño web a medida, moderno y funcional que cautivará a tus visitantes.",
     lottieImage: WebDevelopmentTutorial,
+    link: "/#diseño-web",
   },
   {
     id: 2,
-    idService: "webDevelopment",
+    idService: "desarrollo-web",
     serviceName: "Desarrollo Web",
     serviceDescription:
       "Convierto tu visión en un sitio web interactivo y potente. Desarrollo web personalizado, optimizado y adaptado a tus necesidades. Juntos, llevaremos tu presencia en línea al siguiente nivel.",
     lottieImage: CodeDebugging,
+    link: "/#desarrollo-web",
   },
   {
     id: 3,
-    idService: "optimization",
+    idService: "optimizacion",
     serviceName: "Optimización",
     serviceDescription:
       "Mejore el rendimiento y la experiencia de usuario de tu sitio web con el servicio de Optimización Web. Implemento técnicas avanzadas para aumentar velocidad, usabilidad y conversiones, potenciando tu presencia en línea.",
     lottieImage: UsabilityTesting,
+    link: "/#optimizacion",
   },
   {
     id: 4,
-    idService: "manteinance",
+    idService: "mantenimiento",
     serviceName: "Mantenimiento",
     serviceDescription:
       "Mantén tu sitio web actualizado, seguro y funcionando sin problemas. Mi servicio de mantenimiento web te brinda tranquilidad y tiempo para enfocarte en tu negocio principal. ¡Cuenta conmigo para cuidar de tu presencia en línea!",
     lottieImage: MobileApplicationTesting,
+    link: "/#mantenimiento",
+  },
+  {
+    id: 5,
+    idService: "asesoria",
+    serviceName: "Asesoría",
+    serviceDescription:
+      "Como asesor personal de Diseño y Desarrollo Web, trabajo contigo para crear un sitio cautivador y funcional que refleje la esencia de tu marca. ¡Contacta conmigo y llevemos tu presencia digital al siguiente nivel juntos!",
+    lottieImage: VideoDesign,
+    link: "/#asesoria",
   },
 ];
 
@@ -253,5 +268,28 @@ export const articulosBlog = [
     fecha: "diciembre 18,2023",
     tiempo: "2 min.",
     categoria: "Desarrollo Web",
+  },
+];
+
+export const navlinks = [
+  {
+    id: 1,
+    nameLink: "Inicio",
+    href: "/#hero",
+  },
+  {
+    id: 2,
+    nameLink: "Sobre Mi",
+    href: "/#sobre-mi",
+  },
+  {
+    id: 3,
+    nameLink: "Servicios",
+    href: "/#servicios",
+  },
+  {
+    id: 4,
+    nameLink: "Portafolio",
+    href: "/#portafolio",
   },
 ];

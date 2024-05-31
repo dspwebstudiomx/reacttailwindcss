@@ -4,7 +4,7 @@ import Article from '../Article'
 import Image from '../../../assets/Images/Placeholder.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
-
+import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
 const ErroresComunesDisenoWeb = () => {
   return (
     <Article title={'Los Errores Más Comunes en el Diseño Web y Cómo Evitarlos'} id={6} category={'Diseño Web'} author={'Daniel S.'} image={Image} date={'noviembre 21, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' >
@@ -21,9 +21,7 @@ const ErroresComunesDisenoWeb = () => {
       <p>La falta de coherencia en el diseño puede hacer que un sitio web se vea poco profesional y confuso para los visitantes. Es importante mantener una paleta de colores consistente, utilizar tipografías legibles y aplicar un estilo coherente en todas las páginas del sitio. Esto ayuda a reforzar la marca y facilita la navegación para los usuarios.</p>
 
       <Spacing distance='mb-20' />
-      <h2 className='text-2xl font-bold flex gap-2 items-center'>Conclusión</h2>
-      <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mx-left mt-1' />
-      <Spacing distance='mb-6' />
+      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
       <p>Evitar estos errores comunes en el diseño web es esencial para crear experiencias en línea exitosas y satisfactorias para los usuarios. Centrarse en la experiencia del usuario, mantener el diseño limpio y organizado, optimizar para dispositivos móviles, mejorar la velocidad de carga y mantener la coherencia en el diseño son pasos fundamentales para garantizar el éxito de un sitio web. Al evitar estos errores y enfocarse en las mejores prácticas de diseño, puedes crear un sitio web que impresione a los visitantes y cumpla sus objetivos de manera efectiva.</p>
     </Article >
   )

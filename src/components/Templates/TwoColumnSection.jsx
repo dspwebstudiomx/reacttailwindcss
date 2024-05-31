@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import Container from '../Templates/Container'
 
 const TwoColumnSection = ({ children }) => {
-  const containerClasses = `grid sm:grid-cols-2 gap-2 sm:gap-0 mx-auto px-12`;
+  const containerClasses = `grid sm:grid-cols-2 gap-2 sm:gap-12 mx-auto`;
 
   return (
-    <div className={containerClasses}>
+    <Container className={containerClasses}>
       {children}
-    </div>
+    </Container>
   )
 }
 

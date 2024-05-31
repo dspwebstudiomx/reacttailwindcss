@@ -20,7 +20,7 @@ const Portfolio = () => {
   const classes = "grid sm:grid-cols-2 xl:grid-cols-3 gap-10 place-items-center"
 
   return (
-    <Section id="portfolio">
+    <Section id="portafolio" className={'dark:bg-slate-800'}>
       <Container className={classes}>
         {clientListCard}
       </Container>

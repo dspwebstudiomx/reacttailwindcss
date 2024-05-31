@@ -4,6 +4,7 @@ import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog3.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
+import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
 
 const HerramientasDiseñoWeb = () => {
   return (
@@ -16,9 +17,7 @@ const HerramientasDiseñoWeb = () => {
       <p>Para crear elementos gráficos personalizados, es necesario contar con un editor gráfico. Adobe Photoshop e Illustrator son herramientas estándar utilizadas por muchos diseñadores web profesionales para la creación de logotipos, íconos y elementos visuales personalizados.</p>
       <p>En el ámbito del diseño web, los editores gráficos son herramientas fundamentales para crear y manipular elementos visuales que dan forma a la estética y la identidad de un sitio web. Estas aplicaciones permiten a los diseñadores crear gráficos personalizados, íconos, logotipos y otros elementos visuales, asegurando que la interfaz de usuario sea atractiva y coherente. Como profesional en el campo del diseño web, es esencial estar familiarizado con una variedad de editores gráficos que ofrecen diversas características y capacidades para abordar distintos aspectos del diseño web.</p>
       <Spacing distance='mb-20' />
-      <h2 className='text-2xl font-bold flex gap-2 items-center'>Conclusión</h2>
-      <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mx-left mt-1' />
-      <Spacing distance='mb-6' />
+      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
       <p>Contar con un conjunto adecuado de herramientas de diseño web es esencial tanto para principiantes como para profesionales en el campo del Front End Development. Desde editores de código hasta herramientas de prototipado y optimización de recursos, cada una desempeña un papel crucial en la creación de sitios y aplicaciones web atractivas y funcionales. Adaptarse a estas herramientas y mantenerse actualizado con las últimas tendencias tecnológicas es fundamental para destacar en la industria y brindar experiencias de usuario de alta calidad.</p>
     </Article>
   )

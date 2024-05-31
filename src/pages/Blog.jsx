@@ -14,6 +14,7 @@ import BackgroundSection from '../components/Molecules/BackgroundSection'
 import ButtonScroll from '../components/Atoms/Buttons/ButtonScroll'
 import Spacing from '../components/Sections/Spacing'
 import backgrooundSectionImage from '../assets/Images/blogContacto.webp'
+import useTitle from '../Functions/Hooks/useTitle';
 
 const Blog = () => {
 
@@ -30,27 +31,31 @@ const Blog = () => {
     setArticulos(filterDataCategory)
   }
 
+  useTitle({ title: 'Blog' })
+
   return (
     <div id="scrollTop">
       <header>
         <Navbar />
       </header>
       <ScrollToTop />
-      <main id='blog' className='mt-20'>
+      <main id='blog' className='mt-20 dark:bg-slate-800'>
         <HeroBlog />
-        <Banner className={'p-6 sm:py-6 sm:px-12 gap-4 text-lg sm:text-base cursor-pointer grid grid-cols-2 md:grid-cols-5 sm:place-items-center sm:mr-3'} >
+        <Banner className={'p-6 sm:py-6 sm:px-0 gap-4 text-lg sm:text-base cursor-pointer grid grid-cols-2 md:grid-cols-5 sm:place-items-center sm:mr-3'} >
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
         </Banner>
         <Section>
-          <Container className={'grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 justify-between gap-8 py-16'}>
+          <Container className={'grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-8 py-16'}>
             <ArticleCardGenerator articulos={articulos} />
           </Container>
         </Section>
-        <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage} >
-          <h2 className='text-3xl'>¿Gustas que toque algún tema de tu interés?</h2>
-          <p className='text-lg'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
-          <Spacing distance='mb-3' />
-          <ButtonScroll name={'Contáctame'} to={'/contacto'} />
+        <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage}>
+          <div className='p-12 flex flex-col gap-6'>
+            <h2 className='text-3xl'>¿Gustas que toque algún tema de tu interés?</h2>
+            <p className='text-lg'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
+            <Spacing distance='mb-3' />
+            <ButtonScroll name={'Contáctame'} to={'/contacto'} />
+          </div>
         </BackgroundSection>
       </main>
       <Footer />

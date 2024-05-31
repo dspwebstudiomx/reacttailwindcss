@@ -6,7 +6,7 @@ import { testimonials } from "../../data"
 
 const Testimonials = () => {
   return (
-    <Section id="testimonials" className={'bg-slate-400 px-20 dark:bg-slate-400'}>
+    <Section id="testimonials" className={'bg-slate-400 px-20 dark:bg-slate-700'}>
       <Container className="grid sm:grid-cols-2 gap-8">
         {testimonials.map(testimonial => {
           return (

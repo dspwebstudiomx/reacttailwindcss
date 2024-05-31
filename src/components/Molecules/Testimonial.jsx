@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 
 const Testimonial = (testimonial) => {
   return (
-    <article key={testimonial.id} className='border-blue-900 border-2 rounded-xl p-9 flex flex-col gap-5 bg-slate-200 justify-center shadow-2xl animate_animated animate__bounceIn w-full z-0 min-h-[420px] md:min-h-[280px] lg:h-auto'>
-      <p className='leading-5 flex'>
+    <article key={testimonial.id} className='border-blue-900 border-2 rounded-xl p-9 flex flex-col gap-5 bg-slate-200 justify-center shadow-2xl animate_animated animate__bounceIn w-full z-0 min-h-[340px] md:min-h-[280px] lg:h-auto text-base'>
+      <p className='leading-6 flex text-xl sm:text-base'>
         <span>
           <FaQuoteLeft size={16} className='text-blue-800 mr-2' />
         </span>
@@ -18,7 +18,7 @@ const Testimonial = (testimonial) => {
             <h2 className='font-semibold'>
               {testimonial.nombre}
             </h2>
-            <p className='text-xs text-blue-900 font-medium'>@{testimonial.empresa}</p>
+            <p className=' text-blue-900 font-medium'>@{testimonial.empresa}</p>
           </div>
         </div>
       </Link>

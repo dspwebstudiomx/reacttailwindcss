@@ -5,10 +5,11 @@ import lottieImageAbout from "../../assets/About.json"
 import TitleH2 from "../Atoms/Headings/TitleH2"
 
 const About = () => {
+
   return (
-    <Section id="about" className="bg-slate-200 dark:bg-slate-800 dark:text-slate-100">
+    <Section id="sobre-mi" className="bg-slate-200 dark:bg-slate-800 dark:text-slate-100">
       <Container className="flex flex-col gap-12 sm:flex-row">
-        <div className="text-base flex  flex-col">
+        <div className="flex  flex-col">
           <TitleH2 title="Quien Soy" align={'items-center sm:items-start'} />
           <p><strong>Hola! Mi nombre es Daniel</strong>, orgullosamente mexicano. Desde niño he sido muy inquieto, siempre me pregunto el porqué y el cómo se hacen las cosas.</p>
           <br />

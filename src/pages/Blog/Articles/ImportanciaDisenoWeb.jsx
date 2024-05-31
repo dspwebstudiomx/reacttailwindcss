@@ -3,6 +3,7 @@ import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog5.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
+import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
 
 const ImportanciaDiseñoWeb = () => {
   return (
@@ -17,9 +18,7 @@ const ImportanciaDiseñoWeb = () => {
       <ArticleSubtitle subtitle='Ahorro de Tiempo y Recursos' />
       <p>Además, el diseño responsivo puede ahorrar tiempo y recursos a los propietarios de sitios web. En lugar de tener que mantener múltiples versiones de un sitio para diferentes dispositivos, un diseño responsivo permite una gestión más eficiente del contenido. Esto significa menos trabajo de desarrollo y actualización, lo que a su vez se traduce en ahorro de tiempo y costos.</p>
       <Spacing distance='mb-20' />
-      <h2 className='text-2xl font-bold flex gap-2 items-center'>Conclusión</h2>
-      <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[12%] skew-x-12 mx-left mt-1' />
-      <Spacing distance='mb-6' />
+      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
       <p>En resumen, el diseño responsivo es una piedra angular en la construcción de sitios web modernos y exitosos. No solo mejora la experiencia del usuario y la visibilidad en los motores de búsqueda, sino que también ahorra tiempo y recursos para los propietarios del sitio. En un mundo donde la web es omnipresente y los dispositivos móviles son el medio principal de acceso, el diseño responsivo se convierte en una necesidad más que en una opción. Así que la próxima vez que te embarques en un proyecto de diseño web, recuerda la importancia de hacerlo responsivo para garantizar que tu sitio brinde la mejor experiencia posible a todos sus visitantes</p>
 
     </Article >

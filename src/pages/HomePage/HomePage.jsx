@@ -13,16 +13,20 @@ import ReturnButton from '../../components/Atoms/Buttons/ReturnButton'
 import Banner from '../../components/Sections/Banner'
 import Testimonials from '../../components/Sections/Testimonials'
 import HeroHomePage from './HeroHomePage'
+import useTitle from '../../Functions/Hooks/useTitle'
 
 const HomePage = () => {
+
+  useTitle({ title: 'Inicio' })
+
   return (
     <div id='scrollTop'>
       <header>
         <Navbar />
       </header>
-      <main className='mt-12'>
+      <main className='mt-12 text-xl sm:text-lg'>
         <HeroHomePage />
-        <Banner className={'py-10 sm:text-lg xl:text-xl'}>
+        <Banner className={'py-10 text-xl'}>
           <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
         </Banner>
         <About />
