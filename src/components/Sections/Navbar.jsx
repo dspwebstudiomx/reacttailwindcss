@@ -44,15 +44,13 @@ function Navbar() {
         <HashLink to="/#inicio" className="dark:block hidden  cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="w-[130px] -ml-4" />
         </HashLink>
-        {/* Logo */}
-        {/* Logo */}
         <HashLink to="/#inicio" className="dark:hidden block cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoDark} alt=" dspwebstudio logo" className="w-[90px]" />
         </HashLink>
         {/* Logo */}
 
 
-        <div className="lg:hidden z-40 w-[5%]">
+        <div className="lg:hidden z-10 w-[5%]">
           <ThemeToggle />
         </div>
 
@@ -98,12 +96,12 @@ function Navbar() {
 
         {/* Menu button */}
         <div onClick={toggleNav} className="lg:hidden z-40 flex gap-8 items-center w-[7%]">
-          {!nav ? <FaBars size={30} className="text-blue-900 dark:text-slate-100 z-40" /> : <FaXmark size={32} className="text-slate-100 dark:text-slate-100 z-40" />}
+          {!nav ? <FaBars size={30} className="text-blue-900 dark:text-slate-100 z-40" /> : <FaXmark size={32} className="text-slate-100 dark:text-slate-100 z-30" />}
         </div>
         {/* Menu button */}
 
         {/* Menu mobile*/}
-        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-900 opacity-[99%] z-30 gap-4"}>
+        <div className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen flex flex-col justify-center items-center bg-slate-800 opacity-[99%] z-20 gap-4"}>
           <ul className="flex flex-col gap-8">
             {navlinks.map((navlink) => {
               return (

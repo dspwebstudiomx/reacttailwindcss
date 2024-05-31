@@ -55,6 +55,12 @@ const Footer = () => {
                     </li>
                   )
                 })}
+                <li>
+                  <Link to={'/proceso-trabajo'} aria-label='Ver proceso de trabajo' id='processLink' className={Styles.a}>
+                    <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                    Proceso de Trabajo
+                  </Link>
+                </li>
                 <Link to='/blog' className={Styles.a}>
                   <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                   Blog
@@ -63,12 +69,6 @@ const Footer = () => {
                   <Link to='/contacto' className={Styles.a}>
                     <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                     Contacto
-                  </Link>
-                </li>
-                <li>
-                  <Link to={'/proceso-trabajo'} aria-label='Ver proceso de trabajo' id='processLink' className={Styles.a}>
-                    <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
-                    Proceso de Trabajo
                   </Link>
                 </li>
               </ul>

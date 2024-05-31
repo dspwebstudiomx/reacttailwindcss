@@ -39,7 +39,7 @@ const Blog = () => {
         <Navbar />
       </header>
       <ScrollToTop />
-      <main id='blog' className='mt-20 dark:bg-slate-800'>
+      <main id='blog' className='mt-20 dark:bg-slate-800 bg-slate-300'>
         <HeroBlog />
         <Banner className={'p-6 sm:py-6 sm:px-0 gap-4 text-lg sm:text-base cursor-pointer grid grid-cols-2 md:grid-cols-5 sm:place-items-center sm:mr-3'} >
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />

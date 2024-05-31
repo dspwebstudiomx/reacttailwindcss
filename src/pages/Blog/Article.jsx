@@ -40,7 +40,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
     section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200 dark:bg-slate-800 dark:text-slate-100",
     container: "flex justify-between gap-12 xl:gap-20 py-32 flex-col sm:flex-row text-xl justify-between",
     contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
-    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-8 text-slate-800 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300 dark:bg-slate-900"
+    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 sm:px-4 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300 dark:bg-slate-900"
   }
 
   return (
@@ -118,13 +118,13 @@ const Article = ({ id, title, author, category, date, image, children, source, t
 
             {/* Artículos Recientes */}
             <section className={classes.contenedorDerecho} id="articulos-anteriores">
-              <h2 className="text-3xl text-center px-5 dark:text-slate-100 my-4">Articulos más recientes</h2>
+              <h2 className="text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900">Articulos más recientes</h2>
               <div className="grid gap-12 p-6 py-12">
                 {articulosBlog.map(
                   (articulo) => {
                     return (
                       <Link to={`/blog/${articulo.id}`} key={articulo.id}>
-                        <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%]">
+                        <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%] text-slate-900 dark:text-slate-900">
                           <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
                           <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
                             <h3 className="text-xl font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>

@@ -20,12 +20,12 @@ const HeroHomePage = () => {
         <ButtonScroll
           iconLeft={<IoPersonOutline size={21} />}
           name={'Sobre Mí'}
-          to={'#about'}
+          to={'#sobre-mi'}
         />
         <ButtonScroll
           iconLeft={<IoBookOutline size={21} />}
           name={'Contacto'}
-          to={'#contact'}
+          to={'#contacto'}
         />
       </ButtonContainer>
     </Hero>

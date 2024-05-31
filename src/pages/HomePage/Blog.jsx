@@ -24,16 +24,18 @@ const Blog = () => {
 
   return (
     <BackgroundSection background={BlogSectionImage} opacity='opacity-75' id={'blog'} className={'p-12'}>
-      <div className='flex flex-col sm:grid-cols-2 md:flex-row gap-20'>
+      <div className='flex flex-col md:flex-row gap-20 sm:px-12 px-0 py-12'>
         <div className='text-slate-100 sm:w-2/3'>
           <h2 className='text-4xl text-center sm:text-left'>Visita mi Blog</h2>
           <Spacing distance='mb-8' />
           <p className='text-2xl'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
-          <ButtonContainer distancia={'mt-12'}>
-            <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
-          </ButtonContainer>
+          <div className='hidden sm:block'>
+            <ButtonContainer distancia={'mt-12'}>
+              <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
+            </ButtonContainer>
+          </div>
         </div>
-        <div className='grid sm:grid-cols-2 gap-8 mt-12 sm:mt-0  md:w-[100%] -ml-8'>
+        <div className='grid sm:grid-cols-2 gap-8 sm:gap-12 mt-0 sm:mt-0  md:w-[100%]'>
           {articulos.map(
             (articulo) => {
               return (
@@ -63,6 +65,11 @@ const Blog = () => {
               )
             }
           ).slice(-2).reverse()}
+        </div>
+        <div className='block sm:hidden'>
+          <ButtonContainer distancia={'mt-0'}>
+            <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
+          </ButtonContainer>
         </div>
       </div>
     </BackgroundSection>
