@@ -1,34 +1,36 @@
-import { Link } from "react-router-dom"
-import PropTypes from "prop-types"
-import Section from "../../components/Templates/Section"
-import Container from "../../components/Templates/Container"
-import Navbar from "../../components/Sections/Navbar"
-import Footer from "../../components/Sections/Footer"
-import ReturnButton from "../../components/Atoms/Buttons/ReturnButton"
-import ButtonScroll from "../../components/Atoms/Buttons/ButtonScroll"
-import ButtonContainer from "../../components/Templates/ButtonContainer"
-import { articulosBlog } from "../../data"
-import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from "react-icons/fa6";
-import { IoCalendarOutline, IoPersonCircleOutline } from "react-icons/io5";
-import { FaRegBookmark } from "react-icons/fa6";
-import { TbClockEdit } from "react-icons/tb";
-import { HashLink } from "react-router-hash-link"
-import BackgroundSection from "../../components/Molecules/BackgroundSection"
-import Spacing from "../../components/Sections/Spacing"
+import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
+import Container from '../../components/Templates/Container'
+import Navbar from '../../components/Sections/Navbar'
+import Footer from '../../components/Sections/Footer'
+import ReturnButton from '../../components/Atoms/Buttons/ReturnButton'
+import ButtonScroll from '../../components/Atoms/Buttons/ButtonScroll'
+import ButtonContainer from '../../components/Templates/ButtonContainer'
+import { articulosBlog } from '../../data'
+import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa6';
+import { IoCalendarOutline, IoPersonCircleOutline } from 'react-icons/io5';
+import { FaRegBookmark } from 'react-icons/fa6';
+import { TbClockEdit } from 'react-icons/tb';
+import { HashLink } from 'react-router-hash-link'
+import BackgroundSection from '../../components/Molecules/BackgroundSection'
+import Spacing from '../../components/Sections/Spacing'
 import backgroundSectionImage from '../../assets/Images/blogContacto.webp'
-// import ArticleCardGenerator from "../../components/Molecules/ArticleCardGenerator"
-// import Spacing from "../../components/Sections/Spacing"
-// import PageSubtitle from "../../components/Molecules/PageSubtitle"
-// import { FaHome } from "react-icons/fa"
+import Line from '../../components/Sections/Line'
+import Banner from '../../components/Sections/Banner'
+import { FaHome } from 'react-icons/fa'
+import useTitle from '../../Functions/Hooks/useTitle'
+
 
 const Article = ({ id, title, author, category, date, image, children, source, time }) => {
+
+  useTitle({ title: title })
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
     window.scroll({
       top: elementPosition,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }
 
@@ -37,16 +39,19 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const linkPosterior = parseInt(id) + 1
 
   const classes = {
-    section: "mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200 dark:bg-slate-800 dark:text-slate-100",
-    container: "flex justify-between gap-12 xl:gap-20 py-32 flex-col sm:flex-row text-xl justify-between",
-    contenedorIzquierdo: "flex flex-col w-full sm:w-2/3",
-    contenedorDerecho: "bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 sm:px-4 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300 dark:bg-slate-900"
+    section: 'mt-0 xl:min-xl-screen xl:px-0 sm:px-12 bg-slate-200 dark:bg-slate-800 dark:text-slate-100',
+    container: 'flex justify-between gap-12 xl:gap-20 py-24 flex-col sm:flex-row text-xl justify-between',
+    contenedorIzquierdo: 'flex flex-col w-full sm:w-2/3',
+    contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 sm:px-4 h-auto md:max-h-[1500px] sm:w-2/3 md:w-full bg-slate-300 dark:bg-slate-900'
   }
 
   return (
-    <div id="scrollTop">
+    <div id='scrollTop'>
       <Navbar />
-      <Section className={classes.section} id="article">
+      <Banner className={'mt-24 py-8'}>
+        <h3 className='font-semibold text-center text-2xl'>{category}</h3>
+      </Banner>
+      <section className={classes.section} id='article'>
         <Container className={classes.container}>
 
           {/*  Contenedor izquierdo */}
@@ -55,33 +60,33 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             <header>
               <h1 className='text-3xl text-blue-800 dark:text-blue-500 font-semibold'>{title}</h1 >
               <br />
-              <div id="dataCreation" className="grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-xs w-full sm:w-1/2">
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<IoCalendarOutline />}</span>Fecha: {date}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<FaRegBookmark />}</span>Categoria: {category}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
-                <h4 className="flex items-center"><span className="mr-1 text-blue-800 dark:text-blue-500">{<TbClockEdit />}</span>Tiempo: {time}</h4>
+              <div id='dataCreation' className='grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-xs w-full xl:w-4/6'>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500'>{<IoCalendarOutline />}</span>Fecha: {date}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500'>{<FaRegBookmark />}</span>Categoria: {category}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500'>{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500'>{<TbClockEdit />}</span>Tiempo: {time}</h4>
               </div>
               <br />
               <figure>
-                <img src={image} alt="image blog" className="h-[220px] w-full overflow-hidden object-cover" />
-                <a href={`https://${source}`} target="_blank">
-                  <figcaption className="text-sm font-semibold mt-1"><span className="mr-1">Fuente:</span>{source}</figcaption>
+                <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' />
+                <a href={`https://${source}`} target='_blank'>
+                  <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
                 </a>
               </figure>
             </header>
-            <main className="py-16 text-xl sm:text-base">
+            <main className='pb-12 text-xl sm:text-base'>
               {children}
             </main>
             <footer>
               {/* Botones de Navegación */}
-              <ButtonContainer distancia="mt-4">
-                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? "hidden" : "block"}>
+              <ButtonContainer distancia='mt-4'>
+                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? 'hidden' : 'block'}>
                   <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
-                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? "hidden" : "block"} >
+                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? 'hidden' : 'block'} >
                   <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
@@ -89,7 +94,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 </HashLink >
                 <ButtonScroll
                   to={`/blog`}
-                  name="Ver todos"
+                  name='Ver todos'
                   iconLeft={<FaArrowRotateLeft />}
                 />
                 {/* <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
@@ -101,44 +106,38 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               </ButtonContainer>
               {/* Botones de Navegación */}
 
-              {/* <Spacing distance="mb-20" />
-              <section>
-                <PageSubtitle subtitle="Artículos Relacionados" />
-                <div className="grid sm:grid-cols-3 justify-start mt-12">
 
-                </div>
-              </section> */}
             </footer>
             {/* Contenido */}
           </div>
           {/*  Contenedor izquierdo */}
 
           {/* Contenedor Derecho */}
-          <aside className="w-full sm:max-w-[320px]">
+          <aside className='w-full sm:max-w-[320px]'>
 
             {/* Artículos Recientes */}
-            <section className={classes.contenedorDerecho} id="articulos-anteriores">
-              <h2 className="text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900">Articulos más recientes</h2>
-              <div className="grid gap-12 p-6 py-12">
+            <section className={classes.contenedorDerecho} id='articulos-anteriores'>
+              <h2 className='text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900'>Articulos más recientes</h2>
+              <div className='grid gap-12 p-6 py-12'>
                 {articulosBlog.map(
                   (articulo) => {
                     return (
                       <Link to={`/blog/${articulo.id}`} key={articulo.id}>
-                        <article className="flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%] text-slate-900 dark:text-slate-900">
-                          <img src={articulo.imagen} alt="image" className="rounded-t-md w-full object-cover h-[120px] md:h-[100px] " />
-                          <div className="px-6 py-6 bg-slate-200 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden">
-                            <h3 className="text-xl font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight">{articulo.titulo}</h3>
-                            <div className="mt-3 flex flex-col gap-2">
-                              <div className="flex items-center text-xs">
-                                <TbClockEdit size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Fecha:</span>{articulo.fecha}
+                        <article className='flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[85%] sm:flex-col sm:w-[100%] text-slate-900 dark:text-slate-900'>
+                          <img src={articulo.imagen} alt='image' className='rounded-t-md w-full object-cover h-[120px] md:h-[100px] ' />
+                          <div className='px-6 py-6 bg-slate-100 flex flex-col gap-1 rounded-b-md w-full min-h-[160px] justify-center overflow-hidden'>
+                            <h3 className='text-xl font-semibold sm:text-xs xl:text-sm text-blue-800 leading-tight'>{articulo.titulo}</h3>
+                            <div className='mt-3 flex flex-col gap-2'>
+                              <div className='flex items-center text-xs'>
+                                <TbClockEdit size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Fecha:</span>{articulo.fecha}
                               </div>
-                              <div className="flex items-center text-xs">
-                                <IoPersonCircleOutline size={16} color="#1D4ED8" /><span className="mx-1 font-medium">Autor:</span>{articulo.autor}
+                              <div className='flex items-center text-xs'>
+                                <IoPersonCircleOutline size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Autor:</span>{articulo.autor}
                               </div>
                             </div>
                           </div>
                           {/* Bubble */}
-                          <div id={`Bubble-${articulo.id}`} className="absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center">{articulo.categoria}</div>
+                          <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
                           {/* Bubble */}
 
                         </article>
@@ -150,12 +149,12 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             </section>
             {/* Artículos Recientes */}
 
-            <Spacing distance="mb-12" />
+            <Spacing distance='mb-12' />
 
             {/* Recomendar tema */}
-            <section id="recomendar-tema-interes">
+            <section id='recomendar-tema-interes'>
               <BackgroundSection opacity={'opacity-65'} background={backgroundSectionImage} className={'h-aut0 rounded-lg shadow-2xl md:w-full w-[210px]'} >
-                <div className="py-12 px-6">
+                <div className='py-12 px-6'>
                   <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
                   <br />
                   <p className='text-lg sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
@@ -171,7 +170,47 @@ const Article = ({ id, title, author, category, date, image, children, source, t
           {/* Contenedor Derecho */}
 
         </Container>
-      </Section>
+        <Container className={'py-12'}>
+          <h2 className='text-center text-3xl sm:text-2xl font-semibold w-2/3 mx-auto sm:w-full'>Artículos Relacionados</h2>
+          <Line width='w-2/5 sm:w-1/5' align={'mx-auto'} />
+          <div className='grid sm:grid-cols-3 xl:grid-cols-4 gap-12 py-20'>
+            {articulosBlog.filter(articulo => articulo.categoria === category).map(
+              (articulo) => {
+                return (
+                  <Link to={`/blog/${articulo.id}`} key={articulo.id}>
+                    <article className='flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[75%] sm:flex-col sm:w-[240px] xl:w-[220px] text-slate-900 dark:text-slate-900'>
+                      <img src={articulo.imagen} alt='image' className='rounded-t-md w-full object-cover h-[160px] sm:h-[120px] xl:h-[100px] ' />
+                      <div className='px-6 py-6 bg-slate-100 flex flex-col gap-1 rounded-b-md w-full min-h-[220px] sm:min-h-[190px] justify-center overflow-hidden'>
+                        <h3 className='text-xl font-semibold sm:text-lg xl:text-sm text-blue-800 leading-snug'>{articulo.titulo}</h3>
+                        <div className='mt-3 flex flex-col gap-2'>
+                          <div className='flex items-left text-xs'>
+                            <TbClockEdit size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Fecha:</span>{articulo.fecha}
+                          </div>
+                          <div className='flex items-center text-xs'>
+                            <IoPersonCircleOutline size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Autor:</span>{articulo.autor}
+                          </div>
+                        </div>
+                      </div>
+                      {/* Bubble */}
+                      <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
+                      {/* Bubble */}
+
+                    </article>
+                  </Link>
+                )
+              }
+            ).slice(-4).reverse()}
+          </div>
+          <div className='mt-4 mx-auto'>
+            <HashLink to={'/'}>
+              <button type='button' className={'rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'}>
+                <span className={`mr-2`}><FaHome /></span>
+                Inicio
+              </button>
+            </HashLink >
+          </div>
+        </Container>
+      </section>
       <ReturnButton />
       <Footer />
     </div >

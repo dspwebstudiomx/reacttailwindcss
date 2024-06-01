@@ -16,7 +16,7 @@ import Blog5Image from "../src/assets/Images/Blog/Articulos/blog5.webp";
 import Blog6Image from "../src/assets/Images/Placeholder.webp";
 import Blog7Image from "../src/assets/Images/Blog/Articulos/blog7.webp";
 import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
-import WebDesigner from "../src/assets/JSON/web-designer.json";
+// import WebDesigner from "../src/assets/JSON/web-designer.json";
 import VideoDesign from "../src/assets/JSON/video-design.json";
 import CodeDebugging from "./assets/JSON/code-debugging.json";
 import UsabilityTesting from "./assets/JSON/usability-testing.json";
@@ -293,3 +293,7 @@ export const navlinks = [
     href: "/#portafolio",
   },
 ];
+
+export const DesarrolloWebCategoria = articulosBlog.filter(
+  (e) => e.categoria === "Desarrollo Web"
+);

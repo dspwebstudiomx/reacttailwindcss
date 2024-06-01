@@ -50,7 +50,7 @@ function Navbar() {
         {/* Logo */}
 
 
-        <div className="lg:hidden z-10 w-[5%]">
+        <div className="lg:hidden z-10 w-[5%] mr-12">
           <ThemeToggle />
         </div>
 

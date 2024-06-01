@@ -9,27 +9,25 @@ const articleCardGenerator = ({ articulos }) => {
       (articulo) => {
         return (
           <Link to={`/blog/${articulo.id}`} key={articulo.id}>
-            <article className='relate mx-auto border-1 border-gray-400 shadow-xl animate__animated animate__flipInY flex w-[75vw] sm:flex-col sm:w-[240px] rounded-xl xl:min-h-[400px]'>
-              <img src={articulo.imagen} alt='image' className='w-1/3 sm:w-full object-cover md:h-[150px] rounded-tl-xl rounded-bl-xl sm:rounded-bl-none sm:rounded-tr-xl' />
-              <div className='px-6 py-10 bg-white flex flex-col gap-3  w-2/3 sm:w-full min-h-[270px] overflow-hidden rounded-br-xl sm:rounded-bl-xl dark:text-slate-900 '>
-                <h2 className='text-xl sm:text-base md:text-[1em] font-semibold  text-blue-800 leading-tight'>{articulo.titulo}</h2>
+            <article className='flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-[75%] sm:flex-col sm:w-[240px] xl:w-[220px] text-slate-900 dark:text-slate-900'>
+              <img src={articulo.imagen} alt='image' className='rounded-t-md w-full object-cover h-[160px] sm:h-[120px] xl:h-[100px] ' />
+              <div className='px-6 py-6 bg-slate-100 flex flex-col gap-1 rounded-b-md w-full min-h-[220px] sm:min-h-[190px] justify-center overflow-hidden'>
+                <h3 className='text-xl font-semibold sm:text-lg xl:text-sm text-blue-800 leading-snug'>{articulo.titulo}</h3>
                 <div className='mt-3 flex flex-col gap-2'>
-                  <div className='flex items-center text-xs text-slate-800'>
-                    <IoCalendarOutline size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Fecha:</span>{articulo.fecha}
+                  <div className='flex items-left text-xs'>
+                    <TbClockEdit size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Fecha:</span>{articulo.fecha}
                   </div>
-                  <div className='flex items-center text-xs text-slate-800' >
+                  <div className='flex items-center text-xs'>
                     <IoPersonCircleOutline size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Autor:</span>{articulo.autor}
-                  </div>
-                  <div className='flex items-center text-xs text-slate-800' >
-                    <TbClockEdit size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Tiempo:</span>{articulo.tiempo}
                   </div>
                 </div>
               </div>
               {/* Bubble */}
-              <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-xl border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
+              <div id={`Bubble-${articulo.id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-xs shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{articulo.categoria}</div>
               {/* Bubble */}
 
             </article>
+
           </Link>
         )
       }

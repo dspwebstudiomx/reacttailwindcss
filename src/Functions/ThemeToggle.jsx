@@ -10,7 +10,7 @@ export default function ThemeToggle() {
   }
   return (
     <button
-      className="ml-5 w-12 h-12  mx-auto rounded-full text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600"
+      className="ml-5 w-12 h-12  mx-auto rounded-full text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
       onClick={toggleTheme}>
       {darkMode ? <IoSunnyOutline className='w-full h-6 text-slate-100' /> : <FiMoon className='w-full h-6 text-slate-100' />}
     </button>

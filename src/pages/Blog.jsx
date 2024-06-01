@@ -23,7 +23,7 @@ const Blog = () => {
   const [articulos, setArticulos] = useState(articulosBlog)
 
   const filtrarCategoria = (categoria) => {
-    if (categoria === "Todas") {
+    if (categoria === "Diseño Web") {
       setArticulos(articulosBlog);
       return;
     }
@@ -45,7 +45,7 @@ const Blog = () => {
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
         </Banner>
         <Section>
-          <Container className={'grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-8 py-16'}>
+          <Container className={'grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-12 py-6'}>
             <ArticleCardGenerator articulos={articulos} />
           </Container>
         </Section>

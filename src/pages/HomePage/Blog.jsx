@@ -23,27 +23,27 @@ const Blog = () => {
   }
 
   return (
-    <BackgroundSection background={BlogSectionImage} opacity='opacity-75' id={'blog'} className={'p-12'}>
-      <div className='flex flex-col md:flex-row gap-20 sm:px-12 px-0 py-12'>
+    <BackgroundSection background={BlogSectionImage} opacity='opacity-75' id={'blog'}>
+      <div className='flex flex-col md:flex-row gap-20 sm:px-12 px-0 py-20'>
         <div className='text-slate-100 sm:w-2/3'>
           <h2 className='text-4xl text-center sm:text-left'>Visita mi Blog</h2>
           <Spacing distance='mb-8' />
-          <p className='text-2xl'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
+          <p className='text-2xl px-12 sm:px-0'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
           <div className='hidden sm:block'>
             <ButtonContainer distancia={'mt-12'}>
               <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />
             </ButtonContainer>
           </div>
         </div>
-        <div className='grid sm:grid-cols-2 gap-8 sm:gap-12 mt-0 sm:mt-0  md:w-[100%]'>
+        <div className='grid sm:grid-cols-2 gap-12 mt-0 sm:mt-0  md:w-[100%]'>
           {articulos.map(
             (articulo) => {
               return (
                 <Link to={`/blog/${articulo.id}`} key={articulo.id}>
                   <article className='relate mx-auto border-1 border-gray-400 shadow-xl animate__animated animate__flipInY flex w-[75vw] sm:flex-col sm:w-[240px] rounded-xl xl:min-h-[375px]'>
-                    <img src={articulo.imagen} alt='image' className='w-1/3 sm:w-full object-cover md:h-[150px] rounded-tl-xl rounded-bl-xl sm:rounded-bl-none sm:rounded-tr-xl' />
+                    <img src={articulo.imagen} alt='image' className='w-[45%] sm:w-full object-cover md:h-[150px] rounded-tl-xl rounded-bl-xl sm:rounded-bl-none sm:rounded-tr-xl' />
                     <div className='px-6 py-10 bg-white flex flex-col gap-3  w-2/3 sm:w-full min-h-[250px] overflow-hidden rounded-br-xl sm:rounded-bl-xl  '>
-                      <h2 className='text-xl md:text-[0.9em] font-semibold  text-blue-800 leading-tight'>{articulo.titulo}</h2>
+                      <h2 className='text-lg md:text-[0.9em] font-semibold  text-blue-800 leading-tight'>{articulo.titulo}</h2>
                       <div className='mt-3 flex flex-col gap-2'>
                         <div className='flex items-center text-xs text-slate-800'>
                           <IoCalendarOutline size={16} color='#1D4ED8' /><span className='mx-1 font-medium'>Fecha:</span>{articulo.fecha}
@@ -72,7 +72,7 @@ const Blog = () => {
           </ButtonContainer>
         </div>
       </div>
-    </BackgroundSection>
+    </BackgroundSection >
   )
 }
 export default Blog

@@ -8,10 +8,9 @@ import { FiFacebook } from 'react-icons/fi';
 import { FiPhone } from 'react-icons/fi';
 
 const classes = {
-  Link: 'text-blue-900 hover:text-blue-500 hover:scale-110 dark:text-blue-500 text-xl',
+  Link: 'text-blue-900 hover:text-blue-500 hover:scale-110 dark:text-blue-500 text-xl m ',
   size: 52
 }
-
 
 const SocialLinks = () => {
   return (
