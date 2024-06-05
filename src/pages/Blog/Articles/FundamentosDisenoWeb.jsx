@@ -3,7 +3,7 @@ import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog2.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
-import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
+import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const FundamentosDiseñoWeb = () => {
   return (
@@ -24,7 +24,7 @@ const FundamentosDiseñoWeb = () => {
       <ArticleSubtitle subtitle='Accesibilidad: Diseño para todos, no solo para algunos.' />
       <p>Un diseño web accesible es aquel que puede ser utilizado por todas las personas, independientemente de sus habilidades o discapacidades. Esto incluye tener en cuenta el contraste, las etiquetas adecuadas para elementos interactivos, y el uso de tecnologías que permitan a los usuarios con discapacidades acceder a la información de manera eficiente.</p>
       <Spacing distance='mb-20' />
-      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
+      <ArticleSubtitleH3 title={'Conclusión'} />
       <p>El Diseño Web eficaz se basa en sólidos fundamentos que garanticen una experiencia fluida y agradable para los usuarios. La usabilidad, el diseño responsivo, la jerarquía visual, la tipografía, la paleta de colores, el espacio en blanco y la accesibilidad son elementos esenciales que se entrelazan para crear interfaces digitales atractivas y funcionales. Al dominar estos principios básicos, los Diseñadores UX/UI pueden construir la base para un diseño web excepcional que conecte con los usuarios y cumpla los objetivos del sitio o aplicación.</p>
 
     </Article >

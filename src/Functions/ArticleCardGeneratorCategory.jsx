@@ -1,9 +1,8 @@
-import BlogCard from './BlogCard';
-// import { articulosBlog } from '../../data';
+import BlogCard from '../components/Molecules/BlogCard'
 
-const articleCardGenerator = ({ articulos }) => {
+const ArticleCardGeneratorCategory = ({ currentPosts }) => {
   return (
-    articulos.map(
+    currentPosts.map(
       (articulo) => {
         return (
           <BlogCard
@@ -18,7 +17,8 @@ const articleCardGenerator = ({ articulos }) => {
           />
         )
       }
-    ).reverse()
+    )
   )
 }
-export default articleCardGenerator
+
+export default ArticleCardGeneratorCategory

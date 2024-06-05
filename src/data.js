@@ -15,6 +15,7 @@ import Blog3Image from "../src/assets/Images/Blog/Articulos/blog3.webp";
 import Blog5Image from "../src/assets/Images/Blog/Articulos/blog5.webp";
 import Blog6Image from "../src/assets/Images/Placeholder.webp";
 import Blog7Image from "../src/assets/Images/Blog/Articulos/blog7.webp";
+import Blog8Image from "../src/assets/Images/Blog/Articulos/blog8.webp";
 import WebDevelopmentTutorial from "./assets/JSON/web-development-tutorial.json";
 // import WebDesigner from "../src/assets/JSON/web-designer.json";
 import VideoDesign from "../src/assets/JSON/video-design.json";
@@ -210,6 +211,7 @@ export const articulosBlog = [
   },
   {
     id: 2,
+    idTitle: "fundamentos-diseño-web",
     titulo:
       "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
     imagen: Blog2Image,
@@ -261,13 +263,23 @@ export const articulosBlog = [
   },
   {
     id: 7,
-    idTitle: "errores-comunes-diseño-web",
+    idTitle: "principales-frameworks",
     titulo: "Principales Frameworks de Desarrollo Frontend: Comparación y Uso",
     imagen: Blog7Image,
     autor: "Daniel S.",
     fecha: "diciembre 18,2023",
     tiempo: "2 min.",
     categoria: "Desarrollo Web",
+  },
+  {
+    id: 8,
+    idTitle: "tendencias-actuales-diseño-web",
+    titulo: "Tendencias Actuales en Diseño Web: ¿Qué Está en Boga?",
+    imagen: Blog8Image,
+    autor: "Daniel S.",
+    fecha: "enero 12,2023",
+    tiempo: "3 min.",
+    categoria: "Diseño Web",
   },
 ];
 
@@ -295,5 +307,5 @@ export const navlinks = [
 ];
 
 export const DesarrolloWebCategoria = articulosBlog.filter(
-  (e) => e.categoria === "Desarrollo Web"
+  (articulo) => articulo.categoria === "Desarrollo Web"
 );

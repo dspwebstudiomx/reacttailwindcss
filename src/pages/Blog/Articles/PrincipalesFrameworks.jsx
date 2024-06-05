@@ -1,10 +1,9 @@
 
 import Article from '../Article'
-// import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog7.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
-import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
+import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const PrincipalesFrameworks = () => {
   return (
@@ -21,7 +20,7 @@ const PrincipalesFrameworks = () => {
       <br />
       <p>En un mercado cada vez más competitivo, la elección del framework frontend adecuado puede marcar la diferencia en el éxito de un proyecto. Angular, React y Vue.js son solo algunas de las opciones disponibles, cada una con sus propias ventajas y casos de uso. Al evaluar estas opciones y considerar las necesidades específicas del proyecto, los desarrolladores pueden crear aplicaciones web modernas y funcionales que satisfagan las demandas del mercado actual.</p>
       <Spacing distance='mb-20' />
-      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
+      <ArticleSubtitleH3 title={'Conclusión'} />
       <p>En conclusión, los frameworks frontend como Angular, React y Vue.js han revolucionado la forma en que se desarrollan las aplicaciones web modernas. Cada uno tiene sus propias fortalezas y debilidades, por lo que es importante evaluar cuidadosamente las necesidades del proyecto antes de tomar una decisión. Con la elección adecuada, los desarrolladores pueden crear aplicaciones web potentes y atractivas de manera más eficiente que nunca.</p>
     </Article >
   )

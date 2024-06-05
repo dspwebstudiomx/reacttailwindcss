@@ -4,7 +4,7 @@ import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog4.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
-import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
+import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const ColoresDiseno = () => {
   return (
@@ -22,7 +22,7 @@ const ColoresDiseno = () => {
       <p>Una vez que hayas seleccionado una paleta de colores preliminar, pruébala en diferentes partes de tu sitio web para ver cómo se ve en contexto. Ajusta los colores según sea necesario para garantizar una apariencia cohesiva y atractiva en todo el sitio.</p>
 
       <Spacing distance='mb-20' />
-      <TitleH2 title='Conclusión' align='items-center sm:items-start' />
+      <ArticleSubtitleH3 title={'Conclusión'} />
       <p>Elegir la paleta de colores perfecta para tu sitio web es un proceso que requiere tiempo y consideración. Al comprender la identidad de tu marca, considerar la psicología del color, asegurar la accesibilidad, utilizar herramientas adecuadas y realizar pruebas, puedes crear una experiencia visualmente impactante que refleje la esencia de tu marca y brinde una experiencia agradable para tus usuarios. Recuerda que los colores no solo son una cuestión estética, sino también una poderosa herramienta para comunicar mensajes y emociones a tus visitantes.</p>
     </Article>
   )

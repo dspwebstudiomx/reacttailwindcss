@@ -17,6 +17,7 @@ import ColoresDiseno from './pages/Blog/Articles/ColoresDiseno'
 import ImportanciaDiseñoWeb from './pages/Blog/Articles/ImportanciaDisenoWeb'
 import ErroresComunesDisenoWeb from './pages/Blog/Articles/ErroresComunesDisenoWeb'
 import PrincipalesFrameworks from './pages/Blog/Articles/PrincipalesFrameworks'
+import TendenciasActualesDiseno from './pages/Blog/Articles/TendenciasActualesDiseno'
 
 export default function App() {
 
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/blog/5" element={<ImportanciaDiseñoWeb />} />
           <Route path="/blog/6" element={<ErroresComunesDisenoWeb />} />
           <Route path="/blog/7" element={<PrincipalesFrameworks />} />
+          <Route path="/blog/8" element={<TendenciasActualesDiseno />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>
