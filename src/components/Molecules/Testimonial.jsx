@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Testimonial = (testimonial) => {
   return (
-    <article key={testimonial.id} className='border-blue-900 border-2 rounded-xl p-9 flex flex-col gap-5 bg-slate-200 justify-center shadow-2xl animate_animated animate__bounceIn w-full z-0 min-h-[340px] md:min-h-[280px] lg:h-auto text-base text-slate-800'>
+    <article key={testimonial.id} className='border-blue-900 border-2 rounded-xl p-9 flex flex-col gap-5 bg-slate-200 justify-center shadow-2xl animate_animated animate__bounceIn w-full z-0 min-h-[340px] md:min-h-[280px] lg:h-auto text-base text-slate-900'>
       <p className='leading-6 flex text-xl sm:text-base'>
         <span>
           <FaQuoteLeft size={16} className='text-blue-800 mr-2' />
@@ -13,7 +13,7 @@ const Testimonial = (testimonial) => {
       </p>
       <Link to={testimonial.hyperlink} target='blank' rel='noreferrer'>
         <div className='flex gap-4 items-center ml-5'>
-          <img src={testimonial.imagen} alt={testimonial.nombre + ', ' + testimonial.empresa} className='object-contain rounded-full w-12 h-12 border-2 border-slate-300' />
+          <img src={testimonial.imagen} alt={testimonial.nombre + ', ' + testimonial.empresa} className='object-contain  rounded-full w-12 h-12 border-2 border-slate-300' />
           <div className='block'>
             <h2 className='font-semibold'>
               {testimonial.nombre}

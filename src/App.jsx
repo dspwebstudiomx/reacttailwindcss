@@ -18,6 +18,7 @@ import ImportanciaDiseñoWeb from './pages/Blog/Articles/ImportanciaDisenoWeb'
 import ErroresComunesDisenoWeb from './pages/Blog/Articles/ErroresComunesDisenoWeb'
 import PrincipalesFrameworks from './pages/Blog/Articles/PrincipalesFrameworks'
 import TendenciasActualesDiseno from './pages/Blog/Articles/TendenciasActualesDiseno'
+import { useEffect, useState } from 'react'
 
 export default function App() {
 

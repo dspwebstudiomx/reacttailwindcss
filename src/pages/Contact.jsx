@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className="" id="scrollTop">
       <Navbar />
-      <section className="mt-20 bg-slate-300 py-12 dark:bg-slate-900">
+      <section className="mt-20 bg-slate-300 py-12 dark:bg-slate-800">
         <Contacto />
       </section>
       <Footer />
