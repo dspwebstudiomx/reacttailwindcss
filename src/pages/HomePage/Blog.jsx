@@ -3,9 +3,6 @@ import BlogSectionImage from '../../assets/Images/blog.webp'
 import Spacing from '../../components/Sections/Spacing'
 import { articulosBlog } from '../../data'
 import { useState } from 'react'
-import { IoCalendarOutline, IoPersonCircleOutline } from 'react-icons/io5'
-import { TbClockEdit } from 'react-icons/tb'
-import { Link } from 'react-router-dom'
 import ButtonScroll from '../../components/Atoms/Buttons/ButtonScroll'
 import ButtonContainer from '../../components/Templates/ButtonContainer'
 import { IoEyeOutline } from 'react-icons/io5'
@@ -36,7 +33,7 @@ const Blog = () => {
             </ButtonContainer>
           </div>
         </div>
-        <div className='grid sm:grid-cols-2 gap-12 mt-0 sm:mt-0  md:w-[100%]'>
+        <div className='grid sm:grid-cols-2 gap-12 mt-0 sm:mt-0  md:w-[100%] px-12 sm:px-0'>
           {articulos.map(
             (articulo) => {
               return (

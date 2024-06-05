@@ -54,7 +54,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const classes = {
     container: 'flex justify-between gap-12 sm:gap-8 xl:gap-20 py-12 flex-col sm:flex-row text-xl justify-between',
     contenedorIzquierdo: 'flex flex-col w-full sm:w-[55%] md:w-[50%] lg:w-[60%]',
-    contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 pb-0 sm:px-4 h-auto bg-slate-300 dark:bg-slate-900'
+    contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 pb-0 px-8 sm:px-0 h-auto bg-slate-300 dark:bg-slate-900'
   }
 
 
@@ -131,7 +131,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             {/* Artículos Recientes */}
             <section className={classes.contenedorDerecho} id='articulos-anteriores'>
               <h2 className='text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900'>Articulos más recientes</h2>
-              <div className='grid gap-12 p-6 py-12'>
+              <div className='grid gap-12 sm:px-0 py-12 mx-auto'>
                 {articulosBlog.map(
                   (articulo) => {
                     return (
@@ -180,7 +180,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
         <Container className={'py-12'}>
           <h2 className='text-center text-2xl font-semibold w-2/3 mx-auto sm:w-full'>Artículos Relacionados</h2>
           <Line width='w-2/5 sm:w-1/5' align={'mx-auto'} />
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 pt-20'>
+          <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 pt-20 px-6'>
             <ArticleCardGeneratorCategory currentPosts={currentPosts} category={category} />
           </div>
           <div id='pagination' className='my-12'>
