@@ -36,7 +36,7 @@ export default function ContactForm() {
 
 
   return (
-    <article id="formulario" className="border-4  border-cyan-600 rounded-2xl px-8 py-10 pb-14 bg-slate-900  text-slate-100 w-full ">
+    <article id="formulario" className="border-4  border-cyan-600 rounded-2xl px-8 py-10 pb-14 bg-slate-900 dark:bg-slate-800  text-slate-100 w-full ">
       <Formik
         initialValues={{
           user_name: '',
