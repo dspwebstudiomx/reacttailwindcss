@@ -41,10 +41,10 @@ function Navbar() {
       <section className={Styles.container}>
 
         {/* Logo */}
-        <HashLink to="/#inicio" className="dark:block hidden  cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        <HashLink to="/#inicio" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="w-[130px] -ml-4" />
         </HashLink>
-        <HashLink to="/#inicio" className="dark:hidden block cursor-pointer w-[56%] sm:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        <HashLink to="/#inicio" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoDark} alt=" dspwebstudio logo" className="w-[90px]" />
         </HashLink>
         {/* Logo */}
