@@ -52,8 +52,8 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const linkPosterior = parseInt(id) + 1
 
   const classes = {
-    container: 'flex justify-between gap-12 xl:gap-20 py-12 flex-col sm:flex-row text-xl justify-between',
-    contenedorIzquierdo: 'flex flex-col w-full sm:w-[55%]',
+    container: 'flex justify-between gap-12 sm:gap-8 xl:gap-20 py-12 flex-col sm:flex-row text-xl justify-between',
+    contenedorIzquierdo: 'flex flex-col w-full sm:w-[55%] md:w-[50%] lg:w-[60%]',
     contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 pb-0 sm:px-4 h-auto bg-slate-300 dark:bg-slate-900'
   }
 
@@ -69,7 +69,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
         <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category}</h3>
       </Banner>
 
-      <Section id='article'>
+      <Section id='article' className={'bg-slate-200 dark:bg-slate-800 dark:text-slate-100 md:px-12'}>
 
         {/* Sección artículos */}
         <Container className={classes.container}>
@@ -118,12 +118,6 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                   name='Ver todos'
                   iconLeft={<FaArrowRotateLeft />}
                 />
-                {/* <HashLink to={'/'} scroll={element => scrollWithOffset(element, 98)}>
-                  <button type='button' className={'rounded-lg text-white border-2  text-xl sm:text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[320px] md:w-[182px] lg:w-[170px] h-[60px] mx-auto'}>
-                    <span className={`mr-2`}><FaHome /></span>
-                    Inicio
-                  </button>
-                </HashLink > */}
               </ButtonContainer>
               {/* Botones de Navegación */}
             </footer>

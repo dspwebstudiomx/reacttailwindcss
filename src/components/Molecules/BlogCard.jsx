@@ -12,7 +12,7 @@ const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo }) => {
         {/* Sección 1 */}
         <img src={imagen} alt='image' className='rounded-t-md w-full object-cover h-[160px] sm:h-[120px] xl:h-[120px] ' />
         {/* Bubble */}
-        <div id={`Bubble-${id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-base shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{categoria}</div>
+        <div id={`Bubble-${id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-base xl:text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{categoria}</div>
         {/* Bubble */}
         {/* Sección 1 */}
 
