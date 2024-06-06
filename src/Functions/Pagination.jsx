@@ -4,9 +4,6 @@ const Pagination = ({ totalPosts, postsPerPage, setCurrentPage }) => {
   let pages = []
 
   const calculoPaginas = Math.ceil(totalPosts / postsPerPage)
-  console.log("cantidad de pestañas=" + calculoPaginas)
-  console.log("totalPosts=" + totalPosts);
-  console.log("postsPerPage=" + postsPerPage);
 
   for (let i = 1; i <= calculoPaginas; i++) {
     pages.push(i)

@@ -203,11 +203,13 @@ export const articulosBlog = [
   {
     id: 1,
     titulo: "Mi nuevo Blog",
+    idTitle: "mi-nuevo-blog",
     imagen: Blog1Image,
     autor: "Daniel S.",
     fecha: "junio 22,2023",
     tiempo: "1 min.",
     categoria: "Personal",
+    idCategoria: "personal",
   },
   {
     id: 2,
@@ -219,6 +221,7 @@ export const articulosBlog = [
     fecha: "julio 24,2023",
     categoria: "Diseño Web",
     tiempo: "3 min.",
+    idCategoria: "diseño-web",
   },
   {
     id: 3,
@@ -230,6 +233,7 @@ export const articulosBlog = [
     fecha: "agosto 21,2023",
     tiempo: "2 min.",
     categoria: "Herramientas",
+    idCategoria: "herramientas",
   },
   {
     id: 4,
@@ -240,6 +244,7 @@ export const articulosBlog = [
     fecha: "septiembre 12,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
+    idCategoria: "diseño-web",
   },
   {
     id: 5,
@@ -250,16 +255,18 @@ export const articulosBlog = [
     fecha: "octubre 17,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
+    idCategoria: "diseño-web",
   },
   {
     id: 6,
-    idTitle: "errores-comunes-diseño-web",
+    idTitle: "errores-comunes",
     titulo: "Los Errores Más Comunes en el Diseño Web y Cómo Evitarlos",
     imagen: Blog6Image,
     autor: "Daniel S.",
     fecha: "noviembre 21,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
+    idCategoria: "diseño-web",
   },
   {
     id: 7,
@@ -270,16 +277,18 @@ export const articulosBlog = [
     fecha: "diciembre 18,2023",
     tiempo: "2 min.",
     categoria: "Desarrollo Web",
+    idCategoria: "desarrollo-web",
   },
   {
     id: 8,
-    idTitle: "tendencias-actuales-diseño-web",
+    idTitle: "tendencias-actuales",
     titulo: "Tendencias Actuales en Diseño Web: ¿Qué Está en Boga?",
     imagen: Blog8Image,
     autor: "Daniel S.",
     fecha: "enero 12,2023",
     tiempo: "3 min.",
     categoria: "Diseño Web",
+    idCategoria: "diseño-web",
   },
 ];
 

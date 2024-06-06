@@ -5,10 +5,10 @@ import { FaRegClock } from "react-icons/fa";
 
 import PropTypes from 'prop-types'
 
-const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo }) => {
+const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo, idTitle, idCategoria }) => {
   return (
-    <Link to={`/blog/${id}`} key={id}>
-      <article className='flex mx-auto border-1 border-gray-400 rounded-md shadow-xl animate__animated animate__flipInY sm:flex-col w-full sm:w-[240px] xl:w-[220px] text-slate-900 dark:text-slate-900'>
+    <Link to={`/blog/${idCategoria}/${idTitle}`} key={id}>
+      <article className='flex mx-auto border-1 border-gray-400 bg-slate-100 rounded-md shadow-xl animate__animated animate__flipInY sm:flex-col w-full sm:w-[240px] xl:w-[220px] text-slate-900 dark:text-slate-900 min-h-[300px] sm:min-h-[330px] '>
         {/* Sección 1 */}
         <img src={imagen} alt='image' className='rounded-tl-md rounded-bl-md sm:rounded-t-md sm:rounded-b-none w-[40%] sm:w-full object-cover h-auto sm:h-[120px] xl:h-[120px]' />
         {/* Bubble */}
@@ -17,7 +17,7 @@ const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo }) => {
         {/* Sección 1 */}
 
         {/* Sección 2 */}
-        <div className='px-6 py-12 sm:py-6 bg-slate-100 flex flex-col gap-1 rounded-br-md rounded-tr-md sm:rounded-t-none sm:rounded-b-md w-full min-h-[220px] sm:min-h-[210px] justify-center overflow-hidden'>
+        <div className='px-6 py-12 sm:py-6 bg-slate-100 flex flex-col gap-1 rounded-br-md rounded-tr-md sm:rounded-t-none sm:rounded-b-md w-full justify-center overflow-hidden h-auto'>
           <h3 className='text-lg font-semibold sm:text-lg xl:text-sm text-blue-800 leading-snug'>{titulo}</h3>
           <div className='mt-3 flex flex-col gap-2'>
             <div className='flex items-left text-xs'>
@@ -46,6 +46,8 @@ BlogCard.propTypes = {
   tiempo: PropTypes.string.isRequired,
   autor: PropTypes.string.isRequired,
   categoria: PropTypes.string.isRequired,
+  idCategoria: PropTypes.string.isRequired,
+  idTitle: PropTypes.string.isRequired,
 }
 
 export default BlogCard

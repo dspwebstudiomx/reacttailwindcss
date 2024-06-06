@@ -46,6 +46,8 @@ const Blog = () => {
                   autor={articulo.autor}
                   tiempo={articulo.tiempo}
                   categoria={articulo.categoria}
+                  idCategoria={articulo.idCategoria}
+                  idTitle={articulo.idTitle}
                 />
               )
             }

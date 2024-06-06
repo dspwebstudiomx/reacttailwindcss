@@ -33,14 +33,14 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/*" element={<NotFound />} />
           <Route path="/blog/0" element={<HolaMundo />} />
-          <Route path="/blog/1" element={<NuevoBlog />} />
-          <Route path="/blog/2" element={<FundamentosDiseñoWeb />} />
-          <Route path="/blog/3" element={<HerramientasDiseñoWeb />} />
-          <Route path="/blog/4" element={<ColoresDiseno />} />
-          <Route path="/blog/5" element={<ImportanciaDiseñoWeb />} />
-          <Route path="/blog/6" element={<ErroresComunesDisenoWeb />} />
-          <Route path="/blog/7" element={<PrincipalesFrameworks />} />
-          <Route path="/blog/8" element={<TendenciasActualesDiseno />} />
+          <Route path="/blog/personal/mi-nuevo-blog" element={<NuevoBlog />} />
+          <Route path="/blog/diseño-web/fundamentos-diseño-web" element={<FundamentosDiseñoWeb />} />
+          <Route path="/blog/herramientas/herramientas-diseño-web" element={<HerramientasDiseñoWeb />} />
+          <Route path="/blog/diseño-web/paleta-colores" element={<ColoresDiseno />} />
+          <Route path="/blog/diseño-web/importancia-diseño-responsivo" element={<ImportanciaDiseñoWeb />} />
+          <Route path="/blog/diseño-web/errores-comunes" element={<ErroresComunesDisenoWeb />} />
+          <Route path="/blog/desarrollo-web/principales-frameworks" element={<PrincipalesFrameworks />} />
+          <Route path="/blog/diseño-web/tendencias-actuales" element={<TendenciasActualesDiseno />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

@@ -36,6 +36,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const firstPostIndex = lastPostIndex - postsPerPage //4-4
   const Category = articulo => articulo.categoria === category
   const currentPosts = articulosBlog.filter(Category).slice(firstPostIndex, lastPostIndex)
+  console.log(currentPosts)
 
 
   const scrollWithOffset = (element, offset) => {
@@ -47,9 +48,27 @@ const Article = ({ id, title, author, category, date, image, children, source, t
     });
   }
 
+
   let ultimoContenido = articulosBlog[articulosBlog.length - 1].id
-  const linkAnterior = parseInt(id) - 1
-  const linkPosterior = parseInt(id) + 1
+  // const linkAnterior = parseInt(id) - 1
+  // const linkPosterior = parseInt(id) + 1
+
+  let ultimoArticulo = articulosBlog.find(article => article.id == ultimoContenido)
+  console.log(ultimoArticulo)
+
+  // const articuloID = articulosBlog.find((article) => article.id === id)
+  // console.log(articuloID)
+  let articuloAnterior = articulosBlog.find((article) => article.id >= id - 1);
+  let articuloSiguiente = articulosBlog.find((article) => article.id == id + 1)
+
+  function escanearUltimoContenido() {
+    if (id == ultimoContenido) {
+      articuloSiguiente = articulosBlog.find((article) => article.id == id)
+    } else
+      articuloSiguiente = articulosBlog.find((article) => article.id === id + 1)
+  }
+  escanearUltimoContenido()
+
 
   const classes = {
     container: 'flex justify-between gap-12 sm:gap-8 xl:gap-20 py-12 flex-col sm:flex-row text-xl justify-between',
@@ -66,7 +85,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
       <Navbar />
 
       <Banner className={'mt-24 py-8'}>
-        <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category}</h3>
+        <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category} </h3>
       </Banner>
 
       <Section id='article' className={'bg-slate-200 dark:bg-slate-800 dark:text-slate-100 md:px-12'}>
@@ -101,13 +120,14 @@ const Article = ({ id, title, author, category, date, image, children, source, t
             <footer>
               {/* Botones de Navegación */}
               <ButtonContainer distancia='mt-4'>
-                <HashLink to={`/blog/${linkAnterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == 1 ? 'hidden' : 'block'}>
+                <HashLink to={`/blog/${articuloAnterior.idCategoria}/${articuloAnterior.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id === 1 ? 'hidden' : 'block'}>
                   <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
                     Anterior
                   </button>
                 </HashLink >
-                <HashLink to={`/blog/${linkPosterior}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoContenido ? 'hidden' : 'block'} >
+                { }
+                <HashLink to={`/blog/${articuloSiguiente.idCategoria}/${articuloSiguiente.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoArticulo ? 'hidden' : 'block'} >
                   <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
@@ -144,6 +164,8 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                         categoria={articulo.categoria}
                         imagen={articulo.imagen}
                         tiempo={articulo.tiempo}
+                        idCategoria={articulo.idCategoria}
+                        idTitle={articulo.idTitle}
                       />
                     )
                   }

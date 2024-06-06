@@ -14,6 +14,8 @@ const ArticleCardGeneratorCategory = ({ currentPosts }) => {
             categoria={articulo.categoria}
             imagen={articulo.imagen}
             tiempo={articulo.tiempo}
+            idCategoria={articulo.idCategoria}
+            idTitle={articulo.idTitle}
           />
         )
       }
