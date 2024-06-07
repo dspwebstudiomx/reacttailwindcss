@@ -14,7 +14,7 @@ function Navbar() {
 
   const Styles = {
     header: "fixed top-0 h-[98px] flex items-center justify-between dark:bg-slate-900 bg-white text-slate-800  dark:text-slate-100 px-8 fixed w-full z-10 py-12 shadow-2xl",
-    a: "px-3 hover:border-b-2 hover:border-blue-500 active:text-blue-500 pb-3",
+    a: "px-3 hover:border-b-[3px] hover:border-blue-500 active:text-blue-500 pb-3",
     container: "flex w-full xl:max-w-screen-xl h-auto items-center justify-between sm:px-10 mx-auto",
     linkMobile: "my-5 hover:text-blue-600 active:text-blue-500 text-white text-3xl hover:pb-2"
   }
