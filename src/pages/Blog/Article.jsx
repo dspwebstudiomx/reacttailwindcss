@@ -23,9 +23,10 @@ import ArticleCardGeneratorCategory from '../../Functions/ArticleCardGeneratorCa
 import Pagination from '../../Functions/Pagination'
 import { useState } from 'react'
 import BlogCard from '../../components/Molecules/BlogCard'
+import { Link } from 'react-router-dom'
 
 
-const Article = ({ id, title, author, category, date, image, children, source, time }) => {
+const Article = ({ id, title, author, category, date, image, children, source, time, slug }) => {
 
   useTitle({ title: title })
 
@@ -85,7 +86,9 @@ const Article = ({ id, title, author, category, date, image, children, source, t
       <Navbar />
 
       <Banner className={'mt-24 py-8'}>
-        <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category} </h3>
+        <Link to={`/blog/${slug}`}>
+          <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category} </h3>
+        </Link>
       </Banner>
 
       <Section id='article' className={'bg-slate-200 dark:bg-slate-800 dark:text-slate-100 md:px-12'}>
@@ -100,10 +103,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               <h1 className='text-3xl text-blue-800 dark:text-blue-500 font-semibold'>{title}</h1 >
               <br />
               <div id='dataCreation' className='grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-sm w-full xl:w-4/6'>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoCalendarClearOutline />}</span>Fecha: {date}</h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<FaRegBookmark />}</span>Categoria: {category}</h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoPersonCircleOutline />}</span>Autor: {author}</h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<TbClockEdit />}</span>Tiempo: {time}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoCalendarClearOutline />}</span><span className='mx-1 font-medium'>Fecha:</span>{date}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<FaRegBookmark />}</span><span className='mx-1 font-medium'>Categoría:</span><Link to={`/blog/${slug}`} className='hover:text-blue-700'>{category}</Link></h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoPersonCircleOutline />}</span><span className='mx-1 font-medium'>Autor:</span>{author}</h4>
+                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<TbClockEdit />}</span><span className='mx-1 font-medium'>Tiempo:</span>{time}</h4>
               </div>
               <br />
               <figure>
@@ -238,6 +241,7 @@ Article.propTypes = {
   author: PropTypes.string,
   date: PropTypes.string,
   category: PropTypes.string,
+  slug: PropTypes.string,
   image: PropTypes.any,
 }
 

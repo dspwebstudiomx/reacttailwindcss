@@ -5,7 +5,7 @@ import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 const NuevoBlog = () => {
   return (
-    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} date='junio 22, 2023' source={'pexels.com'} time='1 min.'>
+    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} date='junio 22, 2023' source={'pexels.com'} time='1 min.' slug={'personal'}>
       <p><strong>¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! </strong>En el vertiginoso mundo digital de hoy, tener una presencia en línea sólida es fundamental para cualquier negocio o profesional. Y en el corazón de esa presencia en línea se encuentra el diseño y desarrollo web. Desde la apariencia estética hasta la funcionalidad intuitiva, el diseño y desarrollo web son elementos esenciales para cautivar y retener a los visitantes en un sitio web. Es por eso que he decidido lanzar este blog dedicado exclusivamente a explorar y profundizar en el mundo del Diseño y Desarrollo Web.</p>
       <br />
       <p>Imagina poder plasmar tus ideas en diseños atractivos y amigables, capaces de cautivar a usuarios de todas partes del mundo. Aquí aprenderás a dar forma a tu imaginación y convertirla en realidad, mientras dominas herramientas como <strong>HTML, CSS, JavaScript </strong> y mucho más.</p>

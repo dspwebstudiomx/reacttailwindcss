@@ -13,7 +13,7 @@ import ScrollToTop from '../Functions/ScrolltoTop'
 import BackgroundSection from '../components/Molecules/BackgroundSection'
 import ButtonScroll from '../components/Atoms/Buttons/ButtonScroll'
 import Spacing from '../components/Sections/Spacing'
-import backgrooundSectionImage from '../assets/Images/blogContacto.webp'
+import backgroundSectionImage from '../assets/Images/blogContacto.webp'
 import useTitle from '../Functions/Hooks/useTitle';
 
 const Blog = () => {
@@ -49,7 +49,7 @@ const Blog = () => {
             <ArticleCardGenerator articulos={articulos} />
           </Container>
         </Section>
-        <BackgroundSection opacity={'opacity-65'} background={backgrooundSectionImage}>
+        <BackgroundSection opacity={'opacity-65'} background={backgroundSectionImage}>
           <div className='p-12 flex flex-col gap-6'>
             <h2 className='text-3xl'>¿Gustas que toque algún tema de tu interés?</h2>
             <p className='text-lg'>No dudes en contactarme para poder así generar el artículo solicitado.</p>

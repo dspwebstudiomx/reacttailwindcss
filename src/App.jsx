@@ -18,6 +18,10 @@ import ImportanciaDiseñoWeb from './pages/Blog/Articles/ImportanciaDisenoWeb'
 import ErroresComunesDisenoWeb from './pages/Blog/Articles/ErroresComunesDisenoWeb'
 import PrincipalesFrameworks from './pages/Blog/Articles/PrincipalesFrameworks'
 import TendenciasActualesDiseno from './pages/Blog/Articles/TendenciasActualesDiseno'
+import WebDesignCategoryPage from './pages/Blog/Categories/WebDesignCategoryPage'
+import WebDevelopmentCategoryPage from './pages/Blog/Categories/WebDevelopmentCategoryPage'
+import ToolsCategoryPage from './pages/Blog/Categories/ToolsCategoryPage'
+import PersonalCategoryPage from './pages/Blog/Categories/PersonalCategoryPage'
 
 export default function App() {
 
@@ -41,6 +45,10 @@ export default function App() {
           <Route path="/blog/diseño-web/errores-comunes" element={<ErroresComunesDisenoWeb />} />
           <Route path="/blog/desarrollo-web/principales-frameworks" element={<PrincipalesFrameworks />} />
           <Route path="/blog/diseño-web/tendencias-actuales" element={<TendenciasActualesDiseno />} />
+          <Route path="/blog/diseño-web/" element={<WebDesignCategoryPage />} />
+          <Route path="/blog/desarrollo-web/" element={<WebDevelopmentCategoryPage />} />
+          <Route path="/blog/herramientas/" element={<ToolsCategoryPage />} />
+          <Route path="/blog/personal/" element={<PersonalCategoryPage />} />
         </Routes>
       </ScrollToTop>
     </BrowserRouter>

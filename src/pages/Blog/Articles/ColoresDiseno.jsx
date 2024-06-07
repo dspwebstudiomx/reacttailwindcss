@@ -8,7 +8,7 @@ import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitl
 
 const ColoresDiseno = () => {
   return (
-    <Article title={'¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?'} id={4} category={'Diseño Web'} author={'Daniel S.'} image={Image || Placeholder} date={'septiembre 12, 2023'} source={'pexels.com'} imageLink='https://pexels.com' time='2 min.'>
+    <Article title={'¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?'} id={4} category={'Diseño Web'} author={'Daniel S.'} image={Image || Placeholder} date={'septiembre 12, 2023'} source={'pexels.com'} imageLink='https://pexels.com' time='2 min.' slug={'diseño-web'}>
       <p>El diseño de un sitio web no se trata solo de la disposición de elementos y la funcionalidad, sino también de la estética que transmiten los colores. La paleta de colores que elijas para tu sitio web puede influir en la percepción de tu marca, la legibilidad del contenido y la experiencia general del usuario. Por lo tanto, es crucial seleccionar una paleta de colores que se adapte a la identidad de tu marca y que cree una experiencia visualmente atractiva para tus visitantes.</p>
       <ArticleSubtitle subtitle='Conoce tu marca' number={'1.'} />
       <p>Antes de elegir una paleta de colores, es importante comprender la identidad y los valores de tu marca. ¿Qué mensaje quieres transmitir? ¿Cuál es la personalidad de tu marca? Estos aspectos ayudarán a guiar la selección de colores que mejor representen a tu marca.</p>

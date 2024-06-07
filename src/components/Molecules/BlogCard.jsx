@@ -12,7 +12,8 @@ const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo, idTitle
         {/* Sección 1 */}
         <img src={imagen} alt='image' className='rounded-tl-md rounded-bl-md sm:rounded-t-md sm:rounded-b-none w-[40%] sm:w-full object-cover h-auto sm:h-[120px] xl:h-[120px]' />
         {/* Bubble */}
-        <div id={`Bubble-${id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-base xl:text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{categoria}</div>
+        <Link to={`/blog/${idCategoria}`}>
+          <div id={`Bubble-${id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-base xl:text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{categoria}</div></Link>
         {/* Bubble */}
         {/* Sección 1 */}
 
