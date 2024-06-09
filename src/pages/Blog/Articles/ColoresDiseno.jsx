@@ -1,5 +1,5 @@
 
-import Article from '../Article'
+import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog4.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'

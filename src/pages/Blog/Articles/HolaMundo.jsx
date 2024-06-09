@@ -1,4 +1,4 @@
-import Article from '../Article'
+import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 const HolaMundo = () => {
   return (

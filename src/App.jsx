@@ -35,7 +35,6 @@ export default function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/politica-privacidad" element={<Policy />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/*" element={<NotFound />} />
           <Route path="/blog/0" element={<HolaMundo />} />
           <Route path="/blog/personal/mi-nuevo-blog" element={<NuevoBlog />} />
           <Route path="/blog/diseño-web/fundamentos-diseño-web" element={<FundamentosDiseñoWeb />} />

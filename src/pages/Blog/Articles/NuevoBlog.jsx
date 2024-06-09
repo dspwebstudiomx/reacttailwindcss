@@ -1,4 +1,4 @@
-import Article from '../Article'
+import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog1.webp'
 import Spacing from '../../../components/Sections/Spacing'

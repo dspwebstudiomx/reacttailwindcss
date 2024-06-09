@@ -1,5 +1,5 @@
 
-import Article from '../Article'
+import Article from '../Articles/Article'
 import Image from '../../../assets/Images/Blog/Articulos/blog8.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'

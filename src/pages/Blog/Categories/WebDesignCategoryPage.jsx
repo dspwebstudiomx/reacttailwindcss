@@ -31,7 +31,7 @@ const WebDesignCategoryPage = () => {
       </header>
       <ScrollToTop />
       <main id='blog' className='mt-20 dark:bg-slate-800 bg-slate-300'>
-        <Hero HeroImage={HeroImage} height={'min-h-[33vh]'}>
+        <Hero HeroImage={HeroImage} height={'h-[25vh] md:h-[20vh] xl:h-[30vh]'}>
           <h1 className='text-5xl font-semibold'>Diseño Web</h1>
         </Hero>
         <Section>

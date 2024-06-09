@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const Hero = ({ children, HeroImage, height }) => {
   return (
-    <section id='hero' className={`${height} relative overflow-hidden py-20 px-16 w-full z-0 flex items-center mt-20 xl:px-0 text-white`}>
+    <section id='hero' className={`${height} relative overflow-hidden p-12 w-full z-0 flex items-center mt-20 xl:px-0 text-white`}>
 
       {/* Background Image */}
       <img

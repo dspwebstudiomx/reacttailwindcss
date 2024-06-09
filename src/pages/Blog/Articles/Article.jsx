@@ -1,28 +1,28 @@
 import PropTypes from 'prop-types'
-import Container from '../../components/Templates/Container'
-import Section from '../../components/Templates/Section'
-import Navbar from '../../components/Sections/Navbar'
-import Footer from '../../components/Sections/Footer'
-import ReturnButton from '../../components/Atoms/Buttons/ReturnButton'
-import ButtonScroll from '../../components/Atoms/Buttons/ButtonScroll'
-import ButtonContainer from '../../components/Templates/ButtonContainer'
-import { articulosBlog } from '../../data'
+import Container from '../../../components/Templates/Container'
+import Section from '../../../components/Templates/Section'
+import Navbar from '../../../components/Sections/Navbar'
+import Footer from '../../../components/Sections/Footer'
+import ReturnButton from '../../../components/Atoms/Buttons/ReturnButton'
+import ButtonScroll from '../../../components/Atoms/Buttons/ButtonScroll'
+import ButtonContainer from '../../../components/Templates/ButtonContainer'
+import { articulosBlog } from '../../../data'
 import { FaArrowRotateLeft, FaArrowRight, FaArrowLeft } from 'react-icons/fa6';
 import { IoCalendarClearOutline, IoPersonCircleOutline } from 'react-icons/io5';
 import { FaRegBookmark } from 'react-icons/fa6';
 import { TbClockEdit } from 'react-icons/tb';
 import { HashLink } from 'react-router-hash-link'
-import BackgroundSection from '../../components/Molecules/BackgroundSection'
-import Spacing from '../../components/Sections/Spacing'
-import backgroundSectionImage from '../../assets/Images/blogContacto.webp'
-import Line from '../../components/Sections/Line'
-import Banner from '../../components/Sections/Banner'
+import BackgroundSection from '../../../components/Molecules/BackgroundSection'
+import Spacing from '../../../components/Sections/Spacing'
+import backgroundSectionImage from '../../../assets/Images/blogContacto.webp'
+import Line from '../../../components/Sections/Line'
+import Banner from '../../../components/Sections/Banner'
 import { FaHome } from 'react-icons/fa'
-import useTitle from '../../Functions/Hooks/useTitle'
-import ArticleCardGeneratorCategory from '../../Functions/ArticleCardGeneratorCategory'
-import Pagination from '../../Functions/Pagination'
+import useTitle from '../../../Functions/Hooks/useTitle'
+import ArticleCardGeneratorCategory from '../../../Functions/ArticleCardGeneratorCategory'
+import Pagination from '../../../Functions/Pagination'
 import { useState } from 'react'
-import BlogCard from '../../components/Molecules/BlogCard'
+import BlogCard from '../../../components/Molecules/BlogCard'
 import { Link } from 'react-router-dom'
 
 
@@ -76,10 +76,6 @@ const Article = ({ id, title, author, category, date, image, children, source, t
     contenedorIzquierdo: 'flex flex-col w-full sm:w-[55%] md:w-[50%] lg:w-[60%]',
     contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 pb-0 px-8 sm:px-0 h-auto bg-slate-300 dark:bg-slate-900'
   }
-
-
-
-
 
   return (
     <div id='scrollTop'>
