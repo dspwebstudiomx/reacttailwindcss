@@ -33,7 +33,7 @@ const Blog = () => {
             </ButtonContainer>
           </div>
         </div>
-        <div className='grid sm:grid-cols-2 gap-12 mt-0 sm:mt-0  md:w-[100%] px-12 sm:px-0'>
+        <div className='grid grid-cols-2 gap-4 mt-0 sm:mt-0  md:w-[100%] px-6 sm:px-0'>
           {articulos.map(
             (articulo) => {
               return (

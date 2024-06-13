@@ -37,8 +37,6 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   const firstPostIndex = lastPostIndex - postsPerPage //4-4
   const Category = articulo => articulo.categoria === category
   const currentPosts = articulosBlog.filter(Category).slice(firstPostIndex, lastPostIndex)
-  console.log(currentPosts)
-
 
   const scrollWithOffset = (element, offset) => {
     const elementPosition = element.offsetTop - offset;
@@ -55,10 +53,8 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   // const linkPosterior = parseInt(id) + 1
 
   let ultimoArticulo = articulosBlog.find(article => article.id == ultimoContenido)
-  console.log(ultimoArticulo)
 
   // const articuloID = articulosBlog.find((article) => article.id === id)
-  // console.log(articuloID)
   let articuloAnterior = articulosBlog.find((article) => article.id >= id - 1);
   let articuloSiguiente = articulosBlog.find((article) => article.id == id + 1)
 
@@ -125,13 +121,14 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                     Anterior
                   </button>
                 </HashLink >
-                { }
+
                 <HashLink to={`/blog/${articuloSiguiente.idCategoria}/${articuloSiguiente.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoArticulo ? 'hidden' : 'block'} >
                   <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
                     Siguiente
                     <span className={`ml-2`}><FaArrowRight /></span>
                   </button>
                 </HashLink >
+
                 <ButtonScroll
                   to={`/blog`}
                   name='Ver todos'

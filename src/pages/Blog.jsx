@@ -45,7 +45,7 @@ const Blog = () => {
           <ButtonArticleList categorias={categorias} filtrarCategoria={filtrarCategoria} />
         </Banner>
         <Section>
-          <Container className={'grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-12 py-6 px-0'}>
+          <Container className={'grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-6 gap-y-8 sm:gap-y-12 py-6 px-0'}>
             <ArticleCardGenerator articulos={articulos} />
           </Container>
         </Section>

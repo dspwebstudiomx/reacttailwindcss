@@ -31,11 +31,11 @@ const WebDesignCategoryPage = () => {
       </header>
       <ScrollToTop />
       <main id='blog' className='mt-20 dark:bg-slate-800 bg-slate-300'>
-        <Hero HeroImage={HeroImage} height={'h-[25vh] md:h-[20vh] xl:h-[30vh]'}>
-          <h1 className='text-5xl font-semibold'>Diseño Web</h1>
+        <Hero HeroImage={HeroImage} height={'h-[23vh] md:h-[20vh] xl:h-[33vh]'}>
+          <h1 className='text-4xl font-semibold'>Diseño Web</h1>
         </Hero>
         <Section>
-          <Container className={'grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-12 py-6 px-0'}>
+          <Container className={'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-6 gap-y-8 sm:gap-y-12 py-6 px-0'}>
             <ArticleCardGenerator articulos={filterDataCategory} />
           </Container>
           <div className='mt-12 mx-auto'>

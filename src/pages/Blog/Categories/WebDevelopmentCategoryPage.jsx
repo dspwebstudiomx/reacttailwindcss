@@ -13,8 +13,6 @@ import ArticleCardGenerator from "../../../components/Molecules/ArticleCardGener
 import Hero from "../../../components/Sections/Hero"
 import HeroImage from "../../../assets/Images/Blog/Categorias/code-image.webp"
 import backgroundSectionImage from '../../../assets/Images/blogContacto.webp'
-import ButtonContainer from "../../../components/Templates/ButtonContainer"
-import { FaArrowRotateLeft } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 import { FaHome } from "react-icons/fa"
 
@@ -33,11 +31,11 @@ const WebDevelopmentCategoryPage = () => {
       </header>
       <ScrollToTop />
       <main id='blog' className='mt-20 dark:bg-slate-800 bg-slate-300'>
-        <Hero HeroImage={HeroImage} height={'min-h-[33vh]'}>
-          <h1 className='text-5xl font-semibold'>Desarrollo Web</h1>
+        <Hero HeroImage={HeroImage} height={'h-[23vh] md:h-[20vh] xl:h-[33vh]'}>
+          <h1 className='text-4xl font-semibold'>Desarrollo Web</h1>
         </Hero>
         <Section>
-          <Container className={'grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-12 py-6 px-0'}>
+          <Container className={'grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 justify-between gap-6 gap-y-8 sm:gap-y-12 py-6 px-0'}>
             <ArticleCardGenerator articulos={filterDataCategory} />
           </Container>
           <div className='mt-12 mx-auto'>
