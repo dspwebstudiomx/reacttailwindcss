@@ -10,7 +10,7 @@ const Policy = () => {
     <HelmetProvider>
       <SEOFriendly
         linkHref={'proceso-trabajo'}
-        title={'Política de Privacidad dspwebstudio'}
+        title={'Política de Privacidad | dspwebstudio'}
         description={'Política de Privacidad dspwebstudio'}
         author={'Daniel S.'}
         keywords={'politica, privacidad'}

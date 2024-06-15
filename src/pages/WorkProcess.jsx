@@ -16,7 +16,7 @@ const WorkProcess = () => {
     <HelmetProvider>
       <SEOFriendly
         linkHref={'proceso-trabajo'}
-        title={'dspwebstudio - Diseño y Desarrollo Web'}
+        title={'Proceso de Trabajo | dspwebstudio'}
         description={'Proceso de trabajo en dspwebstudio'}
         author={'dspwebstudio'}
         keywords={'diseño web Morelia, Diseño web Morelia, Desarrollo Web Morelia, desarrollo web morelia, mantenimiento sitio web, posicionamiento SEO'}
