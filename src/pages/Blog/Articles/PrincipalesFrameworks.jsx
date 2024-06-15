@@ -7,7 +7,7 @@ import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitl
 
 const PrincipalesFrameworks = () => {
   return (
-    <Article title={'Principales Frameworks de Desarrollo Frontend: Comparación y Uso'} id={7} category={'Desarrollo Web'} author={'Daniel S.'} image={Image} date={'diciembre 18, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug={'desarrollo-web'} >
+    <Article title={'Principales Frameworks de Desarrollo Frontend: Comparación y Uso'} id={7} category={'Desarrollo Web'} author={'Daniel S.'} image={Image} date={'diciembre 18, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug={'desarrollo-web'} keywords={'frameworks, framework Desarrollo Web, framework Desarrollo'} description={'Principales Frameworks de Desarrollo Frontend'} linkHref={'blog/desarrollo-web/principales-frameworks'}>
       <p>En el vertiginoso mundo del desarrollo web, los frameworks frontend se han convertido en herramientas esenciales para los desarrolladores. Estos frameworks ofrecen una estructura sólida y predefinida que agiliza el proceso de creación de interfaces de usuario dinámicas y receptivas. En este artículo, exploraremos algunos de los principales frameworks de desarrollo frontend, compararemos sus características y discutiremos sus casos de uso.</p>
       <ArticleSubtitle subtitle='Angular' />
       <p>Uno de los frameworks más populares es Angular, desarrollado por Google. Angular es una opción robusta para aplicaciones web complejas y de una sola página (SPA, por sus siglas en inglés). Ofrece enlaces de datos bidireccionales y una arquitectura basada en componentes, lo que facilita la creación de aplicaciones escalables y mantenibles.</p>

@@ -24,9 +24,10 @@ import Pagination from '../../../Functions/Pagination'
 import { useState } from 'react'
 import BlogCard from '../../../components/Molecules/BlogCard'
 import { Link } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
+import SEOFriendly from '../../../Functions/SEOFriendly'
 
-
-const Article = ({ id, title, author, category, date, image, children, source, time, slug }) => {
+const Article = ({ id, title, author, category, date, image, children, source, time, slug, linkHref, description, keywords }) => {
 
   useTitle({ title: title })
 
@@ -74,168 +75,180 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   }
 
   return (
-    <div id='scrollTop'>
-      <Navbar />
+    <HelmetProvider>
+      <SEOFriendly
+        linkHref={linkHref}
+        title={title}
+        description={description}
+        author={author}
+        keywords={keywords}
+        type={'article:tag'}
+        image={image}
+      />
+      <div id='scrollTop'>
+        <Navbar />
 
-      <Banner className={'mt-24 py-8'}>
-        <Link to={`/blog/${slug}`}>
-          <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category} </h3>
-        </Link>
-      </Banner>
+        <Banner className={'mt-24 py-8'}>
+          <Link to={`/blog/${slug}`}>
+            <h3 className='font-semibold text-center text-2xl uppercase tracking-wider'>{category} </h3>
+          </Link>
+        </Banner>
 
-      <Section id='article' className={'bg-slate-200 dark:bg-slate-800 dark:text-slate-100 md:px-12'}>
+        <Section id='article' className={'bg-slate-200 dark:bg-slate-800 dark:text-slate-100 md:px-12'}>
 
-        {/* Sección artículos */}
-        <Container className={classes.container}>
+          {/* Sección artículos */}
+          <Container className={classes.container}>
 
-          {/*  Contenedor izquierdo */}
-          <div className={classes.contenedorIzquierdo}>
-            {/* Contenido */}
-            <header>
-              <h1 className='text-3xl text-blue-800 dark:text-blue-500 font-semibold'>{title}</h1 >
-              <br />
-              <div id='dataCreation' className='grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-sm w-full xl:w-4/6'>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoCalendarClearOutline />}</span><span className='mx-1 font-medium'>Fecha:</span>{date}</h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<FaRegBookmark />}</span><span className='mx-1 font-medium'>Categoría:</span><Link to={`/blog/${slug}`} className='hover:text-blue-700'>{category}</Link></h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoPersonCircleOutline />}</span><span className='mx-1 font-medium'>Autor:</span>{author}</h4>
-                <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<TbClockEdit />}</span><span className='mx-1 font-medium'>Tiempo:</span>{time}</h4>
-              </div>
-              <br />
-              <figure>
-                <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' />
-                <a href={`https://${source}`} target='_blank'>
-                  <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
-                </a>
-              </figure>
-            </header>
-            <main className='py-12 text-lg sm:text-base'>
-              {children}
-            </main>
-            {/* Contenido */}
-            <footer>
-              {/* Botones de Navegación */}
-              <ButtonContainer distancia='mt-4'>
-                <HashLink to={`/blog/${articuloAnterior.idCategoria}/${articuloAnterior.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id === 1 ? 'hidden' : 'block'}>
-                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
-                    <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
-                    Anterior
-                  </button>
-                </HashLink >
-
-                <HashLink to={`/blog/${articuloSiguiente.idCategoria}/${articuloSiguiente.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoArticulo ? 'hidden' : 'block'} >
-                  <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
-                    Siguiente
-                    <span className={`ml-2`}><FaArrowRight /></span>
-                  </button>
-                </HashLink >
-
-                <ButtonScroll
-                  to={`/blog`}
-                  name='Ver todos'
-                  iconLeft={<FaArrowRotateLeft />}
-                />
-              </ButtonContainer>
-              {/* Botones de Navegación */}
-            </footer>
-            {/* Contenido */}
-          </div>
-          {/*  Contenedor izquierdo */}
-
-          {/* Contenedor Derecho */}
-          <aside className='w-full sm:max-w-[320px]'>
-
-            {/* Artículos Recientes */}
-            <section className={classes.contenedorDerecho} id='articulos-anteriores'>
-              <h2 className='text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900'>Articulos más recientes</h2>
-              <div className='grid gap-12 sm:px-0 py-12 mx-auto'>
-                {articulosBlog.map(
-                  (articulo) => {
-                    return (
-                      <BlogCard
-                        key={articulo.id}
-                        id={articulo.id}
-                        titulo={articulo.titulo}
-                        fecha={articulo.fecha}
-                        autor={articulo.autor}
-                        categoria={articulo.categoria}
-                        imagen={articulo.imagen}
-                        tiempo={articulo.tiempo}
-                        idCategoria={articulo.idCategoria}
-                        idTitle={articulo.idTitle}
-                      />
-                    )
-                  }
-                ).slice(-4).reverse()}
-              </div>
-            </section>
-            {/* Artículos Recientes */}
-
-            <Spacing distance='mb-12' />
-
-            {/* Recomendar tema */}
-            <section id='recomendar-tema-interes'>
-              <BackgroundSection opacity={'opacity-65'} background={backgroundSectionImage} className={'h-aut0 rounded-lg shadow-2xl md:w-full w-[210px]'} >
-                <div className='py-12 px-6'>
-                  <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
-                  <br />
-                  <p className='text-lg sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
-                  <Spacing distance='mb-3' />
-                  <br />
-                  <ButtonScroll name={'Contáctame'} to={'/contacto'} />
+            {/*  Contenedor izquierdo */}
+            <div className={classes.contenedorIzquierdo}>
+              {/* Contenido */}
+              <header>
+                <h1 className='text-3xl text-blue-800 dark:text-blue-500 font-semibold'>{title}</h1 >
+                <br />
+                <div id='dataCreation' className='grid grid-cols-2 lg:grid-cols-2 gap-2 justify-between text-sm w-full xl:w-4/6'>
+                  <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoCalendarClearOutline />}</span><span className='mx-1 font-medium'>Fecha:</span>{date}</h4>
+                  <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<FaRegBookmark />}</span><span className='mx-1 font-medium'>Categoría:</span><Link to={`/blog/${slug}`} className='hover:text-blue-700'>{category}</Link></h4>
+                  <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<IoPersonCircleOutline />}</span><span className='mx-1 font-medium'>Autor:</span>{author}</h4>
+                  <h4 className='flex items-center'><span className='mr-1 text-blue-800 dark:text-blue-500 font-bold'>{<TbClockEdit />}</span><span className='mx-1 font-medium'>Tiempo:</span>{time}</h4>
                 </div>
-              </BackgroundSection>
-            </section>
-            {/* Recomendar tema */}
+                <br />
+                <figure>
+                  <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' />
+                  <a href={`https://${source}`} target='_blank'>
+                    <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
+                  </a>
+                </figure>
+              </header>
+              <main className='py-12 text-lg sm:text-base'>
+                {children}
+              </main>
+              {/* Contenido */}
+              <footer>
+                {/* Botones de Navegación */}
+                <ButtonContainer distancia='mt-4'>
+                  <HashLink to={`/blog/${articuloAnterior.idCategoria}/${articuloAnterior.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id === 1 ? 'hidden' : 'block'}>
+                    <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
+                      <span className={`mr-2 flex flex-row-reverse`}><FaArrowLeft /></span>
+                      Anterior
+                    </button>
+                  </HashLink >
 
-          </aside>
-          {/* Contenedor Derecho */}
+                  <HashLink to={`/blog/${articuloSiguiente.idCategoria}/${articuloSiguiente.idTitle}`} scroll={element => scrollWithOffset(element, 98)} className={id == ultimoArticulo ? 'hidden' : 'block'} >
+                    <button type='button' className='rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'>
+                      Siguiente
+                      <span className={`ml-2`}><FaArrowRight /></span>
+                    </button>
+                  </HashLink >
 
-        </Container>
-        {/* Sección artículos */}
+                  <ButtonScroll
+                    to={`/blog`}
+                    name='Ver todos'
+                    iconLeft={<FaArrowRotateLeft />}
+                  />
+                </ButtonContainer>
+                {/* Botones de Navegación */}
+              </footer>
+              {/* Contenido */}
+            </div>
+            {/*  Contenedor izquierdo */}
+
+            {/* Contenedor Derecho */}
+            <aside className='w-full sm:max-w-[320px]'>
+
+              {/* Artículos Recientes */}
+              <section className={classes.contenedorDerecho} id='articulos-anteriores'>
+                <h2 className='text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900'>Articulos más recientes</h2>
+                <div className='grid gap-12 sm:px-0 py-12 mx-auto'>
+                  {articulosBlog.map(
+                    (articulo) => {
+                      return (
+                        <BlogCard
+                          key={articulo.id}
+                          id={articulo.id}
+                          titulo={articulo.titulo}
+                          fecha={articulo.fecha}
+                          autor={articulo.autor}
+                          categoria={articulo.categoria}
+                          imagen={articulo.imagen}
+                          tiempo={articulo.tiempo}
+                          idCategoria={articulo.idCategoria}
+                          idTitle={articulo.idTitle}
+                        />
+                      )
+                    }
+                  ).slice(-4).reverse()}
+                </div>
+              </section>
+              {/* Artículos Recientes */}
+
+              <Spacing distance='mb-12' />
+
+              {/* Recomendar tema */}
+              <section id='recomendar-tema-interes'>
+                <BackgroundSection opacity={'opacity-65'} background={backgroundSectionImage} className={'h-aut0 rounded-lg shadow-2xl md:w-full w-[210px]'} >
+                  <div className='py-12 px-6'>
+                    <h2 className='text-2xl'>¿Gustas que toque algún tema de tu interés?</h2>
+                    <br />
+                    <p className='text-lg sm:text-base'>No dudes en contactarme para poder así generar el artículo solicitado.</p>
+                    <Spacing distance='mb-3' />
+                    <br />
+                    <ButtonScroll name={'Contáctame'} to={'/contacto'} />
+                  </div>
+                </BackgroundSection>
+              </section>
+              {/* Recomendar tema */}
+
+            </aside>
+            {/* Contenedor Derecho */}
+
+          </Container>
+          {/* Sección artículos */}
 
 
-        {/* Artículos Relacionados */}
-        <Container className={'py-12'}>
-          <h2 className='text-center text-2xl font-semibold w-2/3 mx-auto sm:w-full'>Artículos Relacionados</h2>
-          <Line width='w-2/5 sm:w-1/5' align={'mx-auto'} />
-          <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 pt-20 px-6'>
-            <ArticleCardGeneratorCategory currentPosts={currentPosts} category={category} />
-          </div>
-          <div id='pagination' className='my-12'>
-            <Pagination totalPosts={currentPosts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} />
-          </div>
-          {/* Botón ir a inicio */}
-          <div className='mt-4 mx-auto'>
-            <HashLink to={'/'}>
-              <button type='button' className={'rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'}>
-                <span className={`mr-2`}><FaHome /></span>
-                Inicio
-              </button>
-            </HashLink >
-          </div>
-          {/* Botón ir a inicio */}
-        </Container>
-        {/* Articulos Relacionados */}
+          {/* Artículos Relacionados */}
+          <Container className={'py-12'}>
+            <h2 className='text-center text-2xl font-semibold w-2/3 mx-auto sm:w-full'>Artículos Relacionados</h2>
+            <Line width='w-2/5 sm:w-1/5' align={'mx-auto'} />
+            <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 pt-20 px-6'>
+              <ArticleCardGeneratorCategory currentPosts={currentPosts} category={category} />
+            </div>
+            <div id='pagination' className='my-12'>
+              <Pagination totalPosts={currentPosts.length} postsPerPage={postsPerPage} setCurrentPage={setCurrentPage} />
+            </div>
+            {/* Botón ir a inicio */}
+            <div className='mt-4 mx-auto'>
+              <HashLink to={'/'}>
+                <button type='button' className={'rounded-lg text-white border-2  text-lg bg-gradient-to-r from-blue-500 to-blue-900 flex items-center justify-center w-[70%] md:w-[150px] lg:w-[170px] h-[80px] sm:h-[60px] mx-auto border-white shadow-2xl'}>
+                  <span className={`mr-2`}><FaHome /></span>
+                  Inicio
+                </button>
+              </HashLink >
+            </div>
+            {/* Botón ir a inicio */}
+          </Container>
+          {/* Articulos Relacionados */}
 
-      </Section>
-      <ReturnButton />
-      <Footer />
-    </div >
+        </Section>
+        <ReturnButton />
+        <Footer />
+      </div >
+    </HelmetProvider>
   )
 }
 Article.propTypes = {
-  children: PropTypes.node,
   id: PropTypes.number,
-  time: PropTypes.string,
-  idTitle: PropTypes.string,
-  source: PropTypes.string,
   title: PropTypes.string,
-  imageLink: PropTypes.string,
   author: PropTypes.string,
-  date: PropTypes.string,
   category: PropTypes.string,
-  slug: PropTypes.string,
+  date: PropTypes.string,
   image: PropTypes.any,
+  children: PropTypes.node,
+  source: PropTypes.string,
+  time: PropTypes.string,
+  slug: PropTypes.string,
+  linkHref: PropTypes.string,
+  description: PropTypes.string,
+  keywords: PropTypes.string,
 }
 
 export default Article

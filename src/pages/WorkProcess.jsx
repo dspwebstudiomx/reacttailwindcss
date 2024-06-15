@@ -6,10 +6,23 @@ import { MdOutlinePersonSearch } from "react-icons/md";
 import { FaArrowsRotate, FaListCheck, FaCodepen } from "react-icons/fa6";
 import { FaLaptopCode } from "react-icons/fa";
 import { BsFillJournalBookmarkFill } from "react-icons/bs";
+import { HelmetProvider } from 'react-helmet-async';
+import SEOFriendly from '../Functions/SEOFriendly';
+import image from '../assets/Images/HeroImage2.webp'
+
 
 const WorkProcess = () => {
   return (
-    <>
+    <HelmetProvider>
+      <SEOFriendly
+        linkHref={'proceso-trabajo'}
+        title={'dspwebstudio - Diseño y Desarrollo Web'}
+        description={'Proceso de trabajo en dspwebstudio'}
+        author={'dspwebstudio'}
+        keywords={'diseño web Morelia, Diseño web Morelia, Desarrollo Web Morelia, desarrollo web morelia, mantenimiento sitio web, posicionamiento SEO'}
+        type={'website'}
+        image={image}
+      />
       <PageTemplate TituloPrincipal={"Proceso de Trabajo"}>
         <div id='descripcionProceso' className='text-pretty'>
           <p>
@@ -105,7 +118,7 @@ const WorkProcess = () => {
           </div>
         </div>
       </PageTemplate>
-    </>
+    </HelmetProvider>
   )
 }
 
