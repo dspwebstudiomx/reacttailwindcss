@@ -43,13 +43,12 @@ function Navbar() {
 
         {/* Logo */}
         <NavLink smooth to="/#hero" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
-          <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="w-[130px] -ml-4" />
+          <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="-ml-4" width={130} height={92} />
         </NavLink>
         <NavLink smooth to="/#hero" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
-          <img id="logo" src={logoDark} alt=" dspwebstudio logo" className="w-[90px]" />
+          <img id="logo" src={logoDark} alt=" dspwebstudio logo" width={80} height={51} />
         </NavLink>
         {/* Logo */}
-
 
         <div className="lg:hidden z-10 w-[5%] mr-12">
           <ThemeToggle />
