@@ -9,7 +9,7 @@ const NotFound = () => {
       <figure>
         <Lottie animationData={LottieImage} loop={true} className="w-[232px] md:w-[332px] sm:ml-0 mx-auto" />
       </figure>
-      <h1 className="text-3xl font-bold text-center">Página no encontrada</h1>
+      <h1 className="text-3xl font-bold text-center">Error 404 - Página no encontrada</h1>
       <Spacing distance="mt-6" />
       <Link to="/" className='mt-12 sm:mt-2 border-2 border-slate-800 w-[40%] flex items-center justify-center h-[3em] rounded-lg bg-gradient-to-r from-cyan-500 to-blue-900 text-white text-2xl sm:w-[220px]'>Inicio</Link>
     </div>

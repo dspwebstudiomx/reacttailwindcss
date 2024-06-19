@@ -14,7 +14,7 @@ const Clients = () => {
           cliente => {
             return (
               <a key={cliente.id} href={cliente.href} target="_blank" alt={cliente.alt}>
-                <img src={cliente.logo} alt={cliente.cliente} className=" w-28 h-auto m-auto animate_animated animate__swing object-cover" loading="lazy" />
+                <img src={cliente.logo} alt={cliente.cliente} className="m-auto animate_animated animate__swing object-cover" loading="lazy" width={250} height={151} />
               </a>
             )
           }

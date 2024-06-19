@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import { FaBars, FaFacebookF, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { NavHashLink } from "react-router-hash-link";
 import logoWhite from "../../assets/Logos/dsp-white.png"
 import logoDark from "../../assets/Logos/dsp-color.webp"
 import Spacing from "./Spacing";
@@ -9,13 +9,13 @@ import SocialLink from "../Atoms/Social/SocialLink";
 import ThemeToggle from "../../Functions/ThemeToggle";
 import { FaXmark } from "react-icons/fa6";
 import { navlinks } from "../../data";
-import { NavLink } from "react-router-dom";
 
 function Navbar() {
 
   const Styles = {
     header: "fixed top-0 h-[98px] flex items-center justify-between dark:bg-slate-900 bg-white text-slate-800  dark:text-slate-100 px-8 fixed w-full z-10 py-12 shadow-2xl",
     a: "px-3 hover:border-b-[3px] hover:border-blue-500 active:text-blue-500 pb-3",
+    active: "text-blue-900 font-bold",
     container: "flex w-full xl:max-w-screen-xl h-auto items-center justify-between sm:px-10 mx-auto",
     linkMobile: "my-5 hover:text-blue-600 active:text-blue-500 text-white text-3xl hover:pb-2"
   }
@@ -42,10 +42,10 @@ function Navbar() {
       <section className={Styles.container}>
 
         {/* Logo */}
-        <NavLink to="/#inicio" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        <NavLink smooth to="/#hero" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="w-[130px] -ml-4" />
         </NavLink>
-        <NavLink to="/#inicio" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        <NavLink smooth to="/#hero" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoDark} alt=" dspwebstudio logo" className="w-[90px]" />
         </NavLink>
         {/* Logo */}
@@ -62,15 +62,35 @@ function Navbar() {
             {navlinks.map((navlink) => {
               return (
                 <li key={navlink.id}>
-                  <HashLink to={navlink.href} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</HashLink>
+                  <NavHashLink smooth to={navlink.href} duration={500} className={Styles.a} activeClassName={Styles.active} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
                 </li>
               )
             })}
             <li>
-              <Link to="/blog" duration={500} className={Styles.a}>Blog</Link>
+              <NavLink
+                to="/blog"
+                duration={500}
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? "pending" : Styles.a,
+                    isActive ? Styles.active : Styles.a,
+                    isTransitioning ? "transitioning" : "",
+                  ].join(" ")
+                }
+              >Blog</NavLink>
             </li>
             <li>
-              <Link to="/contacto" duration={500} className={Styles.a}>Contacto</Link>
+              <NavLink
+                to="/contacto"
+                duration={500}
+                className={({ isActive, isPending, isTransitioning }) =>
+                  [
+                    isPending ? "pending" : Styles.a,
+                    isActive ? Styles.active : Styles.a,
+                    isTransitioning ? "transitioning" : "",
+                  ].join(" ")
+                }
+              >Contacto</NavLink>
             </li>
           </ul>
           {/* Links */}
@@ -107,7 +127,13 @@ function Navbar() {
             {navlinks.map((navlink) => {
               return (
                 <li key={navlink.id}>
-                  <HashLink onClick={toggleNav} to={navlink.href} duration={500} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</HashLink>
+                  <NavHashLink onClick={toggleNav} smooth to={navlink.href} className={({ isActive, isPending, isTransitioning }) =>
+                    [
+                      isPending ? "pending" : Styles.linkMobile,
+                      isActive ? Styles.active : Styles.linkMobile,
+                      isTransitioning ? "transitioning" : "",
+                    ].join(" ")
+                  } scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
                   <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
                 </li>
               )

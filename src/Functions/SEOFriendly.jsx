@@ -8,13 +8,10 @@ export default function SEOFriendly({ title, description, type, keywords, author
       { /* Standard metadata tags */}
 
       <link rel="canonical" href={`https://dspwebstudio.com/${linkHref}`} />
-      {/* <link rel="icon" type="image/png" href="src/assets/Logos/dsp-color.webp" /> */}
-      {/* <meta name="viewport" content="width=device-width, initial-scale=1.0" /> */}
       <title>{title}</title>
       <meta name='description' content={description} />
       <meta name="author" content={author} />
       <meta name="keywords" content={keywords} />
-      <meta name="robots" content="index, follow" />
       { /* End standard metadata tags */}
       { /* Facebook tags */}
       <meta property="og:type" content={type} />
@@ -25,6 +22,8 @@ export default function SEOFriendly({ title, description, type, keywords, author
       { /* End Facebook tags */}
       { /* Twitter tags */}
       <meta name="twitter:card" content={'summary_large_image'} />
+      <meta property="twitter:domain" content="dspwebstudio.com" />
+      <meta property="twitter:url" content={`https://dspwebstudio.com/${linkHref}`} />
       <meta name="twitter:site" content={'@dspwebstudio'} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

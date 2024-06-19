@@ -12,6 +12,7 @@ const Card = ({ backgroundImage, cliente, alt, href }) => {
           className='absolute inset-0 h-full w-full object-cover object-center rounded-lg'
           src={backgroundImage}
           alt={alt}
+          loading='lazy'
         />
         {/* Background Image */}
 

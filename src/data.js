@@ -213,7 +213,7 @@ export const articulosBlog = [
   },
   {
     id: 2,
-    idTitle: "fundamentos-diseño-web",
+    idTitle: "fundamentos-diseno-web",
     titulo:
       "Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales",
     imagen: Blog2Image,
@@ -221,11 +221,11 @@ export const articulosBlog = [
     fecha: "julio 24,2023",
     categoria: "Diseño Web",
     tiempo: "3 min.",
-    idCategoria: "diseño-web",
+    idCategoria: "diseno-web",
   },
   {
     id: 3,
-    idTitle: "herramientas-diseño-web",
+    idTitle: "herramientas-diseno-web",
     titulo:
       "Herramientas de Diseño Web imprescindibles para principiantes y profesionales",
     imagen: Blog3Image,
@@ -237,25 +237,25 @@ export const articulosBlog = [
   },
   {
     id: 4,
-    idTitle: "paleta-colores",
+    idTitle: "paleta-colores-perfecta-sitio-web",
     titulo: "¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?",
     imagen: Blog4Image,
     autor: "Daniel S.",
     fecha: "septiembre 12,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
-    idCategoria: "diseño-web",
+    idCategoria: "diseno-web",
   },
   {
     id: 5,
-    idTitle: "importancia-diseño-responsivo",
+    idTitle: "importancia-diseno-responsivo",
     titulo: "La Importancia del Diseño Responsivo en la Web Moderna",
     imagen: Blog5Image,
     autor: "Daniel S.",
     fecha: "octubre 17,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
-    idCategoria: "diseño-web",
+    idCategoria: "diseno-web",
   },
   {
     id: 6,
@@ -266,7 +266,7 @@ export const articulosBlog = [
     fecha: "noviembre 21,2023",
     tiempo: "2 min.",
     categoria: "Diseño Web",
-    idCategoria: "diseño-web",
+    idCategoria: "diseno-web",
   },
   {
     id: 7,
@@ -288,7 +288,7 @@ export const articulosBlog = [
     fecha: "enero 12,2023",
     tiempo: "3 min.",
     categoria: "Diseño Web",
-    idCategoria: "diseño-web",
+    idCategoria: "diseno-web",
   },
 ];
 
@@ -314,7 +314,3 @@ export const navlinks = [
     href: "/#portafolio",
   },
 ];
-
-export const DesarrolloWebCategoria = articulosBlog.filter(
-  (articulo) => articulo.categoria === "Desarrollo Web"
-);

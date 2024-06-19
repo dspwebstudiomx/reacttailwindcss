@@ -48,7 +48,7 @@ const Footer = () => {
                 {navlinks.map((navlink) => {
                   return (
                     <li key={navlink.id}>
-                      <HashLink active='Styles.active' to='/#hero' duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>
+                      <HashLink active='Styles.active' to={navlink.href} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>
                         <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                         {navlink.nameLink}
                       </HashLink>

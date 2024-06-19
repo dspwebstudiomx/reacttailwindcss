@@ -1,9 +1,13 @@
-import { ClimbingBoxLoader } from "react-spinners"
+import { RingLoader } from "react-spinners"
+import Navbar from "./Sections/Navbar"
 const Loading = () => {
   return (
-    <div className="w-full h-[100vh] flex items-center justify-center bg-transparent opacity-40">
-      <ClimbingBoxLoader color="#36d7b7" />
-    </div>
+    <>
+      <Navbar />
+      <div className="w-full h-[100vh] flex items-center justify-center bg-blue-900 opacity-80">
+        <RingLoader color="#fafafa" />
+      </div>
+    </>
   )
 }
 

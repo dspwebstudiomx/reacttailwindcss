@@ -69,7 +69,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
 
 
   const classes = {
-    container: 'flex justify-between gap-12 sm:gap-8 xl:gap-20 py-12 flex-col sm:flex-row text-xl justify-between',
+    container: 'flex justify-between gap-12 sm:gap-8 xl:gap-20 py-0 flex-col sm:flex-row text-xl justify-between',
     contenedorIzquierdo: 'flex flex-col w-full sm:w-[55%] md:w-[50%] lg:w-[60%]',
     contenedorDerecho: 'bg-slate-300 rounded-lg border-2 border-blue-800 mt-10 sm:mt-0 py-14 pb-0 px-8 sm:px-0 h-auto bg-slate-300 dark:bg-slate-900'
   }
@@ -113,7 +113,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 </div>
                 <br />
                 <figure>
-                  <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' />
+                  <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' loading='lazy' />
                   <a href={`https://${source}`} target='_blank'>
                     <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
                   </a>
@@ -158,7 +158,7 @@ const Article = ({ id, title, author, category, date, image, children, source, t
               {/* Artículos Recientes */}
               <section className={classes.contenedorDerecho} id='articulos-anteriores'>
                 <h2 className='text-3xl sm:text-lg md:text-lg font-semibold text-center px-2 dark:text-slate-100 text-blue-900'>Articulos más recientes</h2>
-                <div className='grid gap-12 sm:px-0 py-12 mx-auto'>
+                <div className='grid grid-cols-2 sm:grid-cols-1 gap-8 sm:px-0 py-12 mx-auto'>
                   {articulosBlog.map(
                     (articulo) => {
                       return (
@@ -206,10 +206,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
 
 
           {/* Artículos Relacionados */}
-          <Container className={'py-12'}>
+          <Container className={'py-12 mt-20'}>
             <h2 className='text-center text-2xl font-semibold w-2/3 mx-auto sm:w-full'>Artículos Relacionados</h2>
             <Line width='w-2/5 sm:w-1/5' align={'mx-auto'} />
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-12 pt-20 px-6'>
+            <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 gap-y-8 sm:gap-x-2 sm:gap-y-20 pt-20 px-6'>
               <ArticleCardGeneratorCategory currentPosts={currentPosts} category={category} />
             </div>
             <div id='pagination' className='my-12'>

@@ -1,56 +1,62 @@
-import './App.css'
-import '../node_modules/animate.css/animate.css'
-import 'animate.css'
+import { Suspense, lazy } from 'react'
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import HomePage from "./pages/HomePage/HomePage"
-import NotFound from "./pages/NotFound"
-import Blog from "./pages/Blog"
-import WorkProcess from './pages/WorkProcess'
-import Contact from "./pages/Contact"
+import './App.css'
+import 'animate.css'
+import '../node_modules/animate.css/animate.css'
 import ScrollToTop from './Functions/ScrolltoTop'
-import Policy from './pages/Policy'
-import HolaMundo from './pages/Blog/Articles/HolaMundo'
-import NuevoBlog from './pages/Blog/Articles/NuevoBlog'
-import FundamentosDiseñoWeb from './pages/Blog/Articles/FundamentosDisenoWeb'
-import HerramientasDiseñoWeb from './pages/Blog/Articles/HerramientasDiseñoWeb'
-import ColoresDiseno from './pages/Blog/Articles/ColoresDiseno'
-import ImportanciaDiseñoWeb from './pages/Blog/Articles/ImportanciaDisenoWeb'
-import ErroresComunesDisenoWeb from './pages/Blog/Articles/ErroresComunesDisenoWeb'
-import PrincipalesFrameworks from './pages/Blog/Articles/PrincipalesFrameworks'
-import TendenciasActualesDiseno from './pages/Blog/Articles/TendenciasActualesDiseno'
-import WebDesignCategoryPage from './pages/Blog/Categories/WebDesignCategoryPage'
-import WebDevelopmentCategoryPage from './pages/Blog/Categories/WebDevelopmentCategoryPage'
-import ToolsCategoryPage from './pages/Blog/Categories/ToolsCategoryPage'
-import PersonalCategoryPage from './pages/Blog/Categories/PersonalCategoryPage'
+import Loading from './components/Loading'
+
+const Contact = lazy(() => import('./pages/Contact'))
+const Blog = lazy(() => import('./pages/Blog'))
+const WorkProcess = lazy(() => import('./pages/WorkProcess'))
+const NotFound = lazy(() => import('./pages/NotFound'))
+const Policy = lazy(() => import('./pages/Policy'))
+const HomePage = lazy(() => import('./pages/HomePage/HomePage'))
+const HolaMundo = lazy(() => import('./pages/Blog/Articles/HolaMundo'))
+const NuevoBlog = lazy(() => import('./pages/Blog/Articles/NuevoBlog'))
+const ColoresDiseno = lazy(() => import('./pages/Blog/Articles/ColoresDiseno'))
+const FundamentosDisenoWeb = lazy(() => import('./pages/Blog/Articles/FundamentosDisenoWeb'))
+const HerramientasDisenoWeb = lazy(() => import('./pages/Blog/Articles/HerramientasDisenoWeb'))
+const ImportanciaDisenoWeb = lazy(() => import('./pages/Blog/Articles/ImportanciaDisenoWeb'))
+const ErroresComunesDisenoWeb = lazy(() => import('./pages/Blog/Articles/ErroresComunesDisenoWeb'))
+const PrincipalesFrameworks = lazy(() => import('./pages/Blog/Articles/PrincipalesFrameworks'))
+const TendenciasActualesDiseno = lazy(() => import('./pages/Blog/Articles/TendenciasActualesDiseno'))
+const PersonalCategoryPage = lazy(() => import('./pages/Blog/Categories/PersonalCategoryPage'))
+const WebDesignCategoryPage = lazy(() => import('./pages/Blog/Categories/WebDesignCategoryPage'))
+const WebDevelopmentCategoryPage = lazy(() => import('./pages/Blog/Categories/WebDevelopmentCategoryPage'))
+const ToolsCategoryPage = lazy(() => import('./pages/Blog/Categories/ToolsCategoryPage'))
+
 
 export default function App() {
 
   return (
-    < BrowserRouter>
+    <BrowserRouter>
       <ScrollToTop>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/proceso-trabajo" element={<WorkProcess />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contacto" element={<Contact />} />
-          <Route path="/politica-privacidad" element={<Policy />} />
-          <Route path="*" element={<NotFound />} />
-          <Route path="/blog/0" element={<HolaMundo />} />
-          <Route path="/blog/personal/mi-nuevo-blog" element={<NuevoBlog />} />
-          <Route path="/blog/diseño-web/fundamentos-diseño-web" element={<FundamentosDiseñoWeb />} />
-          <Route path="/blog/herramientas/herramientas-diseño-web" element={<HerramientasDiseñoWeb />} />
-          <Route path="/blog/diseño-web/paleta-colores" element={<ColoresDiseno />} />
-          <Route path="/blog/diseño-web/importancia-diseño-responsivo" element={<ImportanciaDiseñoWeb />} />
-          <Route path="/blog/diseño-web/errores-comunes" element={<ErroresComunesDisenoWeb />} />
-          <Route path="/blog/desarrollo-web/principales-frameworks" element={<PrincipalesFrameworks />} />
-          <Route path="/blog/diseño-web/tendencias-actuales" element={<TendenciasActualesDiseno />} />
-          <Route path="/blog/diseño-web/" element={<WebDesignCategoryPage />} />
-          <Route path="/blog/desarrollo-web/" element={<WebDevelopmentCategoryPage />} />
-          <Route path="/blog/herramientas/" element={<ToolsCategoryPage />} />
-          <Route path="/blog/personal/" element={<PersonalCategoryPage />} />
-        </Routes>
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/proceso-trabajo" element={<WorkProcess />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/politica-privacidad" element={<Policy />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="/blog/0" element={<HolaMundo />} />
+            <Route path="/blog/personal/mi-nuevo-blog" element={<NuevoBlog />} />
+            <Route path="/blog/diseno-web/fundamentos-diseno-web" element={<FundamentosDisenoWeb />} />
+            <Route path="/blog/herramientas/herramientas-diseno-web" element={<HerramientasDisenoWeb />} />
+            <Route path="/blog/diseno-web/paleta-colores-perfecta-sitio-web" element={<ColoresDiseno />} />
+            <Route path="/blog/diseno-web/importancia-diseno-responsivo" element={<ImportanciaDisenoWeb />} />
+            <Route path="/blog/diseno-web/errores-comunes" element={<ErroresComunesDisenoWeb />} />
+            <Route path="/blog/desarrollo-web/principales-frameworks" element={<PrincipalesFrameworks />} />
+            <Route path="/blog/diseno-web/tendencias-actuales" element={<TendenciasActualesDiseno />} />
+            <Route path="/blog/diseno-web/" element={<WebDesignCategoryPage />} />
+            <Route path="/blog/desarrollo-web/" element={<WebDevelopmentCategoryPage />} />
+            <Route path="/blog/herramientas/" element={<ToolsCategoryPage />} />
+            <Route path="/blog/personal/" element={<PersonalCategoryPage />} />
+          </Routes>
+        </Suspense>
       </ScrollToTop>
-    </BrowserRouter>
+    </BrowserRouter >
   )
 }
 

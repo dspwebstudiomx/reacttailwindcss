@@ -14,7 +14,7 @@ const PageTemplate = ({ background, id, children, TituloPrincipal }) => {
         <Navbar />
       </header>
       <ScrollToTop />
-      <main>
+      <main className="mt-28">
         <Section className={`mx-auto ${background} py-32 mt-12 dark:bg-slate-800 dark:text-slate-100 text-lg`} id={id}>
           <Container>
             <h1 className="text-3xl mx-auto text-center mb-2">{TituloPrincipal}</h1>
