@@ -1,12 +1,18 @@
 
 import Article from '../Articles/Article'
 import Image from '../../../assets/Images/Placeholder.webp'
+import image_240 from '../../../assets/Images/Placeholder.webp'
+import image_480 from '../../../assets/Images/Placeholder.webp'
+import image_576 from '../../../assets/Images/Placeholder.webp'
+import image_768 from '../../../assets/Images/Placeholder.webp'
+import image_1024 from '../../../assets/Images/Placeholder.webp'
+import image_1200 from '../../../assets/Images/Placeholder.webp'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 const ErroresComunesDisenoWeb = () => {
   return (
-    <Article title={'Los Errores Más Comunes en el Diseño Web y Cómo Evitarlos'} id={6} category={'Diseño Web'} author={'Daniel S.'} image={Image} date={'noviembre 21, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug='diseno-web' keywords={'errores, Diseño Web, errores comunes Diseño Web'} description={'Errores comunes en Diseño Web'} linkHref={'blog/diseño-web/errores-comunes'}>
+    <Article title={'Los Errores Más Comunes en el Diseño Web y Cómo Evitarlos'} id={6} category={'Diseño Web'} author={'Daniel S.'} image={Image} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date={'noviembre 21, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug='diseno-web' keywords={'errores, Diseño Web, errores comunes Diseño Web'} description={'Errores comunes en Diseño Web'} linkHref={'blog/diseño-web/errores-comunes'}>
       <p>El diseño web es un campo fascinante que combina creatividad y funcionalidad para crear experiencias en línea impresionantes. Sin embargo, como en cualquier disciplina, existen errores comunes que pueden obstaculizar el éxito de un sitio web. En este artículo, exploraremos algunos de los errores más frecuentes en el diseño web y cómo evitar caer en ellos.</p>
       <ArticleSubtitle subtitle='Ignorar la Experiencia del Usuario' number={'1.'} />
       <p>Uno de los errores más graves en el diseño web es ignorar la experiencia del usuario (UX). Un diseño web centrado únicamente en el aspecto visual sin tener en cuenta la facilidad de uso y la navegación puede alienar a los visitantes y hacer que abandonen el sitio rápidamente. Para evitar este error, es crucial realizar pruebas de usabilidad y recopilar comentarios de los usuarios para identificar áreas de mejora.</p>

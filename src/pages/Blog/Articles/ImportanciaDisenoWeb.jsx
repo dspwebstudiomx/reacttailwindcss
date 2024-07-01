@@ -1,13 +1,19 @@
 import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog5.webp'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/monitor-computadora-con-dos-ventanas-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/monitor-computadora-con-dos-ventanas-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/monitor-computadora-con-dos-ventanas-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/monitor-computadora-con-dos-ventanas-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/monitor-computadora-con-dos-ventanas-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/monitor-computadora-con-dos-ventanas-1200.jpg'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const ImportanciaDiseñoWeb = () => {
   return (
-    <Article title='La Importancia del Diseño Responsivo en la Web Moderna' id={5} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} date='octubre 17, 2023' source={'pexels.com'} time={'3 min.'} slug={'diseno-web'} keywords={'Diseño Responsivo, Diseño, importancia'} description={'Importancia Diseño Web Responsivo'} linkHref={'blog/diseño-web/importancia-diseno-responsivo'}>
+    <Article title='La Importancia del Diseño Responsivo en la Web Moderna' id={5} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date='octubre 17, 2023' source={'pexels.com'} time={'3 min.'} slug={'diseno-web'} keywords={'Diseño Responsivo, Diseño, importancia'} description={'Importancia Diseño Web Responsivo'} linkHref={'blog/diseño-web/importancia-diseno-responsivo'}>
       <p>En la era digital en la que vivimos, el acceso a la web se ha convertido en una parte fundamental de nuestras vidas cotidianas. Desde buscar información hasta realizar compras en línea, la web es nuestra ventana al mundo virtual. Y en este mundo, el diseño responsivo se erige como un elemento crucial para garantizar una experiencia óptima para todos los usuarios, independientemente del dispositivo que utilicen.</p>
       <ArticleSubtitle subtitle='¿Qué es el Diseño Responsivo?' />
       <p>El diseño responsivo se refiere a la capacidad de un sitio web para adaptarse y funcionar correctamente en una variedad de dispositivos y tamaños de pantalla. Esto significa que, ya sea que estemos navegando en una computadora de escritorio, una tableta o un teléfono inteligente, el sitio web se ajusta automáticamente para proporcionar una experiencia de usuario coherente y satisfactoria.</p>

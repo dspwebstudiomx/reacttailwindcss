@@ -1,13 +1,19 @@
 
 import Article from '../Articles/Article'
 import Image from '../../../assets/Images/Blog/Articulos/blog7.webp'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/laptop-en-escritorio-con-dos-libros-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/laptop-en-escritorio-con-dos-libros-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/laptop-en-escritorio-con-dos-libros-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/laptop-en-escritorio-con-dos-libros-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/laptop-en-escritorio-con-dos-libros-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/laptop-en-escritorio-con-dos-libros-1200.jpg'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const PrincipalesFrameworks = () => {
   return (
-    <Article title={'Principales Frameworks de Desarrollo Frontend: Comparación y Uso'} id={7} category={'Desarrollo Web'} author={'Daniel S.'} image={Image} date={'diciembre 18, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug={'desarrollo-web'} keywords={'frameworks, framework Desarrollo Web, framework Desarrollo'} description={'Principales Frameworks de Desarrollo Frontend'} linkHref={'blog/desarrollo-web/principales-frameworks'}>
+    <Article title={'Principales Frameworks de Desarrollo Frontend: Comparación y Uso'} id={7} category={'Desarrollo Web'} author={'Daniel S.'} image={Image} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date={'diciembre 18, 2023'} source={'unsplash.com'} imageLink='https://unsplash.com' time='3 min.' slug={'desarrollo-web'} keywords={'frameworks, framework Desarrollo Web, framework Desarrollo'} description={'Principales Frameworks de Desarrollo Frontend'} linkHref={'blog/desarrollo-web/principales-frameworks'}>
       <p>En el vertiginoso mundo del desarrollo web, los frameworks frontend se han convertido en herramientas esenciales para los desarrolladores. Estos frameworks ofrecen una estructura sólida y predefinida que agiliza el proceso de creación de interfaces de usuario dinámicas y receptivas. En este artículo, exploraremos algunos de los principales frameworks de desarrollo frontend, compararemos sus características y discutiremos sus casos de uso.</p>
       <ArticleSubtitle subtitle='Angular' />
       <p>Uno de los frameworks más populares es Angular, desarrollado por Google. Angular es una opción robusta para aplicaciones web complejas y de una sola página (SPA, por sus siglas en inglés). Ofrece enlaces de datos bidireccionales y una arquitectura basada en componentes, lo que facilita la creación de aplicaciones escalables y mantenibles.</p>

@@ -1,11 +1,17 @@
 import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog1.webp'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/libreta-con-mockups-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/libreta-con-mockups-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/libreta-con-mockups-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/libreta-con-mockups-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/libreta-con-mockups-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/libreta-con-mockups-1200.jpg'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 const NuevoBlog = () => {
   return (
-    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} date='junio 22, 2023' source={'pexels.com'} time='1 min.' slug={'personal'} keywords={'blog'} description={'Mi nuevo blog'} linkHref={'blog/personal/mi-nuevo-blog'}>
+    <Article title='Mi nuevo Blog' id={1} category='Personal' author='Daniel S.' image={Image || Placeholder} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date='junio 22, 2023' source={'pexels.com'} time='1 min.' slug={'personal'} keywords={'blog'} description={'Mi nuevo blog'} linkHref={'blog/personal/mi-nuevo-blog'}>
       <p><strong>¡Bienvenido al maravilloso mundo del Diseño y Desarrollo Web! </strong>En el vertiginoso mundo digital de hoy, tener una presencia en línea sólida es fundamental para cualquier negocio o profesional. Y en el corazón de esa presencia en línea se encuentra el diseño y desarrollo web. Desde la apariencia estética hasta la funcionalidad intuitiva, el diseño y desarrollo web son elementos esenciales para cautivar y retener a los visitantes en un sitio web. Es por eso que he decidido lanzar este blog dedicado exclusivamente a explorar y profundizar en el mundo del Diseño y Desarrollo Web.</p>
       <br />
       <p>Imagina poder plasmar tus ideas en diseños atractivos y amigables, capaces de cautivar a usuarios de todas partes del mundo. Aquí aprenderás a dar forma a tu imaginación y convertirla en realidad, mientras dominas herramientas como <strong>HTML, CSS, JavaScript </strong> y mucho más.</p>

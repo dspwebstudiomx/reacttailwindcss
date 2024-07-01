@@ -4,7 +4,7 @@ const Loading = () => {
   return (
     <>
       <Navbar />
-      <div className="w-full h-[100vh] flex items-center justify-center bg-blue-900 opacity-80">
+      <div className="w-full h-[100vh] flex items-center justify-center bg-blue-900">
         <RingLoader color="#fafafa" />
       </div>
     </>

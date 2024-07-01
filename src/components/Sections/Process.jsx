@@ -8,7 +8,7 @@ import TwoColumnSection from '../Templates/TwoColumnSection'
 
 const Process = () => {
   return (
-    <BackgroundSection background={ImagenProcesoWeb || Placeholder} opacity={'opacity-75'} className={'p-6 py-12 md:p-12'}>
+    <BackgroundSection id={'process-banner'} background={ImagenProcesoWeb || Placeholder} opacity={'opacity-75'} className={'p-6 py-12 md:p-12'}>
       <TwoColumnSection>
         <div id='procesosDescripcion'>
           <h2 className='text-3xl sm:text-2xl md:text-3xl font-semibold tracking-wide'>¿Estás listo para descubrir cómo puedo llevar tu presencia en línea al siguiente nivel?</h2>

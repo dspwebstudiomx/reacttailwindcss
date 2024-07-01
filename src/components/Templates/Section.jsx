@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Section = ({ id, children, className }) => {
   return (
-    <section id={id} className={` ${className} p-12 sm:p-20 py-20 mx-auto`}>
+    <section id={id} className={` ${className} p-12 sm:p-32 py-20 mx-auto`}>
       {children}
     </section>
   )

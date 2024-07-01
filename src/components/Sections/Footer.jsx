@@ -17,8 +17,8 @@ const Footer = () => {
   }
 
   const Styles = {
-    a: 'sm:my-1 hover:text-blue-500 flex items-center sm:justify-left',
-    active: 'text-blue-500'
+    a: 'sm:my-1 hover:text-blue-400 flex items-center sm:justify-left',
+    active: 'text-blue-400'
   }
 
   return (
@@ -42,14 +42,14 @@ const Footer = () => {
         {/* Sections */}
         <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-20 md:mt-0 md:text-left md:w-1/4 w-1/2'>
           <div className='w-full'>
-            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Secciones</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-400 uppercase title-font'>Secciones</h2>
             <nav className='mb-10 list-none flex flex-col'>
               <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-base text-balance xl:text-base text-left ml-0'>
                 {navlinks.map((navlink) => {
                   return (
                     <li key={navlink.id}>
                       <HashLink active='Styles.active' to={navlink.href} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 80)}>
-                        <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                        <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                         {navlink.nameLink}
                       </HashLink>
                     </li>
@@ -57,17 +57,19 @@ const Footer = () => {
                 })}
                 <li>
                   <Link to={'/proceso-trabajo'} aria-label='Ver proceso de trabajo' id='processLink' className={Styles.a}>
-                    <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                    <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                     Proceso de Trabajo
                   </Link>
                 </li>
-                <Link to='/blog' className={Styles.a}>
-                  <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
-                  Blog
-                </Link>
+                <li>
+                  <Link to='/blog' className={Styles.a}>
+                    <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                    Blog
+                  </Link>
+                </li>
                 <li>
                   <Link to='/contacto' className={Styles.a}>
-                    <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                    <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                     Contacto
                   </Link>
                 </li>
@@ -80,14 +82,14 @@ const Footer = () => {
         {/* Services */}
         <div className='flex flex-wrap flex-grow mt-10 text-center md:pl-12 md:mt-0 md:text-left md:w-1/4 w-1/2'>
           <div className='w-full'>
-            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Servicios</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-400 uppercase title-font'>Servicios</h2>
             <nav className='mb-10 list-none flex flex-col'>
               <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-base text-balance xl:text-base text-left'>
                 {servicios.map((servicio) => {
                   return (
-                    <li key={servicio.id}>
+                    <li key={servicio.id} >
                       <HashLink active='Styles.active' to={servicio.link} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 160)}>
-                        <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                        <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                         {servicio.serviceName}
                       </HashLink>
                     </li>
@@ -102,12 +104,12 @@ const Footer = () => {
         {/* Policy */}
         <div className='flex flex-wrap flex-grow mt-10 text-center md:mt-0 md:text-left md:w-1/4 w-full'>
           <div className='w-full'>
-            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-500 uppercase title-font'>Aviso de Privacidad</h2>
+            <h2 className='mb-3 text-lg font-medium tracking-normal text-blue-400 uppercase title-font'>Aviso de Privacidad</h2>
             <nav className='mb-10 list-none flex flex-col'>
               <ul className='flex flex-col gap-4 mt-5 sm:gap-1 text-lg text-balance xl:text-base mx-auto sm:ml-0'>
                 <li>
                   <Link to={'/politica-privacidad'} aria-label='Ver politica de Privacidad' id='privacyLink' className={Styles.a}>
-                    <span className='text-blue-500 mr-2' ><MdKeyboardDoubleArrowRight /></span>
+                    <span className='text-blue-400 mr-2' ><MdKeyboardDoubleArrowRight /></span>
                     Política de privacidad
                   </Link>
                 </li>
@@ -134,7 +136,7 @@ const Footer = () => {
               Todos los derechos reservados 2024
             </span>
             <br />
-            <span className='text-blue-500'>
+            <span className='text-blue-400'>
               dspwebstudio.com
             </span>
           </p>

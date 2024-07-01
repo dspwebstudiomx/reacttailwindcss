@@ -13,6 +13,10 @@ const ArticleCardGeneratorCategory = ({ currentPosts }) => {
             autor={articulo.autor}
             categoria={articulo.categoria}
             imagen={articulo.imagen}
+            image240={articulo.image240}
+            image480={articulo.image480}
+            image576={articulo.image576}
+            image768={articulo.image768}
             tiempo={articulo.tiempo}
             idCategoria={articulo.idCategoria}
             idTitle={articulo.idTitle}

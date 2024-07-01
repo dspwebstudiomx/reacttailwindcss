@@ -21,10 +21,10 @@ const Blog = () => {
   }
 
   return (
-    <BackgroundSection background={BlogSectionImage} opacity='opacity-75' id={'blog'}>
-      <div className='flex flex-col md:flex-row gap-20 sm:px-12 px-0 py-20'>
+    <BackgroundSection background={BlogSectionImage} opacity='opacity-65' id={'blog'} >
+      <div className='flex flex-col md:flex-row gap-20 py-20 '>
         <div className='text-slate-100 sm:w-2/3'>
-          <h2 className='text-4xl text-center sm:text-left'>Visita mi Blog</h2>
+          <h2 className='text-4xl text-center sm:text-left font-semibold'>Visita mi Blog</h2>
           <Spacing distance='mb-8' />
           <p className='text-2xl px-12 sm:px-0'>Aquí encontrarás temas sobre Diseño Web, Desarrollo Web, Posicionamiento, tips y más.</p>
           <div className='hidden sm:block'>
@@ -33,7 +33,7 @@ const Blog = () => {
             </ButtonContainer>
           </div>
         </div>
-        <div className='grid grid-cols-2 gap-4 mt-0 sm:mt-0  md:w-[100%] px-6 sm:px-0'>
+        <ul className='grid grid-cols-2 gap-4 mt-0 sm:mt-0  md:w-[100%] px-6 sm:px-0'>
           {articulos.map(
             (articulo) => {
               return (
@@ -41,6 +41,9 @@ const Blog = () => {
                   key={articulo.id}
                   id={articulo.id}
                   imagen={articulo.imagen}
+                  image240={articulo.image240}
+                  image480={articulo.image480}
+                  image576={articulo.image576}
                   titulo={articulo.titulo}
                   fecha={articulo.fecha}
                   autor={articulo.autor}
@@ -52,7 +55,7 @@ const Blog = () => {
               )
             }
           ).slice(-2).reverse()}
-        </div>
+        </ul>
         <div className='block sm:hidden'>
           <ButtonContainer distancia={'mt-0'}>
             <ButtonScroll name={'Ver mas'} to={'/blog'} iconLeft={<IoEyeOutline />} />

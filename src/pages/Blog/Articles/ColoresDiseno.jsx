@@ -2,13 +2,19 @@
 import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog4.webp'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/arcoiris-de-colores-con-fondo-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/arcoiris-de-colores-con-fondo-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/arcoiris-de-colores-con-fondo-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/arcoiris-de-colores-con-fondo-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/arcoiris-de-colores-con-fondo-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/arcoiris-de-colores-con-fondo-1200.jpg'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const ColoresDiseno = () => {
   return (
-    <Article title={'¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?'} id={4} category={'Diseño Web'} author={'Daniel S.'} image={Image || Placeholder} date={'septiembre 12, 2023'} source={'pexels.com'} imageLink='https://pexels.com' time='2 min.' slug={'diseno-web'} keywords={'colores, sitio web'} description={'Elegir Paleta de Colores para Sitio Web'} linkHref={'blog/diseno-web/paleta-colores-perfecta-sitio-web'}>
+    <Article title={'¿Cómo elegir la Paleta de Colores perfecta para tu Sitio Web?'} id={4} category={'Diseño Web'} author={'Daniel S.'} image={Image || Placeholder} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date={'septiembre 12, 2023'} source={'pexels.com'} imageLink='https://pexels.com' time='2 min.' slug={'diseno-web'} keywords={'colores, sitio web'} description={'Elegir Paleta de Colores para Sitio Web'} linkHref={'blog/diseno-web/paleta-colores-perfecta-sitio-web'}>
       <p>El diseño de un sitio web no se trata solo de la disposición de elementos y la funcionalidad, sino también de la estética que transmiten los colores. La paleta de colores que elijas para tu sitio web puede influir en la percepción de tu marca, la legibilidad del contenido y la experiencia general del usuario. Por lo tanto, es crucial seleccionar una paleta de colores que se adapte a la identidad de tu marca y que cree una experiencia visualmente atractiva para tus visitantes.</p>
       <ArticleSubtitle subtitle='Conoce tu marca' number={'1.'} />
       <p>Antes de elegir una paleta de colores, es importante comprender la identidad y los valores de tu marca. ¿Qué mensaje quieres transmitir? ¿Cuál es la personalidad de tu marca? Estos aspectos ayudarán a guiar la selección de colores que mejor representen a tu marca.</p>

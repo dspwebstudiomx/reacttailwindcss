@@ -21,13 +21,13 @@ import { FaHome } from 'react-icons/fa'
 import useTitle from '../../../Functions/Hooks/useTitle'
 import ArticleCardGeneratorCategory from '../../../Functions/ArticleCardGeneratorCategory'
 import Pagination from '../../../Functions/Pagination'
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import BlogCard from '../../../components/Molecules/BlogCard'
 import { Link } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import SEOFriendly from '../../../Functions/SEOFriendly'
 
-const Article = ({ id, title, author, category, date, image, children, source, time, slug, linkHref, description, keywords }) => {
+const Article = ({ id, title, author, category, date, image, children, source, time, slug, linkHref, description, keywords, image_240, image_480, image_576, image_768, image_1024, image_1200 }) => {
 
   useTitle({ title: title })
 
@@ -75,18 +75,20 @@ const Article = ({ id, title, author, category, date, image, children, source, t
   }
 
   return (
-    <HelmetProvider>
-      <SEOFriendly
-        linkHref={linkHref}
-        title={title}
-        description={description}
-        author={author}
-        keywords={keywords}
-        type={'article:tag'}
-        image={image}
-      />
+    <Fragment>
+      <HelmetProvider>
+        <SEOFriendly
+          linkHref={linkHref}
+          title={title}
+          description={description}
+          author={author}
+          keywords={keywords}
+          type={'article:tag'}
+          image={image}
+        />
+      </HelmetProvider>
+      <Navbar />
       <div id='scrollTop'>
-        <Navbar />
 
         <Banner className={'mt-24 py-8'}>
           <Link to={`/blog/${slug}`}>
@@ -113,11 +115,23 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                 </div>
                 <br />
                 <figure>
-                  <img src={image} alt='image blog' className='h-[220px] w-full overflow-hidden object-cover' loading='lazy' />
-                  <a href={`https://${source}`} target='_blank'>
-                    <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
-                  </a>
+                  <img
+                    src={image_240}
+                    srcSet={`
+                      ${image_480} 2x,
+                      ${image_576} 3x,
+                      ${image_768} 4x,
+                      ${image_1024} 5x,
+                      ${image_1200} 6x,
+                      `}
+                    alt={image_240}
+                    className='overflow-hidden object-cover w-full h-[220px]'
+                    title={image_240 || image_768}
+                  />
                 </figure>
+                <a href={`https://${source}`} target='_blank'>
+                  <figcaption className='text-sm font-semibold mt-1'><span className='mr-1'>Fuente:</span>{source}</figcaption>
+                </a>
               </header>
               <main className='py-12 text-lg sm:text-base'>
                 {children}
@@ -170,6 +184,9 @@ const Article = ({ id, title, author, category, date, image, children, source, t
                           autor={articulo.autor}
                           categoria={articulo.categoria}
                           imagen={articulo.imagen}
+                          image240={articulo.image240}
+                          image480={articulo.image480}
+                          image576={articulo.image576}
                           tiempo={articulo.tiempo}
                           idCategoria={articulo.idCategoria}
                           idTitle={articulo.idTitle}
@@ -230,9 +247,10 @@ const Article = ({ id, title, author, category, date, image, children, source, t
 
         </Section>
         <ReturnButton />
-        <Footer />
       </div >
-    </HelmetProvider>
+      <Footer />
+    </Fragment>
+
   )
 }
 Article.propTypes = {
@@ -241,7 +259,13 @@ Article.propTypes = {
   author: PropTypes.string,
   category: PropTypes.string,
   date: PropTypes.string,
-  image: PropTypes.any,
+  image: PropTypes.string,
+  image_240: PropTypes.string,
+  image_480: PropTypes.string,
+  image_576: PropTypes.string,
+  image_768: PropTypes.string,
+  image_1024: PropTypes.string,
+  image_1200: PropTypes.string,
   children: PropTypes.node,
   source: PropTypes.string,
   time: PropTypes.string,

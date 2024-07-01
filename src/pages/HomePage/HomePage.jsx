@@ -1,5 +1,5 @@
 import 'animate.css'
-import { Suspense, lazy } from 'react'
+import { Fragment, Suspense, lazy } from 'react'
 import Footer from '../../components/Sections/Footer'
 import ReturnButton from '../../components/Atoms/Buttons/ReturnButton'
 import Banner from '../../components/Sections/Banner'
@@ -23,43 +23,42 @@ const Testimonials = lazy(() => import('../../components/Sections/Testimonials')
 const HomePage = () => {
 
   return (
-    <HelmetProvider>
-      <SEOFriendly
-        linkHref={''}
-        title={'Inicio | dspwebstudio'}
-        description={'Diseño y Desarrollo Web en Morelia Michoacán, posicionamiento SEO así como mantenimiento de sitios web.'}
-        author={'dspwebstudio'}
-        keywords={'diseño web Morelia, Diseño web Morelia, Desarrollo Web Morelia, desarrollo web morelia, mantenimiento sitio web, posicionamiento SEO'}
-        type={'website'}
-        image={image}
-      />
-      <div id='scrollTop'>
-        <Suspense fallback={<Loading />}>
-          <header>
-            <Navbar />
-          </header>
-          <main className='mt-12 text-xl sm:text-lg'>
-
-            <HeroHomePage image={image} />
-            <Banner className={'py-10 text-xl'}>
-              <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
-            </Banner>
-            <About />
-            <Services />
-            <Process />
-            <Clients />
-            <Portfolio />
-            <Testimonials />
-            <Blog />
-            <Technologies />
-            <Contact />
-            <ReturnButton />
-          </main>
-          <Footer />
-        </Suspense>
-      </div>
-    </HelmetProvider>
-
+    <Fragment>
+      <HelmetProvider>
+        <SEOFriendly
+          charset="utf-8"
+          title={'Inicio | dspwebstudio'}
+          description={'Diseño y Desarrollo Web en Morelia Michoacán, posicionamiento SEO así como mantenimiento de sitios web.'}
+          author={'dspwebstudio'}
+          keywords={'diseño web Morelia, Diseño web Morelia, Desarrollo Web Morelia, desarrollo web morelia, mantenimiento sitio web, posicionamiento SEO'}
+          type={'website'}
+          image={image}
+          linkHref={''}
+        />
+      </HelmetProvider>
+      <Suspense fallback={<Loading />}>
+        <header>
+          <Navbar />
+        </header>
+        <main id='scrollTop' className='mt-12 text-xl sm:text-lg'>
+          <HeroHomePage image={image} />
+          <Banner id={'banner-inicial'} className={'py-10'} >
+            <p>Tu sitio web es más que una simple página. Es tu mejor representante en el mundo digital. Asegúrate de que esté a la altura con mi servicio de diseño y desarrollo web</p>
+          </Banner>
+          <About />
+          <Services />
+          <Process />
+          <Clients />
+          <Portfolio />
+          <Testimonials />
+          <Blog />
+          <Technologies />
+          <Contact />
+          <ReturnButton />
+        </main>
+        <Footer />
+      </Suspense>
+    </Fragment>
   )
 }
 

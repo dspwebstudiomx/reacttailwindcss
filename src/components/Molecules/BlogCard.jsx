@@ -5,12 +5,22 @@ import { FaRegClock } from "react-icons/fa";
 
 import PropTypes from 'prop-types'
 
-const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo, idTitle, idCategoria }) => {
+const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo, idTitle, idCategoria, image240, image576, image768 }) => {
   return (
     <Link to={`/blog/${idCategoria}/${idTitle}`} key={id}>
       <article className='flex mx-auto border-1 border-gray-400 bg-slate-100 rounded-md shadow-xl animate__animated animate__flipInY flex-col w-full sm:w-[240px] xl:w-[220px] text-slate-900 dark:text-slate-900 min-h-[200px] sm:min-h-[330px] '>
         {/* Sección 1 */}
-        <img src={imagen} alt='image' className='rounded-tl-md rounded-b-0 sm:rounded-t-md sm:rounded-b-none w-full object-cover h-[120px] xl:h-[120px]' loading='lazy' />
+        {/* <img src={imagen} alt='image' className='rounded-tl-md rounded-b-0 sm:rounded-t-md sm:rounded-b-none w-full object-cover h-[120px] xl:h-[120px]' loading='lazy' /> */}
+        <img
+          src={imagen}
+          srcSet={`
+            ${image240} 240px,
+            ${image576} 576px,
+            ${image768} 768px,
+            `}
+          alt='image'
+          className='rounded-tl-md rounded-b-0 sm:rounded-t-md sm:rounded-b-none w-full object-cover h-[120px] xl:h-[120px] overflow-hidden'
+        />
         {/* Bubble */}
         <Link to={`/blog/${idCategoria}`}>
           <div id={`Bubble-${id}`} className='absolute -top-2 -right-1 bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 text-white text-base xl:text-sm shadow-lg rounded-bl-lg rounded-tr-lg border-2 border-blue-500 min-w-[120px] text-center'>{categoria}
@@ -43,7 +53,11 @@ const BlogCard = ({ id, imagen, titulo, fecha, autor, categoria, tiempo, idTitle
 }
 BlogCard.propTypes = {
   id: PropTypes.number.isRequired,
-  imagen: PropTypes.string.isRequired,
+  imagen: PropTypes.string,
+  image240: PropTypes.string,
+  image480: PropTypes.string,
+  image576: PropTypes.string,
+  image768: PropTypes.string,
   titulo: PropTypes.string.isRequired,
   fecha: PropTypes.string.isRequired,
   tiempo: PropTypes.string.isRequired,

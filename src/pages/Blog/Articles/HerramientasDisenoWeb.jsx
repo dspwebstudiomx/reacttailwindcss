@@ -2,13 +2,19 @@
 import Article from './Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog3.webp'
-import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/mujer-con-laptop-y-cafe-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/mujer-con-laptop-y-cafe-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/mujer-con-laptop-y-cafe-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/mujer-con-laptop-y-cafe-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/mujer-con-laptop-y-cafe-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/mujer-con-laptop-y-cafe-1200.jpg'
+import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle/'
 import Spacing from '../../../components/Sections/Spacing'
 import TitleH2 from '../../../components/Atoms/Headings/TitleH2'
 
 const HerramientasDiseñoWeb = () => {
   return (
-    <Article title='Herramientas del Diseño Web imprescindibles para principiantes y procesionales' id={3} category='Herramientas' author='Daniel S.' image={Image || Placeholder} date='agosto 21, 2023' source={'pexels.com'} time='2 min.' slug={'herramientas'} keywords={'herramienta, diseño web'} description={'Herramientas del Diseño Web'} linkHref={'blog/herramientas/herramientas-diseno-web'}>
+    <Article title='Herramientas del Diseño Web imprescindibles para principiantes y procesionales' id={3} category='Herramientas' author='Daniel S.' image={Image || Placeholder} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date='agosto 21, 2023' source={'pexels.com'} time='2 min.' slug={'herramientas'} keywords={'herramienta, diseño web'} description={'Herramientas del Diseño Web'} linkHref={'blog/herramientas/herramientas-diseno-web'}>
       <p>El diseño web es una disciplina esencial en el desarrollo de sitios y aplicaciones web, que permite crear interfaces atractivas y funcionales para los usuarios. Tanto para principiantes como para profesionales, es crucial contar con un conjunto de herramientas que faciliten y optimicen el proceso de diseño. En esta guía, exploraremos algunas de las herramientas más imprescindibles en el arsenal de un Front End Developer, abarcando desde prototipado hasta diseño gráfico y gestión de recursos.</p>
       <ArticleSubtitle subtitle='Herramientas de Prototipado' number={'1.'} />
       <p>Antes de sumergirse en el desarrollo, es esencial crear prototipos que permitan visualizar la interfaz y la experiencia del usuario. Para principiantes, plataformas en línea como Figma o Adobe XD ofrecen una interfaz intuitiva para diseñar wireframes y mockups sin la necesidad de habilidades de codificación. Los profesionales también pueden utilizar herramientas más robustas como Sketch o InVision, que brindan una mayor capacidad de interacción y colaboración con el equipo.</p><br />

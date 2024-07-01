@@ -2,11 +2,11 @@
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet-async'
 
-export default function SEOFriendly({ title, description, type, keywords, author, linkHref, image }) {
+export default function SEOFriendly({ charset, title, description, type, keywords, author, linkHref, image }) {
   return (
     <Helmet>
       { /* Standard metadata tags */}
-
+      <meta charset={charset} />
       <link rel="canonical" href={`https://dspwebstudio.com/${linkHref}`} />
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -34,6 +34,7 @@ export default function SEOFriendly({ title, description, type, keywords, author
   )
 }
 SEOFriendly.propTypes = {
+  charset: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   type: PropTypes.string,

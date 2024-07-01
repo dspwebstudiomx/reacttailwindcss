@@ -9,6 +9,7 @@ import SocialLink from "../Atoms/Social/SocialLink";
 import ThemeToggle from "../../Functions/ThemeToggle";
 import { FaXmark } from "react-icons/fa6";
 import { navlinks } from "../../data";
+import Container from "../Templates/Container";
 
 function Navbar() {
 
@@ -31,23 +32,23 @@ function Navbar() {
       behavior: "smooth",
     });
   }
-  if (nav) {
-    document.body.classList.add('modal-active')
-  } else {
-    document.body.classList.remove('modal-active')
-  }
+  // if (nav) {
+  //   document.body.classList.add('modal-active')
+  // } else {
+  //   document.body.classList.remove('modal-active')
+  // }
 
   return (
     <nav id="navbar" className={Styles.header} >
-      <section className={Styles.container}>
+      <Container className={Styles.container}>
 
         {/* Logo */}
-        <NavLink smooth to="/#hero" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        <NavHashLink smooth to="/#hero" className="dark:block hidden  cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoWhite} alt=" dspwebstudio logo" className="-ml-4" width={130} height={92} />
-        </NavLink>
-        <NavLink smooth to="/#hero" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
+        </NavHashLink>
+        <NavHashLink smooth to="/#hero" className="dark:hidden block cursor-pointer w-[56%] sm:w-[70%] lg:w-auto" scroll={element => scrollWithOffset(element, 98)}>
           <img id="logo" src={logoDark} alt=" dspwebstudio logo" width={80} height={51} />
-        </NavLink>
+        </NavHashLink>
         {/* Logo */}
 
         <div className="lg:hidden z-10 w-[5%] mr-12">
@@ -61,7 +62,7 @@ function Navbar() {
             {navlinks.map((navlink) => {
               return (
                 <li key={navlink.id}>
-                  <NavHashLink smooth to={navlink.href} duration={500} className={Styles.a} activeClassName={Styles.active} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
+                  <NavHashLink smooth to={navlink.href} duration={500} className={Styles.a} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
                 </li>
               )
             })}
@@ -69,26 +70,14 @@ function Navbar() {
               <NavLink
                 to="/blog"
                 duration={500}
-                className={({ isActive, isPending, isTransitioning }) =>
-                  [
-                    isPending ? "pending" : Styles.a,
-                    isActive ? Styles.active : Styles.a,
-                    isTransitioning ? "transitioning" : "",
-                  ].join(" ")
-                }
+                className={Styles.a}
               >Blog</NavLink>
             </li>
             <li>
               <NavLink
                 to="/contacto"
                 duration={500}
-                className={({ isActive, isPending, isTransitioning }) =>
-                  [
-                    isPending ? "pending" : Styles.a,
-                    isActive ? Styles.active : Styles.a,
-                    isTransitioning ? "transitioning" : "",
-                  ].join(" ")
-                }
+                className={Styles.a}
               >Contacto</NavLink>
             </li>
           </ul>
@@ -126,13 +115,7 @@ function Navbar() {
             {navlinks.map((navlink) => {
               return (
                 <li key={navlink.id}>
-                  <NavHashLink onClick={toggleNav} smooth to={navlink.href} className={({ isActive, isPending, isTransitioning }) =>
-                    [
-                      isPending ? "pending" : Styles.linkMobile,
-                      isActive ? Styles.active : Styles.linkMobile,
-                      isTransitioning ? "transitioning" : "",
-                    ].join(" ")
-                  } scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
+                  <NavHashLink onClick={toggleNav} smooth to={navlink.href} className={Styles.linkMobile} scroll={element => scrollWithOffset(element, 98)}>{navlink.nameLink}</NavHashLink>
                   <hr className='h-1 bg-gradient-to-r from-cyan-500 to-blue-500 w-[35%] skew-x-12 mr-auto text-center mt-2' />
                 </li>
               )
@@ -167,7 +150,7 @@ function Navbar() {
         </div>
         {/* Menu mobile*/}
 
-      </section>
+      </Container>
     </nav >
   )
 }

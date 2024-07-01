@@ -1,13 +1,19 @@
 import Article from '../Articles/Article'
 import Placeholder from '../../../assets/Images/Placeholder.webp'
 import Image from '../../../assets/Images/Blog/Articulos/blog2.webp'
+import image_240 from '../../../assets/Images/Blog/Articulos/Resizes/240/dos-monitores-escritorio-oficina-240.jpg'
+import image_480 from '../../../assets/Images/Blog/Articulos/Resizes/480/dos-monitores-escritorio-oficina-480.jpg'
+import image_576 from '../../../assets/Images/Blog/Articulos/Resizes/576/dos-monitores-escritorio-oficina-576.jpg'
+import image_768 from '../../../assets/Images/Blog/Articulos/Resizes/768/dos-monitores-escritorio-oficina-768.jpg'
+import image_1024 from '../../../assets/Images/Blog/Articulos/Resizes/1024/dos-monitores-escritorio-oficinawebp-1024.jpg'
+import image_1200 from '../../../assets/Images/Blog/Articulos/Resizes/1200/dos-monitores-escritorio-oficina-1200.jpg'
 import ArticleSubtitle from '../../../components/Molecules/ArticleSubtitle'
 import Spacing from '../../../components/Sections/Spacing'
 import ArticleSubtitleH3 from '../../../components/Atoms/Headings/ArticleSubtitleH3'
 
 const FundamentosDiseñoWeb = () => {
   return (
-    <Article title='Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales' id={2} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} date='julio 24, 2023' source={'pexels.com'} time={'3 min.'} slug={'diseno-web'} keywords={'fundamentos, diseño web'} description={'Fundamentos Diseño Web'} linkHref={'blog/diseno-web/fundamentos-diseno-web'}>
+    <Article title='Los fundamentos del Diseño Web: Principios básicos y conceptos esenciales' id={2} category='Diseño Web' author='Daniel S.' image={Image || Placeholder} image_240={image_240} image_480={image_480} image_576={image_576} image_768={image_768} image_1024={image_1024} image_1200={image_1200} date='julio 24, 2023' source={'pexels.com'} time={'3 min.'} slug={'diseno-web'} keywords={'fundamentos, diseño web'} description={'Fundamentos Diseño Web'} linkHref={'blog/diseno-web/fundamentos-diseno-web'}>
       <p>El Diseño Web es una disciplina crucial en el desarrollo de sitios y aplicaciones digitales, ya que tiene el poder de transformar una simple inerfaz en una experiencia cautivadora para los usuarios. Para lograrlo, es fundamental comprender los principios básicos y conceptos esenciales del Diseño Web. En este artículo, exploraremos los fundamentos que todo Diseñador UX/UI debe dominar para crear experiencias en línea impactantes y efectivas.</p>
       <ArticleSubtitle subtitle='Usabilidad: La piedra angular del diseño' />
       <p>La usabilidad es el cimiento del Diseño Web efectivo. Se trata de garantizar que un sitio web sea intuitivo y fácil de usar, permitiendo a los usuarios alcanzar sus objetivos de manera sencilla y sin frustraciones. Para lograrlo, se deben tener en cuenta factores como la navegación clara, la jerarquía visual, los llamados a la acción destacados y la adaptabilidad a diferentes dispositivos.</p>
